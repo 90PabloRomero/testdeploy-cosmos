@@ -10,11 +10,11 @@ export default apiHandler({
 });
 
 function getById(req, res) {
-  const user = usersRepo.getById(req.query.id);
+  const lead = leadsRepo.getById(req.query.id);
 
-  if (!user) throw "Usuario no encontrado";
+  if (!lead) throw "Usuario no encontrado";
 
-  return res.status(200).json(omit(user, "hash"));
+  return res.status(200).json(omit(lead, "hash"));
 }
 
 function update(req, res) {

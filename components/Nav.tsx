@@ -21,18 +21,53 @@ function Nav() {
   if (!user) return null;
 
   return (
-    <nav className="navbar navbar-expand navbar-dark bg-dark">
-      <div className="navbar-nav">
-        <NavLink href="/" exact className="nav-item nav-link">
-          Home
-        </NavLink>
-        <NavLink href="/users" className="nav-item nav-link">
-          Users
-        </NavLink>
-        <a onClick={logout} className="nav-item nav-link">
-          Logout
-        </a>
+    // <nav className="navbar navbar-expand navbar-dark bg-dark">
+    //   <div className="navbar-nav">
+    //     <NavLink href="/" exact className="nav-item nav-link">
+    //       Home
+    //     </NavLink>
+    //     <NavLink href="/users" className="nav-item nav-link">
+    //       Users
+    //     </NavLink>
+    //     <a onClick={logout} className="nav-item nav-link">
+    //       Logout
+    //     </a>
+    //   </div>
+    // </nav>
+    <header>
+      <div className="logo-area">
+        <div className="logo">MARCA BLANCA</div>
       </div>
-    </nav>
+
+      <nav className="nav-area">
+        <ul className="header-nav">
+          <li>
+            <a href="">Inicio</a>
+          </li>
+          <li>
+            <a href="" className="active">
+              Comercial
+            </a>
+          </li>
+          <li>
+            <a href="">emisión</a>
+          </li>
+          <li>
+            <a href="">cobranzas</a>
+          </li>
+          <li>
+            <a href="">Polizas Activas</a>
+          </li>
+          <li>
+            <a href="">indemnizar</a>
+          </li>
+          <li>
+            <a onClick={logout} className="nav-item nav-link">
+              salir
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }

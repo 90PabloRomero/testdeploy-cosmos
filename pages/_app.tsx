@@ -2,10 +2,12 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-import "styles/globals.css";
+// import "styles/globals.css";
 
 import { userService } from "services";
-import { Nav, Alert } from "components";
+import { Nav, Alert, SideBar } from "components";
+import { Modal } from "components/Modal";
+import { GlobalStyles } from "styles/globalStyles";
 
 export default App;
 
@@ -13,6 +15,8 @@ function App({ Component, pageProps }) {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [authorized, setAuthorized] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [sideBarVisible, setSideBarOpen] = useState(false);
 
   useEffect(() => {
     // on initial load - run auth check
@@ -34,7 +38,10 @@ function App({ Component, pageProps }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function authCheck(url) {
+  useEffect(() => {
+    document.body.className = modalVisible ? "modal-mode" : "";
+  });
+  function authCheck(url: string) {
     // redirect to login page if accessing a private page and not logged in
     setUser(userService.userValue);
     const publicPaths = ["/account/login", "/account/register"];
@@ -53,7 +60,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Next.js 11 - User Registration and Login Example</title>
+        <title>Broker - Proyecto Cosmos</title>
 
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link
@@ -61,11 +68,42 @@ function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
+      <Modal
+        modalVisible={modalVisible}
+        onOutsideClick={() => setModalVisible(false)}
+      />
+      <div className={`app-container`}>
+        {user ? (
+          <>
+            <GlobalStyles />
+            <div className="tooltip-wrapper">
+              <SideBar
+                sideBarVisible={sideBarVisible}
+                onOutsideClick={() => setSideBarOpen(false)}
+              />
+              <div className="layout">
+                <Nav />
+                <Alert />
 
-      <div className={`app-container ${user ? "bg-light" : ""}`}>
-        <Nav />
-        <Alert />
-        {authorized && <Component {...pageProps} />}
+                {authorized && (
+                  <Component
+                    {...pageProps}
+                    onClick={setModalVisible}
+                    openSideBar={() => setSideBarOpen(!sideBarVisible)}
+                  />
+                )}
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <GlobalStyles />
+            <Alert />
+            {authorized && (
+              <Component {...pageProps} onClick={setModalVisible} />
+            )}
+          </>
+        )}
       </div>
     </>
   );

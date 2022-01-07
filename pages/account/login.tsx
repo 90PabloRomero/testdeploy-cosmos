@@ -6,6 +6,10 @@ import * as Yup from "yup";
 import { Link } from "components";
 import { Layout } from "components/account";
 import { userService, alertService } from "services";
+import Head from "next/head";
+
+import heroImage from "public/fondo-login.png";
+import Image from "next/image";
 
 export default Login;
 
@@ -36,47 +40,69 @@ function Login() {
 
   return (
     <Layout>
-      <div className="card">
-        <h4 className="card-header">Login</h4>
-        <div className="card-body">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-group">
-              <label>Username</label>
-              <input
-                name="username"
-                type="text"
-                {...register("username")}
-                className={`form-control ${
-                  errors.username ? "is-invalid" : ""
-                }`}
-              />
-              <div className="invalid-feedback">{errors.username?.message}</div>
+      <Head>
+        <title>Acceso Broker: Proyecto Cosmos</title>
+      </Head>
+      <div className="container-fluid login-page">
+        <div className="row h-100">
+          <div className="col-12 col-sm-9">
+            <Image
+              src={heroImage}
+              alt="Acceso a Broker"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </div>
+          <div className="col-sm-3 login-side">
+            <div className="login-logo-area">
+              <h3 className="mb-4">MARCA BLANCA</h3>
             </div>
-            <div className="form-group">
-              <label>Password</label>
-              <input
-                name="password"
-                type="password"
-                {...register("password")}
-                className={`form-control ${
-                  errors.password ? "is-invalid" : ""
-                }`}
-              />
-              <div className="invalid-feedback">{errors.password?.message}</div>
+            <div className="mt-5 py-md-5">
+              <small>version de pruebas. usuario: admin clave: 123456</small>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                  type="text"
+                  id="loginUserName"
+                  placeholder="Nombre de usuario"
+                  {...register("username")}
+                  className={`form-control login-username ${
+                    errors.username ? "is-invalid" : ""
+                  }`}
+                />
+                <div className="invalid-feedback mt-n2 mb-2">
+                  {errors.username?.message}
+                </div>
+                <input
+                  type="password"
+                  id="loginPassWord"
+                  {...register("password")}
+                  className={`form-control login-password ${
+                    errors.password ? "is-invalid" : ""
+                  }`}
+                  placeholder="Contraseña"
+                />
+                <div className="invalid-feedback mt-n2 mb-2">
+                  {errors.password?.message}
+                </div>
+                <input
+                  type="checkbox"
+                  name="checkRememberCredentials"
+                  id="checkRememberCredentials"
+                />
+                <span className="ml-2">Recordar Contraseña</span>
+                <button
+                  disabled={formState.isSubmitting}
+                  className="btn btn-primary btn-login"
+                >
+                  {formState.isSubmitting && (
+                    <span className="spinner-border spinner-border-sm mr-1"></span>
+                  )}
+                  INGRESAR
+                </button>
+              </form>
             </div>
-            <button
-              disabled={formState.isSubmitting}
-              className="btn btn-primary"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1"></span>
-              )}
-              Login
-            </button>
-            <Link href="/account/register" className="btn btn-link">
-              Register
-            </Link>
-          </form>
+          </div>
         </div>
       </div>
     </Layout>

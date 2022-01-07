@@ -102,7 +102,7 @@ function Alert({ id, fade }) {
   if (!alerts.length) return null;
 
   return (
-    <div className="container">
+    <div className="container alertbox">
       <div className="m-3">
         {alerts.map((alert, index) => (
           <div key={index} className={cssClasses(alert)}>
