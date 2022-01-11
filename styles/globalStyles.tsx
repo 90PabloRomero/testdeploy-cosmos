@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = ({ children }) => {
+export const GlobalStyles = () => {
   const Styles = createGlobalStyle`
   /* set defaults */
 
@@ -845,5 +845,5 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
 }
 
 `;
-  return <Styles>{children}</Styles>;
+  return <Styles />;
 };

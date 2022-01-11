@@ -71,83 +71,82 @@ function App({ Component, pageProps }) {
 
   return (
     <>
-      <GlobalStyles>
-        <Head>
-          <title>Broker - Proyecto Cosmos</title>
+      <GlobalStyles />
+      <Head>
+        <title>Broker - Proyecto Cosmos</title>
 
-          {/* eslint-disable-next-line @next/next/no-css-tags */}
-          <link
-            href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            rel="stylesheet"
-          />
-        </Head>
-        <Modal
-          modalVisible={modalVisible}
-          onOutsideClick={() => setModalVisible(false)}
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link
+          href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          rel="stylesheet"
         />
-        <ModalUser
-          modalUserVisible={modalUserVisible}
-          onOutsideClick={() => {
-            setModalUserVisible(false);
-          }}
-        />
-        <ModalCotizacion
-          modalCotizacionVisible={modalCotizacionVisible}
-          onOutsideClick={() => {
-            setModalCotizacionVisible(false);
-          }}
-        />
-        <ModalCargarCotizacion
-          modalCCVisible={modalCCVisible}
-          onOutsideClick={() => {
-            setModalCCVisible(false);
-          }}
-        />
-        <div className={`app-container`}>
-          {user ? (
-            <>
-              <Nav />
-              <div className="tooltip-wrapper">
-                <SideBar
-                  sideBarVisible={sideBarVisible}
-                  onOutsideClick={() => setSideBarOpen(false)}
-                />
-                <div
-                  className={`layout ${
-                    sideBarVisible ? " layout-modal-mode" : ""
-                  } `}
-                >
-                  <Alert />
+      </Head>
+      <Modal
+        modalVisible={modalVisible}
+        onOutsideClick={() => setModalVisible(false)}
+      />
+      <ModalUser
+        modalUserVisible={modalUserVisible}
+        onOutsideClick={() => {
+          setModalUserVisible(false);
+        }}
+      />
+      <ModalCotizacion
+        modalCotizacionVisible={modalCotizacionVisible}
+        onOutsideClick={() => {
+          setModalCotizacionVisible(false);
+        }}
+      />
+      <ModalCargarCotizacion
+        modalCCVisible={modalCCVisible}
+        onOutsideClick={() => {
+          setModalCCVisible(false);
+        }}
+      />
+      <div className={`app-container`}>
+        {user ? (
+          <>
+            <Nav />
+            <div className="tooltip-wrapper">
+              <SideBar
+                sideBarVisible={sideBarVisible}
+                onOutsideClick={() => setSideBarOpen(false)}
+              />
+              <div
+                className={`layout ${
+                  sideBarVisible ? " layout-modal-mode" : ""
+                } `}
+              >
+                <Alert />
 
-                  {authorized && (
-                    <Component
-                      {...pageProps}
-                      onClick={setModalVisible}
-                      onClickUser={setModalUserVisible}
-                      onClickCotizacion={() => setModalCotizacionVisible(true)}
-                      openSideBar={() => setSideBarOpen(!sideBarVisible)}
-                      onClickCargarCotizacion={() => setModalCCVisible(true)}
-                    />
-                  )}
-                </div>
+                {authorized && (
+                  <Component
+                    {...pageProps}
+                    onClick={setModalVisible}
+                    onClickUser={setModalUserVisible}
+                    onClickCotizacion={() => setModalCotizacionVisible(true)}
+                    openSideBar={() => setSideBarOpen(!sideBarVisible)}
+                    onClickCargarCotizacion={() => setModalCCVisible(true)}
+                  />
+                )}
               </div>
-            </>
-          ) : (
-            <>
-              <Alert />
-              {authorized && (
-                <Component
-                  {...pageProps}
-                  onClick={setModalVisible}
-                  onClickCotizacion={() => setModalCotizacionVisible(true)}
-                  onClickCargarCotizacion={() => setModalCCVisible(true)}
-                  onClickUser={setModalUserVisible}
-                />
-              )}
-            </>
-          )}
-        </div>
-      </GlobalStyles>
+            </div>
+          </>
+        ) : (
+          <>
+            <Alert />
+            {authorized && (
+              <Component
+                {...pageProps}
+                onClick={setModalVisible}
+                onClickCotizacion={() => setModalCotizacionVisible(true)}
+                onClickCargarCotizacion={() => setModalCCVisible(true)}
+                onClickUser={setModalUserVisible}
+              />
+            )}
+          </>
+        )}
+      </div>
     </>
   );
 }
