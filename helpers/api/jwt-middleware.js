@@ -1,10 +1,13 @@
 const expressJwt = require("express-jwt");
 const util = require("util");
 import getConfig from "next/config";
+import cors from "cors";
 
 const { serverRuntimeConfig } = getConfig();
 
 export { jwtMiddleware };
+
+jwtMiddleware.use(cors());
 
 function jwtMiddleware(req, res) {
   const middleware = expressJwt({

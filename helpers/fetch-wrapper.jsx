@@ -1,4 +1,5 @@
 import getConfig from "next/config";
+import cors from "cors";
 
 import { userService, leadService } from "../services";
 
