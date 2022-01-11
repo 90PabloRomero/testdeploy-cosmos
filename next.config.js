@@ -3,6 +3,7 @@ module.exports = {
   reactStrictMode: true,
   serverRuntimeConfig: {
     secret: "secretRTConfig",
+    mode: "cors",
   },
   publicRuntimeConfig: {
     apiUrl:
