@@ -1,7 +1,6 @@
-import { FC } from "react";
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles: FC = ({ children }) => {
+export const GlobalStyles = ({ children }) => {
   const Styles = createGlobalStyle`
   /* set defaults */
 
@@ -25,11 +24,11 @@ export const GlobalStyles: FC = ({ children }) => {
     var(--lightblue) 0%,
     var(--primary) 77%
   );
+  --warning: #ff8300 !important;
 }
-html,
-body,
+
 .layout {
-  height: 100%;
+  min-height:100vh;
   width: 100%;
 }
 body {
@@ -87,8 +86,9 @@ ul {
 .layout {
   position: relative;
   z-index: 0;
+}
+.layout-modal-mode {
   box-shadow: 2px 2px 12px rgba(0, 0, 0);
-
 }
 /* header elements*/
 header {
@@ -96,6 +96,10 @@ header {
   display: grid;
   grid-area: header;
   grid-template-areas: "logo nav";
+  padding: 0 1rem;
+  background: white;
+  position:relative;
+  z-index: 10;
 }
 .logo-area {
   display: grid;
@@ -107,13 +111,15 @@ header {
   font-size: 29px;
   font-weight: 700;
   margin: auto 0;
-  padding: 26px 1.81rem;
 }
 .nav-area {
   grid-area: nav;
+  display: flex;
+  flex-direction: row-reverse;
 }
 .nav-area .header-nav {
   display: flex;
+  justify-content: end;
   min-height: 100%;
 }
 .nav-area .header-nav .active {
@@ -152,6 +158,9 @@ header {
   top: 14.5%;
   width: 20vw;
 }
+.sidebar-area > div > nav {
+  min-height: 100vh;
+}
 .sidebar-area .sidebar-nav li:nth-child(n + 2) {
   border-top: 2px solid #ffffff24;
 }
@@ -173,6 +182,7 @@ header {
 main {
   position: relative;
   z-index: 1;
+  padding: 1.5rem;
 }
 .main-layout {
   display: flex;
@@ -182,7 +192,7 @@ main {
 }
 
 .tabs-area {
-  padding: 0.81rem 0 0.81rem 1.205rem;
+
   width: 100%;
 }
 .message-box {
@@ -192,6 +202,8 @@ main {
   margin-bottom: 0.62rem;
   margin-left: 4px;
   position: relative;
+  width: 40%;
+  max-height: 150px;
 }
 .message-box::before {
   background: url(/public/bubble.png) no-repeat left top;
@@ -204,22 +216,28 @@ main {
 }
 .message-box h5 {
   font-weight: 800;
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 0.85rem;
 }
 .message-box h6 {
   font-style: italic;
   margin: 0 !important;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
 }
 .calendar-area {
-  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 30%;
   display: grid;
+  z-index: 5;
   grid-template-areas:
     "top"
     "bottom";
+box-shadow: 16px 19px 13px 15px #0004;
+}
+.wrapper-before-calendar-wrapper{
+  background: white;
 }
 .calendar-wrapper {
   grid-area: top;
@@ -268,7 +286,7 @@ main {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: 40vh;
+  max-height: 67.5vh;
 }
 .day-schedule-hour-and-event {
   display: flex;
@@ -392,8 +410,7 @@ main {
 }
 .tab-list-form .tab-list-form-heading {
   border-top: 1px solid var(--linegray);
-  display: grid;
-  grid-template-columns: 50px 196px 150px 145px 80px 50px;
+  display: flex;
   background: var(--green);
   color: white;
   height: 36px;
@@ -406,21 +423,41 @@ main {
   padding-left: 10.5px;
 }
 .tab-list-form .tab-list-form-row {
-  display: grid;
-  grid-template-columns: 50px 196px 150px 145px 80px 50px;
-  font-size: 11px;
-  height: 39px;
+  display: flex;
+  font-size: 14px;
+  height: 49px;
+  width: 100%;
 }
 .tab-list-form .tab-list-form-row:hover {
   background: var(--greentransluscent) !important;
 }
+.tab-list-form .tab-list-form-heading .tab-list-form-heading-column,
 .tab-list-form .tab-list-form-row .tab-list-form-row-column {
   border-right: 1px solid var(--linegray);
-  padding: 11px 0;
+  padding: 18px 0;
   padding-left: 10.5px;
   height: 100%;
 }
-
+.tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(1),
+.tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(1){
+  min-width: 15%;
+}
+.tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(2),
+.tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(2){
+  min-width: 35%;
+}
+.tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(3),
+.tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(3){
+  min-width: 15%;
+}
+.tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(4),
+.tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(4){
+  min-width: 20%;
+}
+.tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(5),
+.tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(5){
+  min-width: 12%;
+}
 .tab-list-form .tab-list-form-row:nth-child(odd) {
   background: #f2f2f2;
 }
@@ -722,7 +759,7 @@ main {
 .alertbox {
   position: absolute;
   top: 0;
-  right: 5vw;
+  right: 0;
   z-index: 9999999;
 }
 
@@ -742,6 +779,8 @@ main {
 .app-container .sidebar-area{
   user-select: none;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  min-width: 205px;
+  max-width: 205px;
 }
 .app-container .modal {
   user-select: none;
@@ -759,7 +798,8 @@ main {
   z-index: 99999;
   left: 0;
   right: 0;
-  top: 10vh;
+  top: 0;
+  bottom: 0;
 
 }
 .layoutModal > div > div {
@@ -767,11 +807,42 @@ main {
 
 }
 .modal-mode {
-  overflow-y: scroll;
+  overflow-y: auto;
   position: fixed;
+  inset: 0 0 0 0;
 }
 
-
+.modal-open {
+  padding-top: 10vh;
+  background-color: #00000044;
+}
+.tab-list-form-heading-column {
+  padding-top: 9px!important;
+}
+.user-btn {
+  display: inline-block;
+font-weight: 400;
+color: #212529;
+text-align: center;
+vertical-align: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-color: transparent;
+border: 1px solid transparent;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+border-radius: .25rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  &:hover {
+    text-decoration: underline!important;
+  }
+}
+.solicitude-data {
+  font-size: 12px;
+}
 
 `;
   return <Styles>{children}</Styles>;
