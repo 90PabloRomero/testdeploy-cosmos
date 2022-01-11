@@ -14,7 +14,7 @@ async function get(url) {
   const requestOptions = {
     method: "GET",
     headers: authHeader(url),
-    mode: "no-cors",
+    mode: "cors",
   };
   return await fetch(url, requestOptions).then(handleResponse);
 }
@@ -25,7 +25,7 @@ function post(url, body) {
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     credentials: "include",
     body: JSON.stringify(body),
-    mode: "no-cors",
+    mode: "cors",
   };
   return fetch(url, requestOptions).then(handleResponse);
 }
@@ -35,7 +35,7 @@ function put(url, body) {
     method: "PUT",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     body: JSON.stringify(body),
-    mode: "no-cors",
+    mode: "cors",
   };
   return fetch(url, requestOptions).then(handleResponse);
 }
@@ -45,7 +45,7 @@ function _delete(url) {
   const requestOptions = {
     method: "DELETE",
     headers: authHeader(url),
-    mode: "no-cors",
+    mode: "cors",
   };
   return fetch(url, requestOptions).then(handleResponse);
 }
