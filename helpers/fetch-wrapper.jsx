@@ -10,11 +10,32 @@ export const fetchWrapper = {
   put,
   delete: _delete,
 };
-
+// from connecting cors to vercel
+// async headers() {
+//     return [
+//       {
+//         // matching all API routes
+//         source: "/api/users/authenticate",
+//         headers: [
+//           { key: "Access-Control-Allow-Credentials", value: "true" },
+//           { key: "Access-Control-Allow-Origin", value: "*" },
+//           {
+//             key: "Access-Control-Allow-Methods",
+//             value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+//           },
+//           {
+//             key: "Access-Control-Allow-Headers",
+//             value:
+//               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, Authorization, X-Api-Version, X-HTTP-Method-Override",
+//           },
+//         ],
+//       },
+//     ];
 function get(url) {
   const requestOptions = {
     method: "GET",
     headers: authHeader(url),
+    mode: "cors",
   };
   return fetch(url, requestOptions).then(handleResponse);
 }
@@ -25,6 +46,7 @@ function post(url, body) {
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     credentials: "include",
     body: JSON.stringify(body),
+    mode: "cors",
   };
   return fetch(url, requestOptions).then(handleResponse);
 }
@@ -34,6 +56,7 @@ function put(url, body) {
     method: "PUT",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     body: JSON.stringify(body),
+    mode: "cors",
   };
   return fetch(url, requestOptions).then(handleResponse);
 }
@@ -43,6 +66,7 @@ function _delete(url) {
   const requestOptions = {
     method: "DELETE",
     headers: authHeader(url),
+    mode: "cors",
   };
   return fetch(url, requestOptions).then(handleResponse);
 }

@@ -10,11 +10,12 @@ module.exports = {
         ? "http://localhost:3000/api" // development api
         : "http://localhost:3000/api", // production api
   },
+  // from connecting cors to vercel
   async headers() {
     return [
       {
         // matching all API routes
-        source: "/api/users/authenticate",
+        source: "/api/(.*)",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
