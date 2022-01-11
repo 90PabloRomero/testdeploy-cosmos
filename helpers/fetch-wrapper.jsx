@@ -31,16 +31,16 @@ export const fetchWrapper = {
 //         ],
 //       },
 //     ];
-function get(url) {
+async function get(url) {
   const requestOptions = {
     method: "GET",
     headers: authHeader(url),
     mode: "cors",
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return await fetch(url, requestOptions).then(handleResponse);
 }
 
-function post(url, body) {
+async function post(url, body) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
@@ -48,27 +48,27 @@ function post(url, body) {
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return await fetch(url, requestOptions).then(handleResponse);
 }
 
-function put(url, body) {
+async function put(url, body) {
   const requestOptions = {
     method: "PUT",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return await fetch(url, requestOptions).then(handleResponse);
 }
 
 // prefixed with underscored because delete is a reserved word in javascript
-function _delete(url) {
+async function _delete(url) {
   const requestOptions = {
     method: "DELETE",
     headers: authHeader(url),
     mode: "cors",
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return await fetch(url, requestOptions).then(handleResponse);
 }
 
 // helper functions
