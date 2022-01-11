@@ -10,27 +10,6 @@ export const fetchWrapper = {
   put,
   delete: _delete,
 };
-// from connecting cors to vercel
-// async headers() {
-//     return [
-//       {
-//         // matching all API routes
-//         source: "/api/users/authenticate",
-//         headers: [
-//           { key: "Access-Control-Allow-Credentials", value: "true" },
-//           { key: "Access-Control-Allow-Origin", value: "*" },
-//           {
-//             key: "Access-Control-Allow-Methods",
-//             value: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-//           },
-//           {
-//             key: "Access-Control-Allow-Headers",
-//             value:
-//               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, Authorization, X-Api-Version, X-HTTP-Method-Override",
-//           },
-//         ],
-//       },
-//     ];
 async function get(url) {
   const requestOptions = {
     method: "GET",
@@ -40,7 +19,7 @@ async function get(url) {
   return await fetch(url, requestOptions).then(handleResponse);
 }
 
-async function post(url, body) {
+function post(url, body) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
@@ -48,27 +27,27 @@ async function post(url, body) {
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return await fetch(url, requestOptions).then(handleResponse);
+  return fetch(url, requestOptions).then(handleResponse);
 }
 
-async function put(url, body) {
+function put(url, body) {
   const requestOptions = {
     method: "PUT",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return await fetch(url, requestOptions).then(handleResponse);
+  return fetch(url, requestOptions).then(handleResponse);
 }
 
 // prefixed with underscored because delete is a reserved word in javascript
-async function _delete(url) {
+function _delete(url) {
   const requestOptions = {
     method: "DELETE",
     headers: authHeader(url),
     mode: "cors",
   };
-  return await fetch(url, requestOptions).then(handleResponse);
+  return fetch(url, requestOptions).then(handleResponse);
 }
 
 // helper functions
