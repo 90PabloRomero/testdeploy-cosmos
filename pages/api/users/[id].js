@@ -2,14 +2,25 @@ const bcrypt = require("bcryptjs");
 
 import { apiHandler } from "helpers/api";
 import { usersRepo, omit } from "helpers/api";
-
+import Cors from "cors";
+import initMiddleware from "../../lib/init-middleware";
 export default apiHandler({
   get: getById,
   put: update,
   delete: _delete,
 });
 
-function getById(req, res) {
+// Initialize the cors middleware
+const cors = initMiddleware(
+  // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+  Cors({
+    // Only allow requests with GET, POST and OPTIONS
+    methods: ["GET", "POST", "OPTIONS"],
+  })
+);
+
+async function getById(req, res) {
+  await cors(req, res);
   const user = usersRepo.getById(req.query.id);
 
   if (!user) throw "Usuario no encontrado";
@@ -17,7 +28,8 @@ function getById(req, res) {
   return res.status(200).json(omit(user, "hash"));
 }
 
-function update(req, res) {
+async function update(req, res) {
+  await cors(req, res);
   const user = usersRepo.getById(req.query.id);
 
   if (!user) throw "Usuario no encontrado";
@@ -41,7 +53,8 @@ function update(req, res) {
   return res.status(200).json({});
 }
 
-function _delete(req, res) {
+async function _delete(req, res) {
+  await cors(req, res);
   usersRepo.delete(req.query.id);
   return res.status(200).json({});
 }
