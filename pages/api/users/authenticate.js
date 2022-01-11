@@ -5,22 +5,12 @@ import getConfig from "next/config";
 import { apiHandler, usersRepo } from "helpers/api";
 
 const { serverRuntimeConfig } = getConfig();
-import Cors from "cors";
-import initMiddleware from "../../../lib/init-middleware";
+
 export default apiHandler({
   post: authenticate,
 });
-// Initialize the cors middleware
-const cors = initMiddleware(
-  // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
-  Cors({
-    // Only allow requests with GET, POST and OPTIONS
-    methods: ["GET", "POST", "OPTIONS"],
-  })
-);
 
-async function authenticate(req, res) {
-  await cors(req, res);
+function authenticate(req, res) {
   const { username, password } = req.body;
   const user = usersRepo.find((u) => u.username === username);
 
