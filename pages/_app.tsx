@@ -57,16 +57,17 @@ function App({ Component, pageProps }) {
       "/account/register",
       "/account/register-lead",
     ];
-    const path = url.split("?")[0];
-    if (!userService.userValue && !publicPaths.includes(path)) {
-      setAuthorized(false);
-      router.push({
-        pathname: "/account/login",
-        query: { returnUrl: router.asPath },
-      });
-    } else {
-      setAuthorized(true);
-    }
+    // disable for testing purpose
+    // const path = url.split("?")[0];
+    // if (!userService.userValue && !publicPaths.includes(path)) {
+    //   setAuthorized(false);
+    //   router.push({
+    //     pathname: "/account/login",
+    //     query: { returnUrl: router.asPath },
+    //   });
+    // } else {
+    //   setAuthorized(true);
+    // }
   }
 
   return (
