@@ -7,7 +7,7 @@ import { apiHandler, leadsRepo } from "helpers/api";
 const { serverRuntimeConfig } = getConfig();
 
 import Cors from "cors";
-import initMiddleware from "../../lib/init-middleware";
+import initMiddleware from "../../../lib/init-middleware";
 
 // Initialize the cors middleware
 const cors = initMiddleware(

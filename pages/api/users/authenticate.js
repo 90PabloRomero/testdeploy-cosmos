@@ -6,7 +6,7 @@ import { apiHandler, usersRepo } from "helpers/api";
 
 const { serverRuntimeConfig } = getConfig();
 import Cors from "cors";
-import initMiddleware from "../../lib/init-middleware";
+import initMiddleware from "../../../lib/init-middleware";
 export default apiHandler({
   post: authenticate,
 });

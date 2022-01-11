@@ -1,6 +1,6 @@
 import { apiHandler, leadsRepo, omit } from "../../../helpers/api";
 import Cors from "cors";
-import initMiddleware from "../../lib/init-middleware";
+import initMiddleware from "../../../lib/init-middleware";
 
 export default apiHandler({
   get: getLeads,

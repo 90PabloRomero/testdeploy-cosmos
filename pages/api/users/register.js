@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 
 import { apiHandler, usersRepo } from "helpers/api";
 import Cors from "cors";
-import initMiddleware from "../../lib/init-middleware";
+import initMiddleware from "../../../lib/init-middleware";
 
 export default apiHandler({
   post: register,

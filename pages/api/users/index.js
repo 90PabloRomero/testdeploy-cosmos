@@ -1,6 +1,6 @@
 import { apiHandler, usersRepo, omit } from "helpers/api";
 import Cors from "cors";
-import initMiddleware from "../../lib/init-middleware";
+import initMiddleware from "../../../lib/init-middleware";
 
 // Initialize the cors middleware
 const cors = initMiddleware(
