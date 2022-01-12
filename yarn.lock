@@ -2506,6 +2506,13 @@ next@12.0.7:
     "@next/swc-win32-ia32-msvc" "12.0.7"
     "@next/swc-win32-x64-msvc" "12.0.7"
 
+nextjs-cors@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/nextjs-cors/-/nextjs-cors-2.1.0.tgz#99ba64a6b39cf980661153799d8337da25524933"
+  integrity sha512-FC1LJMebe6E9fQ3hapW/4Q6zpz1Xpq8O8A2mYWma3S5EY8BP/t+IiTFsHm8Js5lRNyJ3DzQG/3VQu9pTA2LS/Q==
+  dependencies:
+    cors "^2.8.5"
+
 node-fetch@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"

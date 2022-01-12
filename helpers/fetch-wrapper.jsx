@@ -1,7 +1,7 @@
 import getConfig from "next/config";
 import cors from "cors";
 
-import { userService, leadService } from "../services";
+import { userService } from "../services";
 
 const { publicRuntimeConfig } = getConfig();
 
