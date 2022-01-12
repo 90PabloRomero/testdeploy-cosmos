@@ -28,6 +28,6 @@ module.exports = {
     apiUrl:
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/api" // development api
-        : "http://testdeploy-cosmos.vercel.app/api", // production api
+        : "https://testdeploy-cosmos.vercel.app/api", // production api
   },
 };
