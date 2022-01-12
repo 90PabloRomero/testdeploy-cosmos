@@ -1,4 +1,4 @@
-import { errorHandler, jwtMiddleware } from ".";
+import { errorHandler, jwtMiddleware } from "helpers/api";
 
 export { apiHandler };
 
