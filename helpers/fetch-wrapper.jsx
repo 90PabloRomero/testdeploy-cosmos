@@ -79,6 +79,6 @@ async function handleResponse(response) {
       return Promise.reject(error);
     }
 
-    return await data;
+    return data;
   });
 }
