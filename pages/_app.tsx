@@ -53,9 +53,9 @@ function App({ Component, pageProps }) {
     // redirect to login page if accessing a private page and not logged in
     setUser(userService.userValue);
     const publicPaths = [
-      "/account/login",
-      "/account/register",
-      "/account/register-lead",
+      "/api/account/login",
+      "/api/account/register",
+      "/api/account/register-lead",
       "/api/pruebas/now",
     ];
     // disable for testing purpose
