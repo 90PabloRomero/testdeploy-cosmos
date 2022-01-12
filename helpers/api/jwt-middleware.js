@@ -16,6 +16,7 @@ function jwtMiddleware(req, res) {
       "/api/users/register",
       "/api/users/register-lead",
       "/api/users/authenticate",
+      "/api/pruebas/now",
     ],
   });
 
