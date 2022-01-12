@@ -4,7 +4,7 @@ import cors from "cors";
 import { userService, leadService } from "../services";
 
 const { publicRuntimeConfig } = getConfig();
-app.use(cors());
+
 export const fetchWrapper = {
   get,
   post,
