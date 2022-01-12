@@ -65,8 +65,8 @@ function authHeader(url) {
   }
 }
 
-async function handleResponse(response) {
-  return await response.text().then((text) => {
+function handleResponse(response) {
+  return response.text().then((text) => {
     const data = text && JSON.parse(text);
 
     if (!response.ok) {
