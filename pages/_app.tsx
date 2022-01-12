@@ -56,6 +56,7 @@ function App({ Component, pageProps }) {
       "/account/login",
       "/account/register",
       "/account/register-lead",
+      "/api/pruebas",
     ];
     // disable for testing purpose
     const path = url.split("?")[0];
