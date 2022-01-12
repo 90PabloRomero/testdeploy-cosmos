@@ -4,23 +4,23 @@ import cors from "cors";
 import { userService, leadService } from "../services";
 
 const { publicRuntimeConfig } = getConfig();
-
+app.use(cors());
 export const fetchWrapper = {
   get,
   post,
   put,
   delete: _delete,
 };
-async function get(url) {
+function get(url) {
   const requestOptions = {
     method: "GET",
     headers: authHeader(url),
     mode: "cors",
   };
-  return await fetch(url, requestOptions).then(handleResponse);
+  return fetch(url, requestOptions).then(handleResponse);
 }
 
-async function post(url, body) {
+function post(url, body) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
@@ -28,27 +28,27 @@ async function post(url, body) {
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return await fetch(url, requestOptions).then(handleResponse);
+  return fetch(url, requestOptions).then(handleResponse);
 }
 
-async function put(url, body) {
+function put(url, body) {
   const requestOptions = {
     method: "PUT",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return await fetch(url, requestOptions).then(handleResponse);
+  return fetch(url, requestOptions).then(handleResponse);
 }
 
 // prefixed with underscored because delete is a reserved word in javascript
-async function _delete(url) {
+function _delete(url) {
   const requestOptions = {
     method: "DELETE",
     headers: authHeader(url),
     mode: "cors",
   };
-  return await fetch(url, requestOptions).then(handleResponse);
+  return fetch(url, requestOptions).then(handleResponse);
 }
 
 // helper functions
