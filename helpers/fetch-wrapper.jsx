@@ -20,7 +20,7 @@ async function get(url) {
   return await fetch(url, requestOptions).then(handleResponse);
 }
 
-function post(url, body) {
+async function post(url, body) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
@@ -28,27 +28,27 @@ function post(url, body) {
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return await fetch(url, requestOptions).then(handleResponse);
 }
 
-function put(url, body) {
+async function put(url, body) {
   const requestOptions = {
     method: "PUT",
     headers: { "Content-Type": "application/json", ...authHeader(url) },
     body: JSON.stringify(body),
     mode: "cors",
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return await fetch(url, requestOptions).then(handleResponse);
 }
 
 // prefixed with underscored because delete is a reserved word in javascript
-function _delete(url) {
+async function _delete(url) {
   const requestOptions = {
     method: "DELETE",
     headers: authHeader(url),
     mode: "cors",
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return await fetch(url, requestOptions).then(handleResponse);
 }
 
 // helper functions
@@ -65,8 +65,8 @@ function authHeader(url) {
   }
 }
 
-function handleResponse(response) {
-  return response.text().then((text) => {
+async function handleResponse(response) {
+  return await response.text().then((text) => {
     const data = text && JSON.parse(text);
 
     if (!response.ok) {
@@ -79,6 +79,6 @@ function handleResponse(response) {
       return Promise.reject(error);
     }
 
-    return data;
+    return await data;
   });
 }
