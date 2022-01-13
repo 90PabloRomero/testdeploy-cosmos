@@ -1,12 +1,12 @@
-import { leadService } from "../services";
+import { leadService } from "services";
 
 import { useEffect, useState } from "react";
 import { Link } from "components";
 import CalendarArea from "components/Calendar";
 import Image from "next/image";
-import addIcon from "add.png";
-import editIcon from "edit.png";
-import sendIcon from "icon3.png";
+import addIcon from "public/add.png";
+import editIcon from "public/edit.png";
+import sendIcon from "public/icon3.png";
 
 const Home = ({ onClick, onClickUser }) => {
   const [leads, setLeads] = useState(null);
