@@ -55,8 +55,5 @@ function _delete(id) {
 //   fs.writeFileSync("tmp/users.json", JSON.stringify(users, null, 4));
 // }
 function saveData() {
-  fs.writeFileSync(
-    join(__dirname, "_files", "users.json"),
-    JSON.stringify(users, null, 4)
-  );
+  fs.writeFileSync("tmp/users.json", JSON.stringify(users, null, 4));
 }
