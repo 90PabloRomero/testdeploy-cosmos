@@ -15,11 +15,17 @@ export const usersRepo = {
 function create(user) {
   // generate new user id
   user.id = users.length ? Math.max(...users.map((x) => x.id)) + 1 : 1;
-
+  // users with lowest hierarchy by default
+  user.role = 3;
   // set date created and updated
   user.dateCreated = new Date().toISOString();
   user.dateUpdated = new Date().toISOString();
-
+  // initial states
+  user.askedForQuote = false;
+  user.currentQuotes = [];
+  user.personalData = [];
+  // just for the demo all accounts are verified by default
+  user.verifiedAccount = true;
   // add and save user
   users.push(user);
   saveData();

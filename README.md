@@ -1,10 +1,22 @@
 # Proyecto Cosmos
 
+## VERSION 22.13.1
+
+This version was intended only for demo purpose, known bugs:
+
+-you can move through any section with any user
+-currently there is not really a push from lead array.object into user.array !
+-security is currently using JWT validation but I don't believe it's secure at all.
+
+---
+
 # TO-DOs
 
+- Improve styling
+- Set proper backend
 - Add interface types
 
-## Getting Started
+### Installation
 
 clone, enter directory and install:
 

@@ -22,6 +22,7 @@ function AddEdit(props) {
       .transform((x) => (x === "" ? undefined : x))
       .concat(isAddMode ? Yup.string().required("Password is required") : null)
       .min(6, "Password must be at least 6 characters"),
+    email: Yup.string().required("Mail is required"),
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
 
@@ -42,7 +43,7 @@ function AddEdit(props) {
     return userService
       .register(data)
       .then(() => {
-        alertService.success("User added", { keepAfterRouteChange: true });
+        alertService.success("Usuario creado.", { keepAfterRouteChange: true });
         router.push(".");
       })
       .catch(alertService.error);
@@ -52,7 +53,9 @@ function AddEdit(props) {
     return userService
       .update(id, data)
       .then(() => {
-        alertService.success("User updated", { keepAfterRouteChange: true });
+        alertService.success("Usuario actualizado", {
+          keepAfterRouteChange: true,
+        });
         router.push("..");
       })
       .catch(alertService.error);
@@ -60,9 +63,10 @@ function AddEdit(props) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <h1>Información del solicitante</h1>
       <div className="form-row">
         <div className="form-group col">
-          <label>First Name</label>
+          <label>Nombre/s</label>
           <input
             name="firstName"
             type="text"
@@ -72,7 +76,7 @@ function AddEdit(props) {
           <div className="invalid-feedback">{errors.firstName?.message}</div>
         </div>
         <div className="form-group col">
-          <label>Last Name</label>
+          <label>Apellido/s</label>
           <input
             name="lastName"
             type="text"
@@ -97,7 +101,9 @@ function AddEdit(props) {
           <label>
             Password
             {!isAddMode && (
-              <em className="ml-1">(Leave blank to keep the same password)</em>
+              <em className="ml-1">
+                (Dejar en blanco para conservar el mismo password)
+              </em>
             )}
           </label>
           <input
@@ -128,7 +134,7 @@ function AddEdit(props) {
         >
           Reset
         </button>
-        <Link href="/users" className="btn btn-link">
+        <Link href="/" className="btn btn-link">
           Cancel
         </Link>
       </div>

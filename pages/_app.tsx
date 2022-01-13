@@ -45,7 +45,6 @@ function App({ Component, pageProps }) {
   useEffect(() => {
     document.body.className = modalCotizacionVisible ? "modal-mode" : "";
     document.body.className = modalCCVisible ? "modal-mode" : "";
-
     document.body.className = modalUserVisible ? "modal-mode" : "";
     document.body.className = modalVisible ? "modal-mode" : "";
   });
@@ -53,20 +52,20 @@ function App({ Component, pageProps }) {
     // redirect to login page if accessing a private page and not logged in
     setUser(userService.userValue);
     const publicPaths = [
-      "/account/login",
-      "/account/register",
-      "/account/register-lead",
-      "/api/pruebas/now",
-      "/api/account/login",
-      "/api/account/register",
-      "/api/account/register-lead",
+      "/clientes/inicia-cotizacion",
+      "/clientes/register",
+      "/broker/register",
+      "/broker/login",
+      "/clientes/login",
+      // dev
+      "/broker/register-lead",
     ];
-    // disable for testing purpose
+
     const path = url.split("?")[0];
     if (!userService.userValue && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
-        pathname: "/account/login",
+        pathname: "/clientes/login",
         query: { returnUrl: router.asPath },
       });
     } else {
@@ -78,7 +77,7 @@ function App({ Component, pageProps }) {
     <>
       <GlobalStyles />
       <Head>
-        <title>Broker - Proyecto Cosmos</title>
+        <title>Proyecto Cosmos</title>
 
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link
@@ -130,7 +129,6 @@ function App({ Component, pageProps }) {
                     onClick={setModalVisible}
                     onClickUser={setModalUserVisible}
                     onClickCotizacion={() => setModalCotizacionVisible(true)}
-                    openSideBar={() => setSideBarOpen(!sideBarVisible)}
                     onClickCargarCotizacion={() => setModalCCVisible(true)}
                   />
                 )}

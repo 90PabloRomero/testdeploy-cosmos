@@ -7,8 +7,9 @@ import { Layout } from "components/account";
 import { userService, alertService } from "services";
 import Head from "next/head";
 
-import heroImage from "public/fondo-login.png";
+import heroImage from "public/login-clientes.png";
 import Image from "next/image";
+import { Link } from "components";
 
 export default Login;
 
@@ -31,7 +32,9 @@ function Login() {
       .login(username, password)
       .then(() => {
         // get return url from query parameters or default to '/'
-        const returnUrl = router.query.returnUrl || "/";
+        // const returnUrl = router.query.returnUrl || "/";
+        const returnUrl = "/clientes/panel";
+        alertService.success("conexion exitosa");
         router.push(returnUrl);
       })
       .catch(alertService.error);
@@ -40,7 +43,7 @@ function Login() {
   return (
     <Layout>
       <Head>
-        <title>Acceso Login: Proyecto Cosmos</title>
+        <title>Atencion al Cliente Login: Proyecto Cosmos</title>
       </Head>
       <div className="container-fluid login-page">
         <div className="row h-100">
@@ -100,6 +103,24 @@ function Login() {
                   INGRESAR
                 </button>
               </form>
+              <Link href="/clientes/register">
+                <button className="btn btn-primary btn-login">
+                  CUENTA NUEVA
+                </button>
+              </Link>
+            </div>
+            <div>
+              <ul className="d-flex">
+                <li>
+                  <Link href="/clientes/login">Clientes</Link>
+                </li>
+                <li className="mx-2">
+                  <Link href="/broker/login">Broker</Link>
+                </li>
+                <li>
+                  <Link href="/insurance/login">Aseguradora</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

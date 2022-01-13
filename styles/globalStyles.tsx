@@ -206,7 +206,7 @@ main {
   max-height: 150px;
 }
 .message-box::before {
-  background: url(/public/bubble.png) no-repeat left top;
+  background: url(bubble.png) no-repeat left top;
   content: "";
   position: absolute;
   left: 8px;
@@ -363,12 +363,12 @@ box-shadow: 16px 19px 13px 15px #0004;
 }
 
 .login-username {
-  background: url(./../public/login-username.png) no-repeat left center;
+  background: url(login-username.png) no-repeat left center;
   padding-left: 1.6rem;
   border-left: 1px solid var(--linegray);
 }
 .login-password {
-  background: url(./../public/login-password.png) no-repeat left center;
+  background: url(login-password.png) no-repeat left center;
   padding-left: 1.6rem;
   border-left: 1px solid var(--linegray);
 }
