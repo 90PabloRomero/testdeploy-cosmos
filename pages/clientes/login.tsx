@@ -59,6 +59,7 @@ function Login() {
           <div className="col-sm-3 login-side">
             <div className="login-logo-area">
               <h3 className="mb-4">MARCA BLANCA</h3>
+              <h6 className="text-center">Acceso clientes</h6>
             </div>
             <div className="mt-5 py-md-5">
               {/* <small> usuario broker: admin clave: 123456</small> */}

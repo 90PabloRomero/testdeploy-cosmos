@@ -67,7 +67,7 @@ function App({ Component, pageProps }) {
       setAuthorized(false);
       router.push({
         pathname: "/clientes/login",
-        query: { returnUrl: router.asPath },
+        // query: { returnUrl: router.asPath },
       });
     } else {
       setAuthorized(true);

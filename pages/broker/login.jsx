@@ -32,7 +32,7 @@ function Login() {
       .login(username, password)
       .then(() => {
         // get return url from query parameters or default to '/'
-        const returnUrl = router.query.returnUrl || "/";
+        const returnUrl = router.query.returnUrl || "/broker/panel";
         router.push(returnUrl);
       })
       .catch(alertService.error);

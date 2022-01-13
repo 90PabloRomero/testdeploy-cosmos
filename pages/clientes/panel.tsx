@@ -173,7 +173,7 @@ const Home = ({ onClick, onClickUser }) => {
                               : lead.phase >= 2
                               ? "Esperando solicitud de seguro"
                               : "comercial"
-                            : "Esperando solicitud de seguro"}
+                            : " "}
                         </div>
 
                         <div className="tab-list-form-row-column">

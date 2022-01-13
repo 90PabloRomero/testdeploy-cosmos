@@ -31,11 +31,6 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
           </div> */}
           <div className="message-box">
             <h5>Message:</h5>
-            <h6>Se han registrado 03 nuevos usuarios para seguro de vida</h6>
-            <h6>
-              Se han registrado 04 nuevos usuarios para registro de seguro
-              general
-            </h6>
           </div>
           <div className="tabs-list-area">
             <div className="tabs-list-crud-actions"></div>
@@ -124,6 +119,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                       <div className="tab-list-form-row-column">
                         {lead.quote === false ? (
+                          ""
+                        ) : lead.phase <= 1.2 ? (
                           ""
                         ) : (
                           <Link

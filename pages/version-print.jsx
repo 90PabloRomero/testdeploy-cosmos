@@ -16,7 +16,7 @@ function PrintPage() {
         {/*  */}
         <div className="d-flex justify-content-around pt-4">
           <div className=" d-print-none">
-            <Link href="/">
+            <Link href="/clientes/panel">
               <button className="btn btn-primary">Regresar</button>
             </Link>
           </div>

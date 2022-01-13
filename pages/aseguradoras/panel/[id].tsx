@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Layout, SendConfirmationBroker } from "components/leads";
+import { Layout, SendConfirmationStepThree } from "components/leads";
 import { Spinner } from "components";
 import { leadService, alertService } from "services";
 
@@ -21,7 +21,7 @@ function ViewToSendConfirmation({ id }) {
 
   return (
     <Layout>
-      {lead ? <SendConfirmationBroker lead={lead} /> : <Spinner />}
+      {lead ? <SendConfirmationStepThree lead={lead} /> : <Spinner />}
     </Layout>
   );
 }
