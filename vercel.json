@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/users-repo.js": {
+      "includeFiles": "_files/**"
+    },
+    "api/leads-repo.js": {
+      "includeFiles": "_files/**"
+    }
+  }
+}
