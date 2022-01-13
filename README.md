@@ -1,5 +1,8 @@
 # Proyecto Cosmos
 
+Sistema@Vercel: https://testdeploy-cosmos.vercel.app/
+Landing@Netlify: https://flamboyant-engelbart-d26eb4.netlify.app/
+
 ## VERSION 22.13.1
 
 This version was intended only for demo purpose, known bugs:

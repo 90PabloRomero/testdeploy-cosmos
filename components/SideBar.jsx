@@ -225,7 +225,7 @@ export function BrokerSB() {
 export function InsuSB() {
   return (
     <>
-      <div className="ul">asd</div>
+      <div className="ul"></div>
     </>
   );
 }
@@ -254,9 +254,9 @@ function SideBar({ sideBarVisible, onOutsideClick }) {
             <ClientSB />
           ) : router.route === "/" ? (
             <BrokerSB />
-          ) : (
+          ) : router.route === "/aseguradoras/panel" ? (
             <InsuSB />
-          )}
+          ) : null}
           <ul>
             <li>
               <a href="#" onClick={logout}>
