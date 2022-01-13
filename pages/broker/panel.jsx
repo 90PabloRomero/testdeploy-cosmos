@@ -8,7 +8,7 @@ import addIcon from "public/add.png";
 import editIcon from "public/edit.png";
 import sendIcon from "public/icon3.png";
 
-const Home = ({ onClick, onClickUser }) => {
+const Home = ({ onClick, onClickUser, carryAppointment }) => {
   const [leads, setLeads] = useState(null);
   const [modalCalendarVisible, setModalCalendarVisible] = useState(false);
 
@@ -84,36 +84,54 @@ const Home = ({ onClick, onClickUser }) => {
                   leads.map((lead) => (
                     <div className="tab-list-form-row" key={lead.id}>
                       <div className="tab-list-form-row-column">
-                        {lead.priority === 1
-                          ? "URGENTE"
-                          : lead.priority === 2
-                          ? "importante"
-                          : lead.priorty === 3
-                          ? ""
-                          : "prioridad baja"}
+                        {lead.priority === 1 ? (
+                          <span className="priority-icon priority-critical">
+                            &nbsp;
+                          </span>
+                        ) : lead.priority === 2 ? (
+                          <span className="priority-icon priority-important">
+                            &nbsp;
+                          </span>
+                        ) : lead.priority === 3 ? (
+                          <span className="priority-icon priority-normal">
+                            &nbsp;
+                          </span>
+                        ) : (
+                          <span>-</span>
+                        )}
                       </div>
                       <div className="tab-list-form-row-column">
                         <button
                           className="user-btn m-0 p-0"
                           onClick={onClickUser}
                         >
-                          Llamar a {lead.firstName} {lead.lastName}
+                          {lead.phase === "1.5" ? "Llamar a " : ""}{" "}
+                          {lead.firstName} {lead.lastName}
                         </button>
                       </div>
                       <div className="tab-list-form-row-column">
-                        {lead.phase}
+                        {lead.phase >= 1.5
+                          ? "Requiere asistencia"
+                          : lead.phase <= 1.4
+                          ? "cotizacion en revision del cliente"
+                          : lead.phase <= 1.3
+                          ? "Cotizacion en aseguradora"
+                          : ""}
                       </div>
                       <div className="tab-list-form-row-column">
-                        {lead.status}
+                        {lead.phase >= 1.5 ? "Cliente necesita asesoría" : ""}
                       </div>
 
                       <div className="tab-list-form-row-column">
                         {lead.quote === false ? (
                           ""
                         ) : (
-                          <button onClick={onClick} className="btn p-0 m-0">
+                          <Link
+                            href={`/broker/panel/${lead.id}`}
+                            className="btn p-0 m-0"
+                          >
                             <Image src={addIcon} alt="" />
-                          </button>
+                          </Link>
                         )}
                         {lead.validate === false ? (
                           ""

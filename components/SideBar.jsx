@@ -252,7 +252,7 @@ function SideBar({ sideBarVisible, onOutsideClick }) {
         <nav>
           {router.route === "/clientes/panel" ? (
             <ClientSB />
-          ) : router.route === "/" ? (
+          ) : router.route === "/broker/panel" ? (
             <BrokerSB />
           ) : router.route === "/aseguradoras/panel" ? (
             <InsuSB />

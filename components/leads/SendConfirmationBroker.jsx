@@ -7,9 +7,9 @@ import { Link } from "components";
 import { leadService, alertService } from "services";
 import { useEffect, useState } from "react";
 
-export { SendConfirmationStepTwo };
+export { SendConfirmationBroker };
 
-function SendConfirmationStepTwo(props) {
+function SendConfirmationBroker(props) {
   const [leads, setLeads] = useState(null);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function SendConfirmationStepTwo(props) {
         alertService.success("User(lead) added", {
           keepAfterRouteChange: true,
         });
-        router.push("/aseguradoras/panel");
+        router.push("/broker/panel");
       })
       .catch(alertService.error);
   }
@@ -60,7 +60,7 @@ function SendConfirmationStepTwo(props) {
         alertService.success("User(lead) updated", {
           keepAfterRouteChange: true,
         });
-        router.push("/aseguradoras/panel");
+        router.push("/broker/panel");
       })
       .catch(alertService.error);
   }
@@ -75,7 +75,7 @@ function SendConfirmationStepTwo(props) {
     );
     leadService.delete(id).then(() => {
       setLeads((leads) => leads.filter((x) => x.id !== id));
-      router.push("/aseguradoras/panel");
+      router.push("/broker/panel");
     });
   }
   return (
@@ -173,26 +173,63 @@ function SendConfirmationStepTwo(props) {
       </div>
 
       <div className="form-group text-center"></div>
-      <button
-        type="submit"
-        disabled={formState.isSubmitting}
-        className="btn btn-primary mr-2"
-        onClick={() => setValue("phase", "1.4")}
-      >
-        {formState.isSubmitting && (
-          <span className="spinner-border spinner-border-sm mr-1"></span>
+      {leads &&
+        leads.map((lead) =>
+          lead.phase >= 1.5 ? (
+            <button
+              type="submit"
+              disabled={formState.isSubmitting}
+              className="btn btn-primary mr-2"
+              onClick={() => setValue("phase", "1.4")}
+            >
+              {formState.isSubmitting && (
+                <span className="spinner-border spinner-border-sm mr-1"></span>
+              )}
+              {lead.phase >= 1.5
+                ? "Enviar Nueva cotizacion al cliente"
+                : "ENVIAR COTIZACION AL CLIENTE"}
+            </button>
+          ) : (
+            <button
+              type="submit"
+              disabled={formState.isSubmitting}
+              className="btn btn-primary mr-2"
+              onClick={() => setValue("phase", "1.4")}
+            >
+              {formState.isSubmitting && (
+                <span className="spinner-border spinner-border-sm mr-1"></span>
+              )}
+              {lead.phase >= 1.5
+                ? "Enviar Nueva cotizacion al cliente"
+                : "ENVIAR COTIZACION AL CLIENTE"}
+            </button>
+          )
         )}
-        ENVIAR COTIZACION AL CLIENTE
-      </button>
+
+      {leads &&
+        leads.map((lead) =>
+          lead.phase == 1.5 ? (
+            <button
+              onClick={() => deleteLead(lead.id)}
+              type="button"
+              disabled={formState.isSubmitting}
+              className="btn btn-primary mr-2"
+            >
+              Aceptar nueva cotizacion
+            </button>
+          ) : (
+            "ENVIAR COTIZACION AL CLIENTE"
+          )
+        )}
       <button
         onClick={() => deleteLead(lead.id)}
         type="button"
         disabled={formState.isSubmitting}
-        className="btn btn-secondary"
+        className="btn btn-primary"
       >
         Descartar Solicitud
       </button>
-      <Link href="/aseguradoras/panel" className="btn btn-link">
+      <Link href="/broker/panel" className="btn btn-link">
         Cancel
       </Link>
     </form>

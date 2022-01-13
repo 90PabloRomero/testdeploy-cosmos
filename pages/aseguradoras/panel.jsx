@@ -34,7 +34,14 @@ const Home = ({ onClick, onClickCargarCotizacion }) => {
             <div className="d-flex w-full justify-content-around">
               <div className="message-box">
                 <h5>Message:</h5>
-                <h6>Usted tiene 1 Cotización Pendiente por revisar</h6>
+                {leads &&
+                  leads.map((lead) =>
+                    lead.phase >= 1.4 ? (
+                      ""
+                    ) : (
+                      <h6>Usted tiene 1 Cotización Pendiente por revisar</h6>
+                    )
+                  )}
               </div>
               {/* pie chart disgusting import mode */}
               <FC></FC>

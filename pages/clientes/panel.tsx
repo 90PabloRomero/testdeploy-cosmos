@@ -45,6 +45,25 @@ const Home = ({ onClick, onClickUser }) => {
           <div className="tabs-area">
             <div className="message-box">
               <h5>Verificaciones:</h5>
+              {leads &&
+                leads.map((lead) =>
+                  lead.phase >= 1.4 ? (
+                    lead.phase >= 1.5 ? (
+                      <h6>
+                        Ha solicitado asesoria con su ultimo presupuesto
+                        provisto. Un agente se pondra en contacto en la
+                        brevedad.
+                      </h6>
+                    ) : (
+                      <h6>
+                        Usted tiene 1 Cotización Validada por Aceptar/Rechazar.
+                        Tambien puede pedir asesoramiento.
+                      </h6>
+                    )
+                  ) : (
+                    ""
+                  )
+                )}
               <h6>
                 Verificacion de Identidad:{" "}
                 <span className="text-success">OK</span>
@@ -71,6 +90,19 @@ const Home = ({ onClick, onClickUser }) => {
                     className="search-input "
                   />
                 </fieldset> */}
+                  {leads &&
+                    leads.map((lead) =>
+                      lead.phaseEmision === true ? (
+                        <button
+                          onClick={() => setModalCreateLeadVisible(true)}
+                          className="btn btn-primary ml-4"
+                        >
+                          LLENAR FORMULARIO PARA SOLICITUD DE SEGURO
+                        </button>
+                      ) : (
+                        ""
+                      )
+                    )}
                   <button
                     onClick={() => setModalCreateLeadVisible(true)}
                     className="btn btn-primary ml-4"
@@ -128,19 +160,34 @@ const Home = ({ onClick, onClickUser }) => {
                         <div className="tab-list-form-row-column">
                           {lead.phase >= 1.2
                             ? lead.phase >= 1.4
-                              ? "Revisar Cotizacion"
+                              ? lead.phase >= 2
+                                ? "Peticion de formula de seguro"
+                                : "Revisar Cotizacion"
                               : "Cotizacion en aseguradora"
                             : "Borrador"}
                         </div>
                         <div className="tab-list-form-row-column">
                           {lead.phase <= 1.1
-                            ? "comercial"
-                            : "esperando validacion"}
+                            ? lead.phase >= 1.4
+                              ? "Revisar Cotizacion"
+                              : lead.phase >= 2
+                              ? "Esperando solicitud de seguro"
+                              : "comercial"
+                            : "Esperando solicitud de seguro"}
                         </div>
 
                         <div className="tab-list-form-row-column">
-                          {lead.quote === false ? (
-                            ""
+                          {lead.phase >= 1.2 ? (
+                            lead.phase >= 1.4 ? (
+                              <Link
+                                href={`/clientes/panel/${lead.id}`}
+                                className="btn p-0 m-0"
+                              >
+                                <Image src={addIcon} alt="" />
+                              </Link>
+                            ) : (
+                              ""
+                            )
                           ) : (
                             <Link
                               href={`/clientes/panel/${lead.id}`}

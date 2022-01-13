@@ -50,7 +50,7 @@ function LeadCreator({ onClickOutside }) {
       <div>
         <div className="">Datos del solicitante</div>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="modal-body my-4">
+          <div className="modal-body my-2">
             <div className="d-flex justify-content-around ">
               <div className="form-group ">
                 <label>Nombre </label>
@@ -106,7 +106,7 @@ function LeadCreator({ onClickOutside }) {
           </div>
           {/*  */}
           <div>Datos de los familiares</div>
-          <div className="modal-body my-4">
+          <div className="modal-body my-2">
             <div className="d-flex justify-content-around">
               <div className="form-group">
                 <label>Edad del conyuge</label>
@@ -140,10 +140,10 @@ function LeadCreator({ onClickOutside }) {
           </div>
           {/*  */}
           <div>Anexos</div>
-          <div className="modal-body my-4">
+          <div className="modal-body my-2">
             <div className="d-flex justify-content-around">
               <div className="form-group">
-                <label>Translplante de Organos?</label>
+                <label>Transplante de Organos?</label>
                 <input
                   name="organs"
                   type="checkbox"

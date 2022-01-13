@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // users in JSON file for simplicity, store in a db for production applications
-let users = require("../../tmp/users.json");
+let users = require("../../data/users.json");
 
 export const usersRepo = {
   getAll: () => users,
@@ -55,5 +55,5 @@ function _delete(id) {
 //   fs.writeFileSync("tmp/users.json", JSON.stringify(users, null, 4));
 // }
 function saveData() {
-  fs.writeFileSync("tmp/users.json", JSON.stringify(users, null, 4));
+  fs.writeFileSync("data/users.json", JSON.stringify(users, null, 4));
 }

@@ -1,0 +1,93 @@
+[
+    {
+        "firstName": "Pablo",
+        "lastName": "Romero",
+        "username": "admin",
+        "hash": "$2a$10$UUZdr64trbZ5Ts4T/Gir8ectHg0j0nbgaRISSzXm.QWQ3ECr1r5Ay",
+        "id": 1,
+        "role": 1,
+        "dateCreated": "2022-01-05T05:03:00.852Z",
+        "dateUpdated": "2022-01-05T05:03:00.852Z",
+        "age": 41,
+        "email": "90pabloromero@gmail.com",
+        "verifiedAccount": true,
+        "personalData": [
+            {
+                "registrant": {
+                    "gender": "male",
+                    "country": "Argentina",
+                    "phone": "+541140818692",
+                    "address": "direccion 123"
+                },
+                "family": [
+                    {
+                        "relationship": "conyuge",
+                        "firstName": "Ana",
+                        "lastName": "La Spina",
+                        "gender": "F",
+                        "age": "40"
+                    },
+                    {
+                        "relationship": "hijo",
+                        "firstName": "Nicolas",
+                        "lastName": "Romero",
+                        "gender": "M"
+                    }
+                ]
+            }
+        ],
+        "askedForQuote": false,
+        "currentQuotes": [
+            {
+                "id": "7182973891273",
+                "valuePerPerson": 50,
+                "namePlan": "Access VIP",
+                "axesoPlus": true,
+                "dateCreated": "2022-01-10T22:12:03.329Z",
+                "dateUpdated": "2022-01-10T22:12:03.329Z"
+            }
+        ]
+    },
+    {
+        "firstName": "21342314",
+        "lastName": "12341234",
+        "username": "12341234",
+        "hash": "$2a$10$wbRVPyMgQ.EXBkhw5r0.p.G0pSmK7znrvcao0rNZ9pfI386K19jRu",
+        "id": 2,
+        "role": 3,
+        "dateCreated": "2022-01-13T06:12:57.501Z",
+        "dateUpdated": "2022-01-13T06:12:57.501Z",
+        "askedForQuote": false,
+        "currentQuotes": [],
+        "personalData": [],
+        "verifiedAccount": true
+    },
+    {
+        "firstName": "juan",
+        "lastName": "ugalde",
+        "username": "jugalde1980",
+        "hash": "$2a$10$GLUoUCE/UyM0rgCMVYpGkuspzG61gYeu35JwNDeMK9c7iACDcI7Dm",
+        "id": 3,
+        "role": 3,
+        "dateCreated": "2022-01-13T06:15:39.018Z",
+        "dateUpdated": "2022-01-13T06:15:39.018Z",
+        "askedForQuote": false,
+        "currentQuotes": [],
+        "personalData": [],
+        "verifiedAccount": true
+    },
+    {
+        "firstName": "tests",
+        "lastName": "tests",
+        "username": "tests",
+        "hash": "$2a$10$Uf9qwF8TAlWDimprYKUtcOVNnY75OhpB1oScEd2/0FOu6kpolRJ5.",
+        "id": 4,
+        "role": 3,
+        "dateCreated": "2022-01-13T15:33:12.085Z",
+        "dateUpdated": "2022-01-13T15:33:12.085Z",
+        "askedForQuote": false,
+        "currentQuotes": [],
+        "personalData": [],
+        "verifiedAccount": true
+    }
+]

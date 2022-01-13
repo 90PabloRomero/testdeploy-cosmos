@@ -446,19 +446,19 @@ box-shadow: 16px 19px 13px 15px #0004;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(2),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(2){
-  min-width: 35%;
+  min-width: 25%;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(3),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(3){
-  min-width: 15%;
+  min-width: 25%;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(4),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(4){
-  min-width: 20%;
+  min-width: 21%;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(5),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(5){
-  min-width: 12%;
+  min-width: 20.3%;
 }
 .tab-list-form .tab-list-form-row:nth-child(odd) {
   background: #f2f2f2;

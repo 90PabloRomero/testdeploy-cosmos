@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // leads in JSON file for simplicity, store in a db for production applications
-let leads = require("../../tmp/leads.json");
+let leads = require("../../data/leads.json");
 
 export const leadsRepo = {
   getAll: () => leads,
@@ -22,6 +22,7 @@ function create(lead) {
 
   // set with starting phase
   lead.phase = 1;
+  lead.priority = 3;
   // add and save lead
   leads.push(lead);
   saveData();
@@ -48,5 +49,5 @@ function _delete(id) {
 // private helper functions
 
 function saveData() {
-  fs.writeFileSync("tmp/leads.json", JSON.stringify(leads, null, 4));
+  fs.writeFileSync("data/leads.json", JSON.stringify(leads, null, 4));
 }

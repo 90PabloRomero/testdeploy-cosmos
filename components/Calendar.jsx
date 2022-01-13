@@ -161,7 +161,7 @@ const CalendarArea = ({ modalCalendarVisible, onOutsideClick }) => {
               <div className="day-schedule-hours">
                 <div className="day-schedule-hour-and-event">
                   <div className="ds-s-hour">00:00</div>
-                  <div className="ds-s-event">&nbsp;</div>
+                  <div className="ds-s-event"></div>
                 </div>
                 <div className="day-schedule-hour-and-event">
                   <div className="ds-s-hour">01:00</div>

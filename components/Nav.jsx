@@ -32,14 +32,18 @@ function Nav() {
         </h6>
       </div>
 
-      {router.route !== "/" ? (
+      {router.route === "/" ? (
+        ""
+      ) : router.route === "/clientes/panel" ? (
         ""
       ) : (
         <>
           <nav className="nav-area">
             <ul className="header-nav ">
               <li>
-                <a href="">Comercial</a>
+                <a href="" className="active">
+                  Comercial
+                </a>
               </li>
               <li>
                 <a href="">Emisión</a>

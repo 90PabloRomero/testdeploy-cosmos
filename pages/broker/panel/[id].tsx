@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Layout, SendConfirmationBroker } from "components/leads";
 import { Spinner } from "components";
 import { leadService, alertService } from "services";
+import { SendConfirmationStepThree } from "components/leads/SendConfirmationStepThree";
 
 export default ViewToSendConfirmation;
 
