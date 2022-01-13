@@ -28,15 +28,10 @@
     ],
     "insurance": "vumi",
     "priority": 3,
-    "phase": "1.4",
+    "phase": "comercial",
     "status": "cotizacion pendiente",
     "quote": true,
-    "validate": false,
-    "follow": false,
-    "age": "23",
-    "conguyeage": "33",
-    "numberOfKids": "1",
-    "organs": true,
-    "plus": true
+    "validate": true,
+    "follow": false
   }
 ]

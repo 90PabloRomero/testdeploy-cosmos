@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { userService } from "../services";
 import { useRouter } from "next/router";
+import { Link } from "components";
 
 export { Nav };
 
@@ -20,7 +20,9 @@ function Nav() {
   return (
     <header className=" d-print-none">
       <div className="logo-area">
-        <div className="logo">MARCA BLANCA</div>
+        <div className="logo">
+          <Link href="/">MARCA BLANCA</Link>
+        </div>
         <h6 className="">
           {router.route === "/clientes/panel"
             ? "Sistema de Servicio al Cliente"

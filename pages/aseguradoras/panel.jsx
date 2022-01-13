@@ -1,88 +1,64 @@
+import { leadService } from "services";
+import dynamic from "next/dynamic.js";
+
 import { useEffect, useState } from "react";
 import { Link } from "components";
-import CalendarArea from "components/Calendar";
-
+// import CalendarArea from "components/Calendar";
 import Image from "next/image";
 import addIcon from "public/add.png";
 import editIcon from "public/edit.png";
-import sendIcon from "/public/icon3.png";
-import { leadService } from "services";
-import ModalCreateLead from "components/demo/modalCreateLead";
-const Home = ({ onClick, onClickUser }) => {
+import sendIcon from "public/icon3.png";
+import Head from "next/head";
+const FC = dynamic(() => import("components/demo/piechart"), { ssr: false });
+
+const Home = ({ onClick, onClickCargarCotizacion }) => {
+  // const [modalCalendarVisible, setModalCalendarVisible] = useState(false);
   const [leads, setLeads] = useState(null);
-  const [modalCreateLeadVisible, setModalCreateLeadVisible] = useState(false);
 
   useEffect(() => {
     leadService.getAll().then((x) => setLeads(x));
   }, []);
 
-  useEffect(() => {
-    document.body.className = modalCreateLeadVisible ? "modal-mode" : "";
-  });
-
-  function deleteLead(id) {
-    setLeads(
-      leads.map((x) => {
-        if (x.id === id) {
-          x.isDeleting = true;
-        }
-        return x;
-      })
-    );
-    leadService.delete(id).then(() => {
-      setLeads((leads) => leads.filter((x) => x.id !== id));
-    });
-  }
+  // useEffect(() => {
+  //   document.body.className = modalCalendarVisible ? "modal-mode" : "";
+  // });
 
   return (
     <>
-      <ModalCreateLead
-        modalVisible={modalCreateLeadVisible}
-        onOutsideClick={() => setModalCreateLeadVisible(false)}
-      />
+      <Head>
+        <title>Servicio de Aseguradoras - Cosmos</title>
+      </Head>
       <main>
         <div className="main-layout">
           <div className="tabs-area">
-            <div className="message-box">
-              <h5>Verificaciones:</h5>
-              <h6>
-                Verificacion de Identidad:{" "}
-                <span className="text-success">OK</span>
-              </h6>
-              {/* TODO boolean que informa si tiene un lead disponible o no */}
+            <div className="d-flex w-full justify-content-around">
+              <div className="message-box">
+                <h5>Message:</h5>
+                <h6>Usted tiene 1 Cotización Pendiente por revisar</h6>
+              </div>
+              {/* pie chart disgusting import mode */}
+              <FC></FC>
             </div>
             <div className="tabs-list-area">
               <div className="tabs-list-crud-actions"></div>
 
               <div className="tab-actions-and-search">
-                {/* <div className="tab-actions">
-                <button className="btn btn-tab btn-tab-active">
-                  Pendientes
-                </button>
-                <button className="btn btn-tab">Todos</button>
-                <button className="btn btn-tab">Renovaciones</button>
-              </div> */}
+                <div className="tab-actions">
+                  <button className="btn btn-tab btn-tab-active">
+                    Cotizar
+                  </button>
+                  <button className="btn btn-tab">Emitir</button>
+                  <button className="btn btn-tab">Movimientos</button>
+                </div>
 
                 <div className="tab-search mb-1">
-                  {/* <fieldset>
-                  <input
-                    type="text"
-                    placeholder="Buscar..."
-                    className="search-input "
-                  />
-                </fieldset> */}
-                  <button
-                    onClick={() => setModalCreateLeadVisible(true)}
-                    className="btn btn-primary ml-4"
-                  >
-                    LLENAR FORMULARIO PARA COTIZACION
-                  </button>
-                  {/* <button
-                  onClick={() => setModalCalendarVisible(true)}
-                  className="btn btn-primary ml-4"
-                >
-                  VER CALENDARIO
-                </button> */}
+                  <fieldset>
+                    <input
+                      type="text"
+                      placeholder="Buscar..."
+                      className="search-input "
+                    />
+                  </fieldset>
                 </div>
               </div>
 
@@ -93,9 +69,9 @@ const Home = ({ onClick, onClickUser }) => {
                       Prioridad
                     </div>
                     <div className="tab-list-form-heading-column">Cuenta</div>
+                    <div className="tab-list-form-heading-column">Ramo</div>
                     <div className="tab-list-form-heading-column">Fase</div>
-                    <div className="tab-list-form-heading-column">Estado</div>
-                    <div className="tab-list-form-heading-column">Accion</div>
+                    <div className="tab-list-form-heading-column">Acciones</div>
                   </div>
                   {leads &&
                     leads.map((lead) => (
@@ -120,30 +96,28 @@ const Home = ({ onClick, onClickUser }) => {
                         <div className="tab-list-form-row-column">
                           <button
                             className="user-btn m-0 p-0"
-                            onClick={onClickUser}
+                            // onClick={onClickUser}
                           >
                             {lead.firstName} {lead.lastName}
                           </button>
                         </div>
                         <div className="tab-list-form-row-column">
-                          {lead.phase >= 1.2
-                            ? lead.phase >= 1.4
-                              ? "Revisar Cotizacion"
-                              : "Cotizacion en aseguradora"
-                            : "Borrador"}
+                          {lead.phase >= 1.4
+                            ? "Cotizacion en revision del cliente"
+                            : "Cotizacion en aseguradora"}
                         </div>
                         <div className="tab-list-form-row-column">
-                          {lead.phase <= 1.1
-                            ? "comercial"
-                            : "esperando validacion"}
+                          {lead.phase <= 1.3
+                            ? "esperando validacion"
+                            : "Cotizacion siendo evaluada por el cliente"}
                         </div>
 
                         <div className="tab-list-form-row-column">
-                          {lead.quote === false ? (
+                          {lead.phase >= 1.4 ? (
                             ""
                           ) : (
                             <Link
-                              href={`/clientes/panel/${lead.id}`}
+                              href={`/aseguradoras/panel/${lead.id}`}
                               className="btn p-0 m-0"
                             >
                               <Image src={addIcon} alt="" />
@@ -164,14 +138,14 @@ const Home = ({ onClick, onClickUser }) => {
                             </button>
                           )}
                         </div>
-                        <div className="tab-list-form-row-column">
+                        {/* <div className="tab-list-form-row-column">
                           <button
                             onClick={() => deleteLead(lead.id)}
                             className="btn btn-primary"
                           >
                             X
                           </button>
-                        </div>
+                        </div> */}
                         {/* <div className="tab-list-form-row-column">
                           {lead.quote === false ? (
                             ""

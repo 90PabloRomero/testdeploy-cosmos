@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 import { userService } from "../services";
 import { Nav, Alert, SideBar, Modal } from "../components";
-import { GlobalStyles } from "../styles/globalStyles";
+import GlobalStyles from "../styles/globalStyles";
 import { ModalUser } from "../components/demo/modalUser";
 import { ModalCotizacion } from "../components/demo/modalCotizacion";
 import { ModalCargarCotizacion } from "../components/demo/modalCargarCotizacion";
@@ -56,6 +56,7 @@ function App({ Component, pageProps }) {
       "/clientes/register",
       "/broker/register",
       "/broker/login",
+      "/aseguradoras/login",
       "/clientes/login",
       // dev
       "/broker/register-lead",

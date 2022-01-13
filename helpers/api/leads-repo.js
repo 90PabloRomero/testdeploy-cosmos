@@ -20,6 +20,8 @@ function create(lead) {
   lead.dateCreated = new Date().toISOString();
   lead.dateUpdated = new Date().toISOString();
 
+  // set with starting phase
+  lead.phase = 1;
   // add and save lead
   leads.push(lead);
   saveData();

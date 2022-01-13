@@ -108,10 +108,10 @@ function Login() {
                     <Link href="/clientes/login">Clientes</Link>
                   </li>
                   <li className="mx-2">
-                    <Link href="/account/login">Broker</Link>
+                    <Link href="/broker/login">Broker</Link>
                   </li>
                   <li>
-                    <Link href="/insurance/login">Aseguradora</Link>
+                    <Link href="/aseguradoras/login">Aseguradora</Link>
                   </li>
                 </ul>
               </div>

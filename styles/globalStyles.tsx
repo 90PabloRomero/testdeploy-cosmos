@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = () => {
-  const Styles = createGlobalStyle`
+const Styles = createGlobalStyle`
   /* set defaults */
 
 /* colors */
@@ -112,6 +111,9 @@ header {
   font-weight: 700;
   margin: auto 0;
 }
+.logo-area a {
+  text-decoration: none;
+}
 .nav-area {
   grid-area: nav;
   display: flex;
@@ -206,7 +208,7 @@ main {
   max-height: 150px;
 }
 .message-box::before {
-  background: url(bubble.png) no-repeat left top;
+  background: url(/bubble.png) no-repeat left top;
   content: "";
   position: absolute;
   left: 8px;
@@ -440,7 +442,7 @@ box-shadow: 16px 19px 13px 15px #0004;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(1),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(1){
-  min-width: 15%;
+  min-width: 5%;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(2),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(2){
@@ -800,7 +802,7 @@ box-shadow: 16px 19px 13px 15px #0004;
   right: 0;
   top: 0;
   bottom: 0;
-
+  overflow-y: scroll;
 }
 .layoutModal > div > div {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
@@ -844,6 +846,20 @@ transition: color .15s ease-in-out,background-color .15s ease-in-out,border-colo
   font-size: 12px;
 }
 
+.priority-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url(/priority-icon.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.priority-icon .priority-important{
+filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%) contrast(103%);
+
+}
+.priority-icon .priority-normal {
+  filter: invert(51%) sepia(75%) saturate(7020%) hue-rotate(200deg) brightness(103%) contrast(106%);
+}
 `;
-  return <Styles />;
-};
+export default Styles;

@@ -1,4 +1,13 @@
+import { useEffect, useState } from "react";
+import { leadService } from "../../services";
+
 export default function NextFC() {
+  const [leads, setLeads] = useState(null);
+
+  useEffect(() => {
+    leadService.getAll().then((x) => setLeads(x));
+  }, []);
+
   const FroalaCharts = require("froalacharts");
   const FroalaTheme = require("froalacharts/themes/froalacharts.theme.froala.js");
   const { default: ReactFC } = require("react-froalacharts");
@@ -17,10 +26,10 @@ const dataSource = {
     doughnutRadius: "0%",
   },
   data: [
-    { label: "Solicitudes Recibidas", value: "640481178825" },
-    { label: "Solicitudes Realizadas", value: "640481178825" },
-    { label: "Solicitudes Aceptadas", value: "152441577181" },
-    { label: "Solicitudes Rechazadas", value: "30193577746" },
+    { label: "Solicitudes Recibidas", value: "10" },
+    { label: "Solicitudes Realizadas", value: "10" },
+    { label: "Solicitudes Aceptadas", value: "3" },
+    { label: "Solicitudes Rechazadas", value: "7" },
   ],
 };
 

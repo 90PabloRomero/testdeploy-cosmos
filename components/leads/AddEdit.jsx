@@ -132,7 +132,7 @@ function AddEdit(props) {
         >
           Reset
         </button>
-        <Link href="/users" className="btn btn-link">
+        <Link href="/clientes/panel" className="btn btn-link">
           Cancel
         </Link>
       </div>

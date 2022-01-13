@@ -3,7 +3,7 @@ import { alertService } from "../services";
 import { leadService } from "services";
 import { useEffect, useState } from "react";
 
-function Modal({ modalVisible, onOutsideClick }) {
+function ModalSendLeadCreated({ modalVisible, onOutsideClick }) {
   function handleSendClick() {
     // setModalPage("insurance-sign");
     alertService.success("Cotización enviada al correo electronico del Lead", {
@@ -200,4 +200,4 @@ function Modal({ modalVisible, onOutsideClick }) {
     </div>
   );
 }
-export { Modal };
+export { ModalSendLeadCreated };

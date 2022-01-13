@@ -7,9 +7,9 @@ import { Layout } from "components/account";
 import { userService, alertService } from "services";
 import Head from "next/head";
 
-import heroImage from "public/login-clientes.png";
+import heroImage from "public/fondo-aseg.jpg";
 import Image from "next/image";
-import { Link } from "components";
+import Link from "next/link";
 
 export default Login;
 
@@ -32,9 +32,7 @@ function Login() {
       .login(username, password)
       .then(() => {
         // get return url from query parameters or default to '/'
-        // const returnUrl = router.query.returnUrl || "/";
-        const returnUrl = "/clientes/panel";
-        alertService.success("conexion exitosa");
+        const returnUrl = router.query.returnUrl || "/aseguradoras/panel";
         router.push(returnUrl);
       })
       .catch(alertService.error);
@@ -43,7 +41,7 @@ function Login() {
   return (
     <Layout>
       <Head>
-        <title>Atencion al Cliente Login: Proyecto Cosmos</title>
+        <title>Acceso Login: Proyecto Cosmos</title>
       </Head>
       <div className="container-fluid login-page">
         <div className="row h-100">
@@ -59,6 +57,7 @@ function Login() {
           <div className="col-sm-3 login-side">
             <div className="login-logo-area">
               <h3 className="mb-4">MARCA BLANCA</h3>
+              <h6 className="text-center">Acceso Aseguradoras</h6>
             </div>
             <div className="mt-5 py-md-5">
               {/* <small> usuario broker: admin clave: 123456</small> */}
@@ -103,24 +102,19 @@ function Login() {
                   INGRESAR
                 </button>
               </form>
-              <Link href="/clientes/register">
-                <button className="btn btn-primary btn-login">
-                  CUENTA NUEVA
-                </button>
-              </Link>
-            </div>
-            <div>
-              <ul className="d-flex">
-                <li>
-                  <Link href="/clientes/login">Clientes</Link>
-                </li>
-                <li className="mx-2">
-                  <Link href="/broker/login">Broker</Link>
-                </li>
-                <li>
-                  <Link href="/aseguradoras/login">Aseguradora</Link>
-                </li>
-              </ul>
+              <div className="mt-3">
+                <ul className="d-flex">
+                  <li>
+                    <Link href="/clientes/login">Clientes</Link>
+                  </li>
+                  <li className="mx-2">
+                    <Link href="/broker/login">Broker</Link>
+                  </li>
+                  <li>
+                    <Link href="/aseguradoras/login">Aseguradora</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

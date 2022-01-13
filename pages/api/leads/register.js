@@ -1,18 +1,22 @@
 const bcrypt = require("bcryptjs");
 
-import { apiHandler, usersRepo } from "helpers/api";
+import { apiHandler, leadsRepo } from "helpers/api";
 
 export default apiHandler({
   post: register,
 });
 
 function register(req, res) {
-  const { currentQuotes, ...user } = req.body;
+  // // split out password from user details
+  const { ...lead } = req.body;
 
-  // validate
-  if (usersRepo.find((x) => x.askedForQuote === true))
-    throw `Usted ya tiene una cotizacion pendiente`;
+  // // validate
+  // if (leadsRepo.find((x) => x.username === lead.username))
+  //   throw `Usuario "${lead.username}" existente`;
 
-  usersRepo.apply(user);
+  // // hash password
+  // lead.hash = bcrypt.hashSync(password, 10);
+
+  leadsRepo.create(lead);
   return res.status(200).json({});
 }
