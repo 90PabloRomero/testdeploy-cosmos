@@ -5,7 +5,14 @@ const Styles = createGlobalStyle`
 
 /* colors */
 :root {
-  --green: #006837;
+  --green: #18a763;
+  
+  --linear-gradient-green: linear-gradient(
+    0deg,
+    var(--light-green) 0%,
+    var(--green) 77%
+  );
+  --light-green: #28a745;
   --greentransluscent: #00683744;
   --gray: #cccccc;
   --linegray: #bfbfbf88;
@@ -17,6 +24,14 @@ const Styles = createGlobalStyle`
     var(--lightblue) 0%,
     var(--primary) 77%
   );
+  --linear-gradient-red: linear-gradient(
+    0deg,
+    var(--light-red) 0%,
+    var(--red) 77%
+  );
+
+  --red: #a52727;
+  --light-red:#dc3545;
 
   --linear-gradient-reversed: linear-gradient(
     180deg,
@@ -154,12 +169,12 @@ header {
 /* header ends */
 /* sidebar */
 .sidebar-area {
-  background: var(--linear-gradient);
+ 
   position: relative;
   bottom: 0;
   top: 14.5%;
   width: 20vw;
-}
+} 
 .sidebar-area > div > nav {
   min-height: 100vh;
 }
@@ -167,7 +182,7 @@ header {
   border-top: 2px solid #ffffff24;
 }
 .sidebar-area .sidebar-nav li {
-  padding: 0.5rem 0.65rem;
+ 
   cursor: pointer;
 }
 .sidebar-area img {
@@ -781,8 +796,7 @@ box-shadow: 16px 19px 13px 15px #0004;
 .app-container .sidebar-area{
   user-select: none;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  min-width: 205px;
-  max-width: 205px;
+ width: auto;
 }
 .app-container .modal {
   user-select: none;
@@ -861,5 +875,26 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
 .priority-icon .priority-normal {
   filter: invert(51%) sepia(75%) saturate(7020%) hue-rotate(200deg) brightness(103%) contrast(106%);
 }
+.sidebar-area > div > nav{
+  display:flex !important;}
+  .p-side{
+    position: relative;
+    display: inline-flex;
+  }
+  .txt-center{
+    text-align:center;
+  }
+  .pt-20{
+      padding-top: 20% !important;}
+  .sidebar-client{
+    background: var(--linear-gradient);
+  }
+  .sidebar-broker{
+    background: var(--linear-gradient-red);
+  }
+  .sidebar-insurance{
+    background: var(--linear-gradient-green);
+  }
 `;
+
 export default Styles;
