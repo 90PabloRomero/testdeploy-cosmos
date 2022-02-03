@@ -901,7 +901,20 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   .ml-10{
     margin-left:10px;
   }
-  
+  .info-card{
+    margin-top:5vw;
+  }
+  .archive-card{
+    margin-top:40px;
+    margin-bottom:40px;
+  }
+  .card-check{
+    text-align: start;
+    margin-left: 10%;
+  }
+  .bg-grey{
+    background-color:var(--linegray);
+  }
 `;
 
 export default Styles;
