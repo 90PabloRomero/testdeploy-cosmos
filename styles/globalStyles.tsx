@@ -895,6 +895,13 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   .sidebar-insurance{
     background: var(--linear-gradient-green);
   }
+  .select-product{
+    margin-bottom:20px;
+  }
+  .ml-10{
+    margin-left:10px;
+  }
+  
 `;
 
 export default Styles;
