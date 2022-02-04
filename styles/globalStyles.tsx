@@ -29,7 +29,13 @@ const Styles = createGlobalStyle`
     var(--light-red) 0%,
     var(--red) 77%
   );
-
+  --linear-gradient-khaki: linear-gradient(
+    0deg,
+    var(--light-khaki) 0%,
+    var(--khaki) 77%
+  );
+  --light-khaki: #fffcf1;
+  --khaki: #fff2cc;
   --red: #a52727;
   --light-red:#dc3545;
 
@@ -897,6 +903,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   }
   .select-product{
     margin-bottom:20px;
+    height:40px;
   }
   .ml-10{
     margin-left:10px;
@@ -915,6 +922,54 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   .bg-grey{
     background-color:var(--linegray);
   }
+  .notes-area{
+    height: 15vw;
+  }
+  .txt-align-end{
+    text-align:end;
+  
+  }
+  .notes-n{
+    background:var(--linear-gradient-khaki);
+    border-radius:20px;
+    border: 1px solid;
+    margin: 20px 10px 20px 10px;
+    width:100%;
+    padding:10px
+  
+  }
+  .notes-n p{
+    margin: 20px 0px 20px 0px;
+
+  }
+  .notes-n h4{
+    margin: 20px 0px 0px 20px;
+
+  }
+  .note-footer{
+    text-align:end;
+    margin-right:5px;
+    font-weight: bold;
+
+  }
+  input[type="file"] {
+    color: transparent;
+    position:absolute;
+   left:30px;
+}
+ .left{
+   right:30px;
+ }
+ .archive-select{
+   margin-left:15px;
+   margin-right:15px;
+   height:40px;
+ }
+ .archive-description{
+  text-align:start;
+  margin-right:5px;
+ 
+ }
 `;
 
 export default Styles;

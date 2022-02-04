@@ -1,17 +1,1 @@
-[
-    {
-        "firstName": "pruebas",
-        "lastName": "asdasd",
-        "email": "asdasd",
-        "age": "asd",
-        "conguyeage": "",
-        "numberOfKids": "",
-        "organs": false,
-        "plus": false,
-        "id": 1,
-        "dateCreated": "2022-01-13T17:32:17.506Z",
-        "dateUpdated": "2022-01-13T17:32:17.506Z",
-        "phase": "1.4",
-        "priority": 3
-    }
-]
+[]
