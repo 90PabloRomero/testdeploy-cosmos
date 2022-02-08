@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { Link } from "components";
 import { leadService, alertService } from "services";
 import Head from "next/head";
-import { Tabs, Tab, CloseButton } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 export default LeadCreator;
 
@@ -324,17 +324,93 @@ function LeadCreator ({ onClickOutside }) {
                 />
                 <div className="invalid-feedback">{errors.email?.message}</div>
               </div>
-              <button
+              
+      </div>
+      <div className="txt-align-end">
+            <button
               disabled={formState.isSubmitting}
-              className="btn btn-primary ml-10"
+              className="btn btn-primary"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
-             ></span>
+                <span className="spinner-border spinner-border-sm mr-1 justify-content-end"></span>
               )}
-              Agregar
+              AGREGAR 
             </button>
-      </div>
+            </div>
+            <div className="grid">
+            <Table striped bordered hover>
+
+  <tbody>
+  <tr>
+      
+      <td>Producto</td>
+      <td>Costo</td>
+      <td rowSpan={3}>Resumen</td>
+    </tr>
+    
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      
+      <td>Producto</td>
+      <td>Costo</td>
+      <td rowSpan={3}>Resumen</td>
+    </tr>
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr>
+      
+      <td>Producto</td>
+      <td>Costo</td>
+      <td rowSpan={3}>Resumen</td>
+    </tr>
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+    <tr className="opacity-0">
+      
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</Table>
+            </div>
     </div>
 </div>
           <div className="d-flex justify-content-center">

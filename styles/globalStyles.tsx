@@ -892,6 +892,9 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   }
   .pt-20{
       padding-top: 20% !important;}
+  .pt-auto{
+      padding-top: 6%;}
+
   .sidebar-client{
     background: var(--linear-gradient);
   }
@@ -969,6 +972,30 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   text-align:start;
   margin-right:5px;
  
+ }
+ .opacity-0{
+  opacity:0;
+ }
+ .logo-insurance{
+
+  margin-right:30px;
+ }
+ .logo-insurance img{
+  width:150px;
+  height:150px;
+  border-radius: 100px;
+   
+ }
+ .txt-align-ct{
+   text-align:center;
+ }
+ .btn-archive{
+  text-align: end;
+  margin-left: 150px;
+  margin-top: 50px;
+ }
+ .bg-khaki{
+  background: var(--linear-gradient-khaki);
  }
 `;
 
