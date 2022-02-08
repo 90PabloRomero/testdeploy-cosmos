@@ -9,14 +9,6 @@ function Nav() {
   const router = useRouter();
   const [user, setUser] = useState(null);
 
-  // useEffect(() => {
-  //   const subscription = userService.user.subscribe((x) => setUser(x));
-  //   return () => subscription.unsubscribe();
-  // }, []);
-
-  // // only show nav when logged in
-  // if (!user) return null;
-
   return (
     <header className=" d-print-none">
       <div className="logo-area">
@@ -26,9 +18,11 @@ function Nav() {
         <h6 className="">
           {router.route === "/clientes/panel"
             ? "Sistema de Servicio al Cliente"
-            : router.route === "/"
+            : router.route === "/broker/panel"
             ? "Sistema de Operación del Bróker"
-            : "Sistema de Aseguradoras"}
+            : router.route === "/aseguradoras/panel"
+            ? "Sistema de Aseguradoras"
+            : " "}
         </h6>
       </div>
 

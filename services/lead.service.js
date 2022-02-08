@@ -43,15 +43,7 @@ function getById(id) {
 
 function update(id, params) {
   return fetchWrapper.put(`${baseUrl}/${id}`, params).then((x) => {
-    // // update stored user if the logged in user updated their own record
-    // if (id === leadSubject.value.id) {
-    //   // update local storage
-    //   const lead = { ...leadSubject.value, ...params };
-    //   localStorage.setItem("lead", JSON.stringify(lead));
 
-    //   // publish updated user to subscribers
-    //   leadSubject.next(lead);
-    // }
     return x;
   });
 }

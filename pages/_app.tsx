@@ -63,8 +63,8 @@ function App({ Component, pageProps }) {
     if (!userService.userValue && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
-        pathname: "/broker/login",
-        // query: { returnUrl: router.asPath },
+        pathname: "/clientes/login",
+        query: { returnUrl: router.asPath },
       });
     } else {
       setAuthorized(true);
