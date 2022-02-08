@@ -8,11 +8,11 @@ import Head from "next/head";
 
 const Home = ({ onClick, onClickCotizacion }) => {
   const [modalCalendarVisible, setModalCalendarVisible] = useState(false);
-  // const [leads, setLeads] = useState(null);
+  const [leads, setLeads] = useState(null);
 
-  // useEffect(() => {
-  //   leadService.getAll().then((x) => setLeads(x));
-  // }, []);
+  useEffect(() => {
+    leadService.getAll().then((x) => setLeads(x));
+  }, []);
 
   useEffect(() => {
     document.body.className = modalCalendarVisible ? "modal-mode" : "";
