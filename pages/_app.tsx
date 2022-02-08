@@ -1,9 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-
-// import "styles/globals.css";
-
 import { userService } from "../services";
 import { Nav, Alert, SideBar, Modal } from "../components";
 import GlobalStyles from "../styles/globalStyles";
@@ -66,7 +63,7 @@ function App({ Component, pageProps }) {
     if (!userService.userValue && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
-        pathname: "/clientes/login",
+        pathname: "/broker/login",
         // query: { returnUrl: router.asPath },
       });
     } else {
