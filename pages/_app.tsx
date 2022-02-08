@@ -1,9 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-
-// import "styles/globals.css";
-
 import { userService } from "../services";
 import { Nav, Alert, SideBar, Modal } from "../components";
 import GlobalStyles from "../styles/globalStyles";
@@ -67,7 +64,7 @@ function App({ Component, pageProps }) {
       setAuthorized(false);
       router.push({
         pathname: "/clientes/login",
-        // query: { returnUrl: router.asPath },
+        query: { returnUrl: router.asPath },
       });
     } else {
       setAuthorized(true);

@@ -89,5 +89,19 @@
         "currentQuotes": [],
         "personalData": [],
         "verifiedAccount": true
+    },
+    {
+        "firstName": "angel",
+        "lastName": "calderon",
+        "username": "d2",
+        "hash": "$2a$10$Cn.klYbIXRwfI6y4EafoGuyUfiasE7bTMeSDljdSE704xu1V38pOq",
+        "id": 5,
+        "role": 3,
+        "dateCreated": "2022-01-31T20:36:42.946Z",
+        "dateUpdated": "2022-01-31T20:36:43.072Z",
+        "askedForQuote": false,
+        "currentQuotes": [],
+        "personalData": [],
+        "verifiedAccount": true
     }
 ]

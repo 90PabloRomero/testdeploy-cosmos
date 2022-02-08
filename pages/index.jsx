@@ -10,7 +10,8 @@ import sendIcon from "../public/icon3.png";
 import { useRouter } from "next/router";
 
 const Home = () => {
+  // return <h1>home</h1>;
   const router = useRouter();
-  return router.push("/clientes/login");
+  return router.push("/clientes/panel");
 };
 export default Home;

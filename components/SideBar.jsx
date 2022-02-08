@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Link, NavLink } from ".";
+import { Link } from ".";
 import { userService } from "../services";
 import Image from "next/image";
 
@@ -29,193 +29,233 @@ export function ClientSB() {
   }
   return (
     <>
-      <ul className="sidebar-nav">
+      <ul className="txt-center pt-20 sidebar-client sidebar-nav">
         <li>
           <Link href="/">
-            <span>
+            <div className="txt-center">
               <Image
                 src={iconFoco}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="18"
-                height="18"
+                width="25"
+                height="25"
               />
-            </span>
-            Cotizaciones Solicitadas
+            </div>
+            <p className="p-side"> Cotizaciones Solicitadas</p>
           </Link>
         </li>
         <li>
           <Link href="/">
-            <span>
+            <div>
               <Image
                 src={iconMano}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="18"
-                height="18"
+                width="25"
+                height="25"
               />
-            </span>
-            Documentos por Cargar
+            </div>
+            <p className="p-side"> Documentos por Cargar</p>
           </Link>
         </li>
         <li>
           <Link href="/">
-            <span>
+            <div className="txt-center">
               <Image
                 src={iconCasa}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="18"
-                height="18"
+                width="25"
+                height="25"
               />
-            </span>
-            Polizas emitidas
+            </div>
+            <p className="p-side"> Polizas emitidas</p>
           </Link>
         </li>
         <li>
           <Link href="/">
-            <span>
+            <div>
               <Image
                 src={iconManos}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="18"
-                height="18"
+                width="25"
+                height="25"
               />
-            </span>
-            Cobranza pendiente
+            </div>
+            <p className="p-side"> Cobranza pendiente</p>
           </Link>
         </li>
         <li>
           <Link href="/">
-            <span>
+            <div className="txt-center">
               <Image
                 src={iconPorcentaje}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="18"
-                height="18"
+                width="25"
+                height="25"
               />
-            </span>
-            Indemnizaciones activas
+            </div>
+            <p className="p-side">Indemnizaciones activas</p>
           </Link>
         </li>
         <li>
           <Link href="#">
-            <span>
+            <div className="txt-center">
               <Image
                 src={iconLabel}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="18"
-                height="18"
+                width="25"
+                height="25"
               />
-            </span>
-            Documentos
+            </div>
+            <p className="p-side"> Documentos</p>
           </Link>
+        </li>
+        <li>
+          <a href="#" onClick={logout}>
+            <div className="txt-center">
+              <Image
+                src={iconSalir}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Cerrar Sesión
+          </a>
         </li>
       </ul>
     </>
   );
 }
 export function BrokerSB() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const subscription = userService.user.subscribe((x) => setUser(x));
+    return () => subscription.unsubscribe();
+  }, []);
+
+  function logout() {
+    userService.logout();
+  }
   return (
     <>
-      <ul className="sidebar-nav">
+      <ul className="sidebar-nav txt-center pt-20  sidebar-broker">
         <li>
           <a href="#">
-            <span>
+            <div>
               <Image
                 src={iconFoco}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="20"
-                height="20"
+                width="25"
+                height="25"
               />
-            </span>
+            </div>
             Oportunidad
           </a>
         </li>
         <li>
           <a href="#">
-            <span>
+            <div>
               <Image
                 src={iconMano}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="20"
-                height="20"
+                width="25"
+                height="25"
               />
-            </span>
+            </div>
             Ver clientes
           </a>
         </li>
         <li>
           <a href="#">
-            <span>
+            <div>
               <Image
                 src={iconCasa}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="20"
-                height="20"
+                width="25"
+                height="25"
               />
-            </span>
+            </div>
             Ver Reclamos
           </a>
         </li>
         <li>
           <a href="#">
-            <span>
+            <div>
               <Image
                 src={iconManos}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="20"
-                height="20"
+                width="25"
+                height="25"
               />
-            </span>
+            </div>
             Seguimiento
           </a>
         </li>
         <li>
           <a href="#">
-            <span>
+            <div>
               <Image
                 src={iconPorcentaje}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="20"
-                height="20"
+                width="25"
+                height="25"
               />
-            </span>
+            </div>
             Reportes
           </a>
         </li>
         <li>
           <a href="#">
-            <span>
+            <div>
               <Image
                 src={iconLabel}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="20"
-                height="20"
+                width="25"
+                height="25"
               />
-            </span>
+            </div>
             Estadísticas
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={logout}>
+            <div>
+              <Image
+                src={iconSalir}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Cerrar Sesión
           </a>
         </li>
       </ul>
@@ -223,12 +263,129 @@ export function BrokerSB() {
   );
 }
 export function InsuSB() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const subscription = userService.user.subscribe((x) => setUser(x));
+    return () => subscription.unsubscribe();
+  }, []);
+
+  function logout() {
+    userService.logout();
+  }
   return (
     <>
-      <div className="ul"></div>
+      <ul className="sidebar-nav txt-center pt-20  sidebar-broker">
+        <li>
+          <a href="#">
+            <div>
+              <Image
+                src={iconFoco}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Oportunidad
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>
+              <Image
+                src={iconMano}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Ver clientes
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>
+              <Image
+                src={iconCasa}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Ver Reclamos
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>
+              <Image
+                src={iconManos}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Seguimiento
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>
+              <Image
+                src={iconPorcentaje}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Reportes
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div>
+              <Image
+                src={iconLabel}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Estadísticas
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={logout}>
+            <div>
+              <Image
+                src={iconSalir}
+                alt=" "
+                quality={100}
+                layout="fixed"
+                width="25"
+                height="25"
+              />
+            </div>
+            Cerrar Sesión
+          </a>
+        </li>
+      </ul>
     </>
   );
 }
+
 function SideBar({ sideBarVisible, onOutsideClick }) {
   const router = useRouter();
 
@@ -257,23 +414,6 @@ function SideBar({ sideBarVisible, onOutsideClick }) {
           ) : router.route === "/aseguradoras/panel" ? (
             <InsuSB />
           ) : null}
-          <ul>
-            <li>
-              <a href="#" onClick={logout}>
-                <span>
-                  <Image
-                    src={iconSalir}
-                    alt=" "
-                    quality={100}
-                    layout="fixed"
-                    width="18"
-                    height="18"
-                  />
-                </span>
-                Cerrar Sesión
-              </a>
-            </li>
-          </ul>
         </nav>
       </OutsideClickHandler>
     </aside>
