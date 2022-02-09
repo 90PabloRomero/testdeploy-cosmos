@@ -45,45 +45,9 @@ function LeadCreator({ onClickOutside }) {
       .catch(alertService.error);
   }
 
-  return (<>
-    <>
+  return (
+      <>
       <div>
-      <div className="">Producto</div>
-        <form onSubmit={handleSubmit(onSubmit)}> </form>
-          <div className="modal-body my-2">
-            <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" > 
-            <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
-</select>
-
-<div className="form-group">
-                
-                <input
-                  name="asesoria"
-                  type="checkbox"
-                  {...register("asesoria")}
-                
-                />
-                <label>No sé todavia, necesito asesoria</label>
-                <div className="invalid-feedback">{errors.plus?.message}</div>
-              </div>
-
-            
-                
-                <div className="invalid-feedback">{errors.age?.message}</div>
-              </div>
-            </div>
-          </div>
         <div className="">Datos del solicitante</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="modal-body my-2">
@@ -129,35 +93,23 @@ function LeadCreator({ onClickOutside }) {
                 <div className="invalid-feedback">{errors.email?.message}</div>
               </div>
               <div className="form-group">
-                <label>Numero Telefónico</label>
+                <label>Edad</label>
                 <input
-                  name="number"
+                  name="age"
                   type="text"
                   {...register("age")}
-                  className={`form-control ${errors.number ? "is-invalid" : ""}`}
+                  className={`form-control ${errors.age ? "is-invalid" : ""}`}
                 />
-                <div className="invalid-feedback">{errors.number?.message}</div>
-              </div> </div>
-              <div className="d-flex justify-content-around">
-              <div className="form-group">
-                <label>Fecha de Nacimiento</label>
-                <input
-                  name="datebirth"
-                  type="text"
-                  {...register("date-birth")}
-                  className={`form-control ${errors.datebirth ? "is-invalid" : ""}`}
-                />
-                
-                <div className="invalid-feedback">{errors.datebirth?.message}</div>
+                <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
           </div>
-          {  }
+          {/*  */}
           <div>Datos de los familiares</div>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around">
               <div className="form-group">
-                <label>fecha de nacimiento del conyuge</label>
+                <label>Edad del conyuge</label>
                 <input
                   name="conguyeage"
                   type="text"
@@ -186,7 +138,7 @@ function LeadCreator({ onClickOutside }) {
               </div>
             </div>
           </div>
-          
+          {/*  */}
           <div>Anexos</div>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around">
@@ -231,7 +183,6 @@ function LeadCreator({ onClickOutside }) {
           </div>
         </form>
       </div>
-    </>
     </>
   );
 }
