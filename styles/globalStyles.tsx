@@ -1014,6 +1014,17 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   margin-bottom:20px;
   margin-right:30px;
  }
+ .Container-Solicitud-Landing{
+  display:grid;
+  
+  margin:auto;
+  max-width:950px;
+ }
+ .Container-Solicitud-Landing .subtitle{
+  font-size:25px;
+  color: var(--primary);
+  text-align:center;
+ }
 `;
 
 export default Styles;

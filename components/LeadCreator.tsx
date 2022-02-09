@@ -48,7 +48,7 @@ function LeadCreator({ onClickOutside }) {
   return (<>
     <>
       <div>
-      <div className="">Producto</div>
+      <div className="subtitle">Producto</div>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
@@ -84,7 +84,7 @@ function LeadCreator({ onClickOutside }) {
               </div>
             </div>
           </div>
-        <div className="">Datos del solicitante</div>
+        <div className="subtitle">Datos del solicitante</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around ">
@@ -153,7 +153,7 @@ function LeadCreator({ onClickOutside }) {
             </div>
           </div>
           {  }
-          <div>Datos de los familiares</div>
+          <div className="subtitle">Datos de los familiares</div>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around">
               <div className="form-group">
@@ -187,7 +187,7 @@ function LeadCreator({ onClickOutside }) {
             </div>
           </div>
           
-          <div>Anexos</div>
+          <div className="subtitle">Anexos</div>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around">
               <div className="form-group">

@@ -15,7 +15,9 @@ const Home = () => {
       </Head>
       <main>
         <h1>Solicitud de cotizacion</h1>
+        <div className="Container-Solicitud-Landing">
         <LeadCreator />
+        </div>
       </main>
     </>
   );
