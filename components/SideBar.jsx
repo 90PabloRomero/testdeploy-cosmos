@@ -30,7 +30,7 @@ export function ClientSB() {
   return (
     <>
       <ul className="txt-center sidebar-client sidebar-nav">
-        <li>
+        <li >
           <Link href="/">
             <div className="txt-center">
               <Image
@@ -60,7 +60,7 @@ export function ClientSB() {
             <p className="p-side"> Documentos por Cargar</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="/">
             <div className="txt-center">
               <Image
@@ -75,7 +75,7 @@ export function ClientSB() {
             <p className="p-side"> Polizas emitidas</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="/">
             <div>
               <Image
@@ -105,7 +105,7 @@ export function ClientSB() {
             <p className="p-side">Indemnizaciones activas</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="#">
             <div className="txt-center">
               <Image
@@ -120,7 +120,7 @@ export function ClientSB() {
             <p className="p-side"> Documentos</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#" onClick={logout}>
             <div className="txt-center">
               <Image
@@ -153,7 +153,7 @@ export function BrokerSB() {
   return (
     <>
       <ul className=" txt-center  sidebar-broker sidebar-nav">
-      <li>
+      <li className="li-1line">
           <Link href="/">
             <div className="txt-center">
               <Image
@@ -168,7 +168,7 @@ export function BrokerSB() {
             <p className="p-side"> Oportunidad</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="/">
             <div>
               <Image
@@ -183,7 +183,7 @@ export function BrokerSB() {
             <p className="p-side"> Visualizar clientes</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="/">
             <div className="txt-center">
               <Image
@@ -198,7 +198,7 @@ export function BrokerSB() {
             <p className="p-side"> Ver Reclamos</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="/">
             <div>
               <Image
@@ -213,7 +213,7 @@ export function BrokerSB() {
             <p className="p-side">Seguimiento</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="/">
             <div className="txt-center">
               <Image
@@ -228,7 +228,7 @@ export function BrokerSB() {
             <p className="p-side">Reportes</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <Link href="#">
             <div className="txt-center">
               <Image
@@ -243,7 +243,7 @@ export function BrokerSB() {
             <p className="p-side"> Estadísticas</p>
           </Link>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#" onClick={logout}>
             <div className="txt-center">
               <Image
@@ -276,7 +276,7 @@ export function InsuSB() {
   return (
     <>
       <ul className="sidebar-nav txt-center  sidebar-insurance">
-        <li>
+        <li className="li-1line">
           <a href="#">
             <div>
               <Image
@@ -291,7 +291,7 @@ export function InsuSB() {
             Oportunidad
           </a>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#">
             <div>
               <Image
@@ -306,7 +306,7 @@ export function InsuSB() {
             Ver clientes
           </a>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#">
             <div>
               <Image
@@ -321,7 +321,7 @@ export function InsuSB() {
             Ver Reclamos
           </a>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#">
             <div>
               <Image
@@ -336,7 +336,7 @@ export function InsuSB() {
             Seguimiento
           </a>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#">
             <div>
               <Image
@@ -351,7 +351,7 @@ export function InsuSB() {
             Reportes
           </a>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#">
             <div>
               <Image
@@ -366,7 +366,7 @@ export function InsuSB() {
             Estadísticas
           </a>
         </li>
-        <li>
+        <li className="li-1line">
           <a href="#" onClick={logout}>
             <div>
               <Image
