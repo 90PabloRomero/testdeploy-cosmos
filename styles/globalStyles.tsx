@@ -175,7 +175,7 @@ header {
 /* header ends */
 /* sidebar */
 .sidebar-area {
- 
+  
   position: relative;
   bottom: 0;
   top: 14.5%;
@@ -188,7 +188,7 @@ header {
   border-top: 2px solid #ffffff24;
 }
 .sidebar-area .sidebar-nav li {
- 
+  
   cursor: pointer;
 }
 .sidebar-area img {
@@ -802,7 +802,7 @@ box-shadow: 16px 19px 13px 15px #0004;
 .app-container .sidebar-area{
   user-select: none;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
- width: auto;
+ width: 150px;
 }
 .app-container .modal {
   user-select: none;
@@ -886,24 +886,37 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   .p-side{
     position: relative;
     display: inline-flex;
+    
   }
   .txt-center{
     text-align:center;
   }
-  .pt-20{
-      padding-top: 20% !important;}
+  .pb
   .pt-auto{
       padding-top: 6%;}
+.sidebar-area li{
+  height:85px;
+  margin:auto;
+}
 
   .sidebar-client{
     background: var(--linear-gradient);
+    
+    width:100%;
   }
   .sidebar-broker{
     background: var(--linear-gradient-red);
+    
+    width:100%
   }
   .sidebar-insurance{
     background: var(--linear-gradient-green);
+   
+    width:100%;
   }
+ .li-1line{
+  padding-top: 10%;
+ }
   .select-product{
     
     height:40px;
@@ -1013,6 +1026,17 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  .inputs-left{
   margin-bottom:20px;
   margin-right:30px;
+ }
+ .Container-Solicitud-Landing{
+  display:grid;
+  
+  margin:auto;
+  max-width:950px;
+ }
+ .Container-Solicitud-Landing .subtitle{
+  font-size:25px;
+  color: var(--primary);
+  text-align:center;
  }
 `;
 
