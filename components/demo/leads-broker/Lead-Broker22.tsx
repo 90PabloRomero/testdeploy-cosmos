@@ -50,6 +50,7 @@ function LeadCreator ({ onClickOutside }) {
     <>
     <Tabs defaultActiveKey="Datos" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="Datos" title="Datos">
+  <div className="">
   <div>Poliza</div>
           <div className="modal-body my-2 bg-grey">
           <div >
@@ -183,9 +184,7 @@ function LeadCreator ({ onClickOutside }) {
                   
             </div>
         </div>
-  <div className="">
-     
-        <div className="">Cliente</div>
+        <div className="">Datos del solicitante</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="modal-body my-2 bg-grey">
             <div className="d-flex justify-content-around ">
@@ -264,7 +263,9 @@ function LeadCreator ({ onClickOutside }) {
             </div>
           </div>
           {  }
-          
+         
+          {}
+        
           {}
           <div>Plan Seleccionado</div>
           <div className="modal-body my-2 bg-grey">
@@ -300,131 +301,163 @@ function LeadCreator ({ onClickOutside }) {
             </div>
         </div>
           {}
+          <div>Reclamo</div>
+          <div className="modal-body my-2  bg-grey">
+          <div className="d-flex justify-content-around ">
+            
+            <div className="form-group ">
          
-          <div>Forma de Pago Ofrecido</div>
-          <div className="modal-body my-2 bg-grey">
-          <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-                <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Forma de Pago"
-                disabled
-                />
-                
-              </div>
-              <div className="form-group">
-               
-                <input
-                  
-                  type="text"
-                 
-                  className={`form-control `}
-                  placeholder="detalles"
-                disabled
-                />
-               
-              </div>
-
-
-            </div>
-            
-        </div>
-        <div>Emisión</div>
-          <div className="modal-body my-2 bg-grey">
-          <div >
-              <div className="form-group">
-              
-                <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Instrucciones de emisión"
-                
-                />
-                
-              </div>
-              
-
-
-            </div>
-        </div>
-        <div>Forma de Pago Aplicable</div>
-          <div className="modal-body my-2">
-          <div >
-           
-          <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-               <p>Forma de Pago</p>
-                
-              </div>
-              <div className="form-group">
-               
-              <select name="productos" className="select-product archive-select" > 
-            <option selected value="0"> Tipo de Archivo </option>
-     
-       <option value="1">Cedula</option> 
-       <option value="2">Papeleta de votacion</option> 
-       <option value="3">Informe de Inspección</option> 
-   
-</select>
-               
-              </div>
-
-
-            </div>
-            <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-               <p>Autorización de Débito</p>
-                
-              </div>
-              <div className="form-group">
-               
-              <input type="button"  value="Seleccionar archivo" className="archive-select" />
-               
-              </div>
-            
-
-            </div>
-        
-        
-               
-            </div>
-            <div className="d-flex justify-content-center">
-        <div className="select-product form-group ">
-        <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Codigo OTP"
-                disabled
-                />
-                
-                </div>
-                <div className="form-group">
-                 <button
+            <input
+                size={70}
+                type="text"
+                 className={`form-control  notes-area`}
+                 placeholder="detalle de solicitud"
+              />
              
-              className="btn btn-primary select-product"
+            </div>
+            </div>
+          
+            <div className="d-flex justify-content-around ">
+          <div className="form-group">
+
+                  <input type="text" className={`form-control  `}
+                 placeholder="Fecha y Hora del evento" />
+
+          </div>
+          <div className="form-group">
+                
+                <input
+                  name="lastName"
+                  type="text"
+                  {...register("lastName")}
+                  className={`form-control ${
+                    errors.lastName ? "is-invalid" : ""
+                  }`}
+                  placeholder="Monto Reclamado"
+                
+                />
+                <div className="invalid-feedback">
+                  {errors.lastName?.message}
+                </div>
+              </div>
+              </div>
+          <div className="txt-align-end">
+            <button
+              disabled={formState.isSubmitting}
+              className="btn btn-primary"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1"></span>
+                <span className="spinner-border spinner-border-sm mr-1 justify-content-end"></span>
               )}
-              Firmar Requisitos
+             Archivos Sustento
             </button>
-</div>
-
-        </div>
-        </div>
+            </div>
+            </div>
+            <div className="">Cuenta Bancaria Solicitante </div>
+      
+          <div className="modal-body my-2 bg-grey">
+            <div className="d-flex justify-content-around ">
+              <div className="form-group ">
+                
+                <input
+                  name="firstName"
+                  type="text"
+                  {...register("firstName")}
+                  className={`form-control `
+                } placeholder="Banco"
+               
+                />
+               
+              </div>
+              <div className="form-group ">
+                
+                <input
+                  name="firstName"
+                  type="text"
+                  {...register("firstName")}
+                  className={`form-control `
+                } placeholder="Número de Cuenta"
+               
+                />
+               
+              </div>
+            </div>
+            <div className="d-flex justify-content-around ">
+              <div className="form-group ">
+                
+                <input
+                  name="firstName"
+                  type="text"
+                  {...register("firstName")}
+                  className={`form-control `
+                } placeholder="Tipo"
+               
+                />
+               
+              </div>
+              <div className="form-group ">
+                
+                <input
+                  name="firstName"
+                  type="text"
+                  {...register("firstName")}
+                  className={`form-control `
+                } placeholder="CI Titular"
+               
+                />
+               
+              </div>
+            </div>
+            <div className="d-flex justify-content-around ">
+              <div className="form-group ">
+                
+                <input
+                  name="firstName"
+                  type="text"
+                  {...register("firstName")}
+                  className={`form-control `
+                } placeholder="Nombre Titular"
+               
+                />
+               
+              </div>
+              <div className="form-group ">
+                
+                <input
+                  name="firstName"
+                  type="text"
+                  {...register("firstName")}
+                  className={`form-control `
+                } placeholder="Email Titular"
+               
+                />
+               
+              </div>
+            </div>
+            <div className="d-flex justify-content-around ">
+              <div className="form-group ">
+                
+                <input
+                  name="firstName"
+                  type="text"
+                  {...register("firstName")}
+                  className={`form-control `
+                } placeholder="Celular Titular"
+               
+                />
+               
+              </div>
+              
+            </div>
+          </div>
+          <div className="d-flex justify-content-center">
+          
+            
+       </div>
         
           <div className="d-flex justify-content-center">
-            
+         
+         
             <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
@@ -435,7 +468,6 @@ function LeadCreator ({ onClickOutside }) {
               )}
               DOCUMENTACIÓN INCOMPLETA
             </button>
-            
             <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
@@ -444,18 +476,17 @@ function LeadCreator ({ onClickOutside }) {
                 <span className="spinner-border spinner-border-sm mr-1 " 
              ></span>
               )}
-              EMITIDO
+              ENVIAR RECLAMO A ASEGURADORA
             </button>
-            
+         </div>
             <br></br>
-           
-            
-          </div>
-          <div className="d-flex justify-content-center">
-          <button onClick={onClickOutside} className="btn btn-link">
+            <div className="d-flex justify-content-center">
+            <button onClick={onClickOutside} className="btn btn-link">
               CANCELAR
             </button>
             </div>
+         
+         
         </form>
       </div>
   </Tab>

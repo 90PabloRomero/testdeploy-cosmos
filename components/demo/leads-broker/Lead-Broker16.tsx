@@ -158,7 +158,7 @@ function LeadCreator ({ onClickOutside }) {
                     name="Dateseg"
                     type="text"
                    placeholder="Valor a Pagar"
-                    className={`form-control `}
+                    className={`form-control bg-green`}
                   />
                 </div>
                 <div className="txt-align-end">     
@@ -333,99 +333,41 @@ function LeadCreator ({ onClickOutside }) {
             </div>
             
         </div>
-        <div>Emisión</div>
-          <div className="modal-body my-2 bg-grey">
+        <div>Pago con Tarjeta de Crédito</div>
+          <div className="modal-body my-2 ">
           <div >
-              <div className="form-group">
-              
-                <input
+              <div className="banner-creditcard">
+                  <img src="https://www.nicepng.com/png/detail/254-2542614_social-media-links-visa-mastercard-accepted-banner-sign.png" alt=""  />
                   
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Instrucciones de emisión"
-                
-                />
-                
               </div>
-              
-
-
-            </div>
-        </div>
-        <div>Forma de Pago Aplicable</div>
-          <div className="modal-body my-2">
-          <div >
-           
-          <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-               <p>Forma de Pago</p>
-                
-              </div>
-              <div className="form-group">
-               
-              <select name="productos" className="select-product archive-select" > 
-            <option selected value="0"> Tipo de Archivo </option>
-     
-       <option value="1">Cedula</option> 
-       <option value="2">Papeleta de votacion</option> 
-       <option value="3">Informe de Inspección</option> 
-   
-</select>
-               
-              </div>
-
-
-            </div>
-            <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-               <p>Autorización de Débito</p>
-                
-              </div>
-              <div className="form-group">
-               
-              <input type="button"  value="Seleccionar archivo" className="archive-select" />
-               
-              </div>
-            
-
-            </div>
-        
-        
-               
-            </div>
-            <div className="d-flex justify-content-center">
-        <div className="select-product form-group ">
-        <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Codigo OTP"
-                disabled
-                />
-                
-                </div>
-                <div className="form-group">
-                 <button
+              <div className="d-flex justify-content-around ">
              
-              className="btn btn-primary select-product"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1"></span>
-              )}
-              Firmar Requisitos
-            </button>
-</div>
-
+              <div className="form-group">
+              <input
+                    name="Dateseg"
+                    type="button"
+                   value="                       Pagar                       "
+                    className={`form-control bg-green`}
+                  />
+                  <input
+                  name="asesoria"
+                  type="checkbox"
+                 
+                />
+                <label>He leído y acepto los términos y condiciones</label>
+            
+              </div>
+            </div>
+             
+            </div>
         </div>
-        </div>
+        
         
           <div className="d-flex justify-content-center">
-            
-            <button
+          <button onClick={onClickOutside} className="btn btn-link">
+               CANCELAR
+             </button>
+          <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
             >
@@ -433,28 +375,19 @@ function LeadCreator ({ onClickOutside }) {
                 <span className="spinner-border spinner-border-sm mr-1 " 
              ></span>
               )}
-              DOCUMENTACIÓN INCOMPLETA
+             CONTINUAR
             </button>
             
-            <button
-              disabled={formState.isSubmitting}
-              className="btn btn-primary ml-10"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
-             ></span>
-              )}
-              EMITIDO
-            </button>
-            
-            <br></br>
+         
            
+            
+           
+         
+       
             
           </div>
           <div className="d-flex justify-content-center">
-          <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
-            </button>
+         
             </div>
         </form>
       </div>

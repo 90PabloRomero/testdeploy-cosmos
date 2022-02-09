@@ -50,6 +50,7 @@ function LeadCreator ({ onClickOutside }) {
     <>
     <Tabs defaultActiveKey="Datos" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="Datos" title="Datos">
+  <div className="">
   <div>Poliza</div>
           <div className="modal-body my-2 bg-grey">
           <div >
@@ -183,9 +184,7 @@ function LeadCreator ({ onClickOutside }) {
                   
             </div>
         </div>
-  <div className="">
-     
-        <div className="">Cliente</div>
+        <div className="">Datos del solicitante</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="modal-body my-2 bg-grey">
             <div className="d-flex justify-content-around ">
@@ -264,7 +263,76 @@ function LeadCreator ({ onClickOutside }) {
             </div>
           </div>
           {  }
-          
+          <div>Datos de los familiares</div>
+          <div className="modal-body my-2 bg-grey">
+            <div className="d-flex justify-content-around">
+              <div className="form-group">
+                <label>fecha de nacimiento del conyuge</label>
+                <input
+                  name="conguyeage"
+                  type="text"
+                  {...register("conguyeage")}
+                  className={`form-control ${
+                    errors.conguyeage ? "is-invalid" : ""
+                  }`}
+                  placeholder="dato precompletado"
+                disabled
+                />
+                <div className="invalid-feedback">
+                  {errors.conguyeage?.message}
+                </div>
+              </div>
+              <div className="form-group">
+                <label>Numero de hijos</label>
+                <input
+                  name="numberOfKids"
+                  type="text"
+                  {...register("numberOfKids")}
+                  className={`form-control ${
+                    errors.numberOfKids ? "is-invalid" : ""
+                  }`}
+                  placeholder="dato precompletado"
+                disabled
+                />
+                <div className="invalid-feedback">
+                  {errors.numberOfKids?.message}
+                </div>
+              </div>
+            </div>
+          </div>
+          {}
+          <div>Anexos</div>
+          <div className="modal-body my-2 bg-grey">
+            <div className="d-flex justify-content-around">
+              <div className="form-group">
+                <label>Transplante de Organos?</label>
+                <input
+                  name="organs"
+                  type="checkbox"
+                  {...register("organs")}
+                  className={`form-control ${
+                    errors.organs ? "is-invalid" : ""
+                  }`}
+                  
+                disabled
+                />
+                <div className="invalid-feedback">{errors.organs?.message}</div>
+              </div>
+              <div className="form-group">
+                <label>Cobertura Plus?</label>
+                <input
+                  name="plus"
+                  type="checkbox"
+                  {...register("plus")}
+                  className={`form-control ${errors.plus ? "is-invalid" : ""}`}
+                 
+                disabled
+                />
+                
+                <div className="invalid-feedback">{errors.plus?.message}</div>
+              </div>
+            </div>
+          </div>
           {}
           <div>Plan Seleccionado</div>
           <div className="modal-body my-2 bg-grey">
@@ -300,128 +368,178 @@ function LeadCreator ({ onClickOutside }) {
             </div>
         </div>
           {}
-         
-          <div>Forma de Pago Ofrecido</div>
+          <div>Plan Seleccionado</div>
           <div className="modal-body my-2 bg-grey">
-          <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-                <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Forma de Pago"
-                disabled
-                />
-                
-              </div>
-              <div className="form-group">
-               
-                <input
-                  
-                  type="text"
-                 
-                  className={`form-control `}
-                  placeholder="detalles"
-                disabled
-                />
-               
-              </div>
-
-
-            </div>
+          <div className="d-flex justify-content-around ">
             
-        </div>
-        <div>Emisión</div>
-          <div className="modal-body my-2 bg-grey">
-          <div >
-              <div className="form-group">
-              
-                <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Instrucciones de emisión"
-                
-                />
-                
-              </div>
-              
-
-
-            </div>
-        </div>
-        <div>Forma de Pago Aplicable</div>
-          <div className="modal-body my-2">
-          <div >
-           
-          <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-               <p>Forma de Pago</p>
-                
-              </div>
-              <div className="form-group">
-               
-              <select name="productos" className="select-product archive-select" > 
-            <option selected value="0"> Tipo de Archivo </option>
-     
-       <option value="1">Cedula</option> 
-       <option value="2">Papeleta de votacion</option> 
-       <option value="3">Informe de Inspección</option> 
+            <div className="form-group ">
+            <select name="productos" className="select-product" > 
+            <option selected value="0"> Tipo de Movimiento </option>
+       
+       <option value="1">VUMI opcion 1</option> 
+       <option value="2">VUMI opción 2</option> 
+       <option value="3">VUMI opcion 3</option> 
+    
    
 </select>
-               
-              </div>
-
-
-            </div>
-            <div className="d-flex justify-content-around">
-              <div className="form-group">
-              
-               <p>Autorización de Débito</p>
-                
-              </div>
-              <div className="form-group">
-               
-              <input type="button"  value="Seleccionar archivo" className="archive-select" />
-               
-              </div>
-            
-
-            </div>
-        
-        
-               
-            </div>
-            <div className="d-flex justify-content-center">
-        <div className="select-product form-group ">
-        <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Codigo OTP"
-                disabled
-                />
-                
-                </div>
-                <div className="form-group">
-                 <button
+            <input
+                size={70}
+                type="text"
+                 className={`form-control  notes-area`}
+                 placeholder="detalle de solicitud"
+              />
              
-              className="btn btn-primary select-product"
+            </div>
+            
+          </div>
+          <div className="txt-align-end">
+            <button
+              disabled={formState.isSubmitting}
+              className="btn btn-primary"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1"></span>
+                <span className="spinner-border spinner-border-sm mr-1 justify-content-end"></span>
               )}
-              Firmar Requisitos
+             Archivos de Requisito
             </button>
+            </div>
+            </div>
+            <div>Endoso Aplicado</div>
+          <div className="modal-body my-2 bg-grey">
+          <div >
+          <div className="d-flex ">  
+  
+<div className="form-group  logo-insurance">
+                <input
+                  name="Dateseg"
+                  type="text"
+                 placeholder="Número Poliza"
+                  className={`form-control `}
+                />
+              </div>
+              <div className="form-group logo-insurance">
+                <input
+                  name="Dateseg"
+                  type="text"
+                 placeholder="Número Endoso"
+                  className={`form-control `}
+                />
+              </div>
+              <div className="form-group logo-insurance">
+                <input
+                  name="Dateseg"
+                  type="text"
+                 placeholder="Prima Emitida Diferencia"
+                  className={`form-control `}
+                />
+              </div>
+              <div className="txt-align-end">     
+              <div className="form-group logo-insurance">
+                <input
+                  name="Result"
+                  type="text"
+                 placeholder="Código Referencia"
+                  className={`form-control `}
+                />
+              </div>
+              
+
+
 </div>
 
+      </div>   
+      <div className="d-flex ">  
+  
+  <div className="form-group  logo-insurance">
+                  <input
+                    name="Dateseg"
+                    type="text"
+                   placeholder="Ramo"
+                    className={`form-control `}
+                  />
+                </div>
+                <div className="form-group logo-insurance">
+                  <input
+                    name="Dateseg"
+                    type="text"
+                   placeholder="Fecha Inicio Vigencia"
+                    className={`form-control `}
+                  />
+                </div>
+                <div className="form-group logo-insurance">
+                  <input
+                    name="Dateseg"
+                    type="text"
+                   placeholder="Impuestos"
+                    className={`form-control `}
+                  />
+                </div>
+                <div className="txt-align-end">     
+                <div className="form-group logo-insurance">
+                  <input
+                    name="Result"
+                    type="text"
+                   placeholder="Comisión Broker"
+                    className={`form-control `}
+                  />
+                </div>
+                
+  
+  
+  </div>
+  
+        </div> 
+        <div className="d-flex ">  
+  
+  <div className="form-group  logo-insurance">
+                  <input
+                    name="Dateseg"
+                    type="text"
+                   placeholder="Sucursal"
+                    className={`form-control `}
+                  />
+                </div>
+                <div className="form-group logo-insurance">
+                  <input
+                    name="Dateseg"
+                    type="text"
+                   placeholder="Fecha fin vigencia"
+                    className={`form-control `}
+                  />
+                </div>
+                <div className="form-group logo-insurance">
+                  <input
+                    name="Dateseg"
+                    type="text"
+                   placeholder="Valor a Pagar Diferencia"
+                    className={`form-control `}
+                  />
+                </div>
+                <div className="txt-align-end">     
+                <div className="form-group logo-insurance">
+                <button
+              disabled={formState.isSubmitting}
+              className="btn btn-primary ml-10"
+            >
+              {formState.isSubmitting && (
+                <span className="spinner-border spinner-border-sm mr-1 " 
+             ></span>
+              )}
+              ARCHIVOS DE POLIZA
+            </button>
+                </div>
+                
+  
+  
+  </div>
+  
+        </div> 
+                  
+            </div>
         </div>
-        </div>
+      
+
+       
         
           <div className="d-flex justify-content-center">
             
@@ -433,7 +551,7 @@ function LeadCreator ({ onClickOutside }) {
                 <span className="spinner-border spinner-border-sm mr-1 " 
              ></span>
               )}
-              DOCUMENTACIÓN INCOMPLETA
+              DOCUMENTACION INCOMPLETA
             </button>
             
             <button
@@ -444,9 +562,8 @@ function LeadCreator ({ onClickOutside }) {
                 <span className="spinner-border spinner-border-sm mr-1 " 
              ></span>
               )}
-              EMITIDO
+              CONFIRMACIÓN DE APLICACIÓN DE MOVIMIENTO
             </button>
-            
             <br></br>
            
             

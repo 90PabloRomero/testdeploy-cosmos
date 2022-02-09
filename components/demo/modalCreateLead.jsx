@@ -1,4 +1,4 @@
-import LeadCreator from "components/demo/leads-broker/Lead-Broker11";
+import LeadCreator from "components/LeadCreator";
 import Link from "next/link";
 import { useEffect, useReducer, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
