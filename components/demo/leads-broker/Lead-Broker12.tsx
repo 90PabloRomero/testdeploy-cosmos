@@ -354,7 +354,7 @@ function LeadCreator ({ onClickOutside }) {
             </div>
         </div>
         <div>Forma de Pago Aplicable</div>
-          <div className="modal-body my-2">
+          <div className="modal-body my-2 bg-grey">
           <div >
            
           <div className="d-flex justify-content-around">
@@ -365,7 +365,7 @@ function LeadCreator ({ onClickOutside }) {
               </div>
               <div className="form-group">
                
-              <select name="productos" className="select-product archive-select" > 
+              <select name="productos" className="select-product archive-select" disabled > 
             <option selected value="0"> Tipo de Archivo </option>
      
        <option value="1">Cedula</option> 
@@ -386,7 +386,7 @@ function LeadCreator ({ onClickOutside }) {
               </div>
               <div className="form-group">
                
-              <input type="button"  value="Seleccionar archivo" className="archive-select" />
+              <input type="button"  value="Descargar" className="archive-select bg-khaki" />
                
               </div>
             
@@ -396,31 +396,8 @@ function LeadCreator ({ onClickOutside }) {
         
                
             </div>
-            <div className="d-flex justify-content-center">
-        <div className="select-product form-group ">
-        <input
-                  
-                  type="text"
-                
-                  className={`form-control`}
-                  placeholder="Codigo OTP"
-                disabled
-                />
-                
-                </div>
-                <div className="form-group">
-                 <button
-             
-              className="btn btn-primary select-product"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1"></span>
-              )}
-              Firmar Requisitos
-            </button>
-</div>
-
-        </div>
+          
+        
         </div>
         
           <div className="d-flex justify-content-center">
@@ -444,7 +421,7 @@ function LeadCreator ({ onClickOutside }) {
                 <span className="spinner-border spinner-border-sm mr-1 " 
              ></span>
               )}
-              EMITIDO
+              ENVIAR ASEGURADORA
             </button>
             
             <br></br>

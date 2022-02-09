@@ -905,7 +905,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
     background: var(--linear-gradient-green);
   }
   .select-product{
-    margin-bottom:20px;
+    
     height:40px;
   }
   .ml-10{
@@ -996,6 +996,23 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  }
  .bg-khaki{
   background: var(--linear-gradient-khaki);
+ }
+ .bg-green{
+  background: var(--linear-gradient-green)!important;
+ }
+ .bg-red{
+  background: var(--linear-gradient-red)!important;
+ }
+ .banner-creditcard{
+   text-align:center;
+ }
+ .banner-creditcard img{
+   width:480px;
+   
+ }
+ .inputs-left{
+  margin-bottom:20px;
+  margin-right:30px;
  }
 `;
 
