@@ -10,7 +10,7 @@ import { Tabs, Tab, Table } from 'react-bootstrap';
 
 export default LeadCreator;
 
-function LeadCreator ({ onClickOutside }) {
+function LeadCreator ({ onClickOutside,modalPanel13ShowHandler }) {
   const router = useRouter();
 
   // form validation rules
@@ -48,6 +48,12 @@ function LeadCreator ({ onClickOutside }) {
   
   return (<>
     <>
+    <div
+        className={`layoutModal ${
+          modalPanel13ShowHandler ? "d-block modal-open" : "d-none"
+        }`}
+      >
+        <div className="modal-dialog bg-white">
     <Tabs defaultActiveKey="Datos" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="Datos" title="Datos">
   <div>Poliza</div>
@@ -672,7 +678,7 @@ function LeadCreator ({ onClickOutside }) {
           
   </Tab>
 </Tabs>
-  
+  </div></div>
     </>
   </>
 

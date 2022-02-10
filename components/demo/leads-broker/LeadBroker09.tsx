@@ -53,9 +53,9 @@ function LeadCreator9 ({ onClickOutside }) {
   <div className="">
       <div className="">Producto</div>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
-          <div className="modal-body my-2 bg-grey">
-            <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" disabled >
+        <div className="modal-body my-2 bg-grey">
+            <div className="d-flex justify-content-around ">  <div className=" inputs-left">
+           <select name="productos" className="select-product" disabled> 
             <option selected value="0"> selecciona un producto </option>
        <optgroup label="VUMI">
        <option value="1">VUMI opcion 1</option>
@@ -68,25 +68,26 @@ function LeadCreator9 ({ onClickOutside }) {
        <option value="12">MAPFRE opcion 3</option>
    </optgroup>
 </select>
-
+</div>
+</div>
+<div className="d-flex justify-content-around "> 
 <div className="form-group">
 
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
-                  disabled
-
+                
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-
-
+            
+                </div>
                 <div className="invalid-feedback">{errors.age?.message}</div>
-              </div>
-            </div>
+             
+            
           </div>
         <div className="">Datos del solicitante</div>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -667,6 +668,7 @@ function LeadCreator9 ({ onClickOutside }) {
 
   </Tab>
   <Tab eventKey="Seguimiento " title="Seguimientos " >
+    <div className="inputs-left">
   <div className="">Registro de Actividad con el Cliente</div>
   <div className="modal-body my-2">
 
@@ -726,13 +728,20 @@ function LeadCreator9 ({ onClickOutside }) {
           </div>
           <div className="d-flex">
              <div className="notes-n">
+              <div className="w-20">
             <h4>
               Llamada
             </h4>
-          <div className="archive-description">
-            copiadecedula132313213.PDF
-          </div>
-
+            <div className="form-group ">
+                <input
+                  name="Result"
+                  type="text"
+                 placeholder="Recibida"
+                  className={`form-control  `}
+                  disabled
+                />
+              </div>
+              </div>
                 <div className="note-footer">
                 alberto cajas - 10/01/2022 - 10:55
                 </div>
@@ -740,22 +749,28 @@ function LeadCreator9 ({ onClickOutside }) {
 
           </div>
           <div className="d-flex">
-             <div className="notes-n">
+          <div className="notes-n">
+              <div className="w-20">
             <h4>
               Visita
             </h4>
-
-          <div className="archive-description">
-            copiadecedula132313213.PDF
-          </div>
-
+            <div className="form-group ">
+                <input
+                  name="Result"
+                  type="text"
+                 placeholder="Pendiente"
+                  className={`form-control  `}
+                  disabled
+                />
+              </div>
+              </div>
                 <div className="note-footer">
                 alberto cajas - 10/01/2022 - 10:55
                 </div>
              </div>
 
           </div>
-
+          </div>
   </Tab>
 </Tabs>
 
