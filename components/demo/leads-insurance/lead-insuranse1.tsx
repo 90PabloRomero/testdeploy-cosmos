@@ -85,20 +85,20 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
                       </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
                   disabled
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -176,7 +176,7 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
                   placeholder="dato precompletado"
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -232,7 +232,7 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                  
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -244,10 +244,10 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
                   type="checkbox"
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                 
+
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
             </div>
@@ -265,7 +265,7 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -289,7 +289,7 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
                   disabled
-               
+
                 />
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
@@ -298,50 +298,50 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
           {}
           <div>Resumén de Planes</div>
           <div className="modal-body my-2">
-          <div className="container">   
+          <div className="container">
           <div className="d-flex justify-content-around">
-          
+
           <div className="form-group">
-                
+
                 <input
-                
+
                   type="text"
-                  
+
                   placeholder="Producto"
-               
+
                 />
                 <div className="invalid-feedback">
                   {errors.lastName?.message}
                 </div>
               </div>
-                
+
               <div className="form-group">
-                
+
                 <input
-                
+
                   type="text"
-                 
+
                   placeholder="Precio"
-                
+
                 />
                 <div className="invalid-feedback">
                   {errors.lastName?.message}
                 </div>
               </div>
-            
-           
+
+
               <div className="form-group">
-                
+
                 <input
-                  
+
                   type="text"
-                
+
                   placeholder="Resumen del producto"
-               
+
                 />
                 <div className="invalid-feedback">{errors.email?.message}</div>
               </div>
-              
+
       </div>
       <div className="txt-align-end">
             <button
@@ -351,7 +351,7 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
               {formState.isSubmitting && (
                 <span className="spinner-border spinner-border-sm mr-1 justify-content-end"></span>
               )}
-              AGREGAR 
+              AGREGAR
             </button>
             </div>
             <div className="grid">
@@ -359,71 +359,71 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
 
   <tbody>
   <tr>
-      
+
       <td>Producto</td>
       <td>Costo</td>
       <td rowSpan={3}>Resumen</td>
     </tr>
-    
+
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr>
-      
+
       <td>Producto</td>
       <td>Costo</td>
       <td rowSpan={3}>Resumen</td>
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr>
-      
+
       <td>Producto</td>
       <td>Costo</td>
       <td rowSpan={3}>Resumen</td>
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
   </tbody>
 </Table>
@@ -445,25 +445,25 @@ function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               COTIZADO
             </button>
-            
+
             <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               RIESGO SIN APETITO
             </button>
-            
-           
-            
+
+
+
           </div>
           <div className="d-flex justify-content-center">
           <button onClick={onClickOutside} className="btn btn-link">
