@@ -10,7 +10,7 @@ import { Tabs, Tab, CloseButton } from "react-bootstrap";
 
 export default LeadCreator3;
 
-function LeadCreator3({ onClickOutside,modalPanel3ShowHandler }) {
+function LeadCreator3({ onClickOutside, modalPanel3ShowHandler }) {
   const router = useRouter();
 
   // form validation rules
