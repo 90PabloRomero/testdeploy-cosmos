@@ -22,7 +22,7 @@ function ModalCotizacion({ modalCotizacionVisible, onOutsideClick }) {
       }
     );
   }
-  function handleClickCancelar() {
+  function handleClickcerrar() {
     alertService.error(
       "Usted ha cancelado la solicitud. Puede volver a pedir una nueva cotización."
     );
@@ -309,7 +309,7 @@ function ModalCotizacion({ modalCotizacionVisible, onOutsideClick }) {
                   <li>
                     <span onClick={onOutsideClick}>
                       <button
-                        onClick={handleClickCancelar}
+                        onClick={handleClickcerrar}
                         className="btn bg-danger my-2"
                       >
                         Descartar

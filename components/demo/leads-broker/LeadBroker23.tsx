@@ -505,7 +505,7 @@ function LeadCreator23({ onClickOutside, modalPanel23ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -593,7 +593,7 @@ function LeadCreator23({ onClickOutside, modalPanel23ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

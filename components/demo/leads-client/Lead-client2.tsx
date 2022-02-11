@@ -464,7 +464,7 @@ function LeadCreator({ onClickOutside, modalPanel26ShowHandler }) {
                   </div>
                   <div className="d-flex justify-content-center">
                     <button onClick={onClickOutside} className="btn btn-link">
-                      CANCELAR
+                      cerrar
                     </button>
                   </div>
                 </form>

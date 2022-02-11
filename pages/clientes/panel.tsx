@@ -224,7 +224,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(2)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(2) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión del Broker
                     </div>
@@ -247,7 +250,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(3)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(3) Comercial */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión de la Aseguradora
                     </div>
@@ -268,7 +274,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(4)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(4) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Broker se contactará con usted
                     </div>
@@ -288,7 +297,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(5)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(5) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Nueva Cotización disponible
                     </div>
@@ -311,7 +323,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(6)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(6) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Solicitud Asesoría en proceso
                     </div>
@@ -354,7 +369,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(8)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(8) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Registro de Seguro en Revisión
                     </div>
@@ -371,7 +389,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(9)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(9) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Evaluación de riesgos (en proceso)
                     </div>
@@ -391,7 +412,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(10)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(10) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Revisón final de Documentación
                     </div>
@@ -414,7 +438,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(11)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(11) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Emisión de Poliza enviada al Broker
                     </div>
@@ -432,7 +459,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(12)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(12) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Emisión de Poliza en proceso
                     </div>
@@ -452,7 +482,7 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza</div>
+                    <div className="tab-list-form-row-column">Cobranzas</div>
                     <div className="tab-list-form-row-column">
                       Añadir Débito Bancario
                     </div>
@@ -477,7 +507,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(14){" "}
+                      {/* Cobranzas(14){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Documentación en Revisión del Broker
@@ -498,7 +529,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(15){" "}
+                      {/* Cobranzas(15){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora registrando Forma de pago
@@ -519,7 +551,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(16)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(16) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Transferencia, Depósito o Cheque
                     </div>
@@ -544,7 +579,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(17){" "}
+                      {/* Cobranzas(17){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Documentación en Revisión del Broker
@@ -565,7 +601,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(18)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(18) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Pago con Tarjeta de crédito
                     </div>
@@ -590,7 +629,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(19){" "}
+                      {/* Cobranzas(19){" "}<></> */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora confirmando pago
@@ -632,10 +672,7 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">
-                      {" "}
-                      Movimientos{" "}
-                    </div>
+                    <div className="tab-list-form-row-column"> Movimientos</div>
                     <div className="tab-list-form-row-column">
                       Solicitud de Movimientos
                     </div>
@@ -660,7 +697,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(23){" "}
+                      {/* Movimientos(23){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Broker Revisando requisitos
@@ -681,7 +719,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(24){" "}
+                      {/* Movimientos(24){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora emitiendo movimiento
@@ -730,7 +769,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(26){" "}
+                      {/* Indemnización(26){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Broker Revisando requisitos
@@ -751,7 +791,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(27){" "}
+                      {/* Indemnización(27){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora en Ajuste y Tratamiento
@@ -774,7 +815,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización (28){" "}
+                      {/* Indemnización (28){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisión Liquidación de Siniestros
@@ -800,7 +842,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(29){" "}
+                      {/* Indemnización(29){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Broker realizando Alcance

@@ -62,9 +62,11 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                 className="mb-3"
               >
                 <Tab eventKey="Datos" title="Datos">
-                  <div className=""><div className=" modal-lead-titular">
-            Emisión- <span> Revisión de Formularios y Requisitos</span>
-            </div>
+                  <div className="">
+                    <div className=" modal-lead-titular">
+                      Emisión-{" "}
+                      <span> Revisión de Formularios y Requisitos</span>
+                    </div>
                     <div className="">Producto</div>
                     <form onSubmit={handleSubmit(onSubmit)}> </form>
                     <div className="modal-body my-2 bg-grey">
@@ -501,7 +503,7 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                           {formState.isSubmitting && (
                             <span className="spinner-border spinner-border-sm mr-1 "></span>
                           )}
-                          CLIENTE YA NO DESEA
+                          CANCELAR OPERACION
                         </button>
 
                         <button
@@ -538,7 +540,7 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -626,7 +628,7 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

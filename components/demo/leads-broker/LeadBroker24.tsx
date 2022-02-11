@@ -64,9 +64,10 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                 <Tab eventKey="Datos" title="Datos">
                   <div className="">
                     <div className=" modal-lead-titular">
-  indemnización - <span> Revisión Liquidación de Siniestros</span>
-            </div>
-  <div>Poliza</div>
+                      indemnización -{" "}
+                      <span> Revisión Liquidación de Siniestros</span>
+                    </div>
+                    <div>Poliza</div>
                     <div className="modal-body my-2 bg-grey">
                       <div>
                         <div className="d-flex ">
@@ -518,7 +519,7 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -606,7 +607,7 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

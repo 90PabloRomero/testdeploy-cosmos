@@ -64,9 +64,9 @@ function LeadCreator9({ onClickOutside, modalPanel9ShowHandler }) {
                 <Tab eventKey="Datos" title="Datos">
                   <div className="">
                     <div className=" modal-lead-titular">
-            Emisión- <span> Proceso de Emisión de Polizas</span>
-            </div>
-      <div className="">Producto</div>
+                      Emisión- <span> Proceso de Emisión de Polizas</span>
+                    </div>
+                    <div className="">Producto</div>
                     <form onSubmit={handleSubmit(onSubmit)}> </form>
                     <div className="modal-body my-2 bg-grey">
                       <div className="d-flex justify-content-around ">
@@ -515,7 +515,7 @@ function LeadCreator9({ onClickOutside, modalPanel9ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -603,7 +603,7 @@ function LeadCreator9({ onClickOutside, modalPanel9ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

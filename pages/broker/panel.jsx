@@ -121,13 +121,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
               <div className="tabs-list-crud-actions"></div>
 
               <div className="tab-actions-and-search">
-                <div className="tab-actions">
+                {/* <div className="tab-actions">
                   <button className="btn btn-tab btn-tab-active">
                     Pendientes
                   </button>
                   <button className="btn btn-tab">Todos</button>
                   <button className="btn btn-tab">Renovaciones</button>
-                </div>
+                </div> */}
 
                 <div className="tab-search mb-1">
                   <fieldset>
@@ -137,11 +137,11 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                       className="search-input "
                     />
                   </fieldset>
-                  <Link href="/account/register-lead">
+                  {/* <Link href="/account/register-lead">
                     <button className="btn btn-primary ml-4">
                       CREAR CLIENTE
                     </button>
-                  </Link>
+                  </Link> */}
                   <button
                     onClick={() => setModalCalendarVisible(true)}
                     className="btn btn-primary ml-4"
@@ -175,7 +175,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(2)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(2) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Nueva Cotización a Revisar
                     </div>
@@ -199,7 +202,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(3)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(3) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión de la Aseguradora
                     </div>
@@ -218,7 +224,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(4)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(4)  */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización por Enviar al Cliente
                     </div>
@@ -241,7 +250,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(5)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(5) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión del cliente
                     </div>
@@ -265,7 +277,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(6)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(6) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cliente necesita Asesoría
                     </div>
@@ -312,7 +327,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(8)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(8) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Revisión de Formularios y Requisitos
                     </div>
@@ -334,7 +352,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(9)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(9) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Evaluación de riesgos (en proceso)
                     </div>
@@ -352,7 +373,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(10)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(10) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Revisón del Cliente
                     </div>
@@ -376,7 +400,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(11)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(11) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Proceso de Emisión de Polizas
                     </div>
@@ -399,7 +426,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(12)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(12) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Emisión de Poliza en Aseguradora
                     </div>
@@ -417,7 +447,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza</div>
+                    <div className="tab-list-form-row-column">Cobranzas</div>
                     <div className="tab-list-form-row-column">
                       Cliente Añade Débito Bancario
                     </div>
@@ -439,7 +469,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(14){" "}
+                      {/* Cobranzas(14){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Documentación del Cliente
@@ -465,7 +496,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(15){" "}
+                      {/* Cobranzas(15){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora registrando Forma de pago
@@ -484,7 +516,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(16)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(16) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cliente Añade constancia de pago
                     </div>
@@ -506,7 +541,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(17){" "}
+                      {/* Cobranzas(17){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Documentación del Cliente
@@ -531,7 +567,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(18)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(18) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cliente Añade Tarjeta de Crédito
                     </div>
@@ -551,7 +590,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(19){" "}
+                      {/* Cobranzas(19){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora confirmando pago
@@ -574,7 +614,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(20){" "}
+                      {/* Cobranzas(20){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Activar Poliza
@@ -623,7 +664,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(23){" "}
+                      {/* Movimientos(23){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Solicitud de Movimientos
@@ -650,7 +692,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(24){" "}
+                      {/* Movimientos(24){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora emitiendo movimiento
@@ -694,7 +737,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(26){" "}
+                      {/* Indemnización(26){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Solicitud de Indemnización
@@ -721,7 +765,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(27){" "}
+                      {/* Indemnización(27){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora en Ajuste y Tratamiento
@@ -742,7 +787,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización (28){" "}
+                      {/* Indemnización (28){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Cliente Revisión Liquidación de Siniestros
@@ -765,7 +811,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(29){" "}
+                      {/* Indemnización(29){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       realizar Alcance

@@ -279,7 +279,7 @@ function LeadCreator1({
                       </button>
                       <br></br>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </form>
@@ -367,7 +367,7 @@ function LeadCreator1({
                       ENVIAR FORMULARIO
                     </button>
                     <button onClick={onClickOutside} className="btn btn-link">
-                      CANCELAR
+                      cerrar
                     </button>
                   </div>
                 </div>
