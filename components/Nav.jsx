@@ -13,7 +13,19 @@ function Nav() {
     <header className=" d-print-none">
       <div className="logo-area">
         <div className="logo">
-          <Link href="/">MARCA BLANCA</Link>
+          <Link
+            href={
+              router.route === "/clientes/panel"
+                ? "/clientes/panel"
+                : router.route === "/broker/panel"
+                ? "/broker/panel"
+                : router.route === "/aseguradoras/panel"
+                ? "/aseguradoras/panel"
+                : "/"
+            }
+          >
+            MARCA BLANCA
+          </Link>
         </div>
         <h6 className="">
           {router.route === "/clientes/panel"
@@ -29,7 +41,29 @@ function Nav() {
       {router.route === "/" ? (
         ""
       ) : router.route === "/clientes/panel" ? (
-        ""
+        <>
+          <nav className="nav-area">
+            <ul className="header-nav ">
+              <li>
+                <a href="" className="active">
+                  Comercial
+                </a>
+              </li>
+              <li>
+                <a href="">Emisión</a>
+              </li>
+              <li>
+                <a href="">Cobranzas</a>
+              </li>
+              <li>
+                <a href="">Polizas Activas</a>
+              </li>
+              <li>
+                <a href="">Indemnización</a>
+              </li>
+            </ul>
+          </nav>
+        </>
       ) : (
         <>
           <nav className="nav-area">

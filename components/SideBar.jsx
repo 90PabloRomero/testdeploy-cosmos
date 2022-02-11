@@ -29,8 +29,8 @@ export function ClientSB() {
   }
   return (
     <>
-      <ul className="txt-center sidebar-client sidebar-nav">
-        <li >
+      <ul className="txt-center sidebar-nav">
+        <li>
           <Link href="/">
             <div className="txt-center">
               <Image
@@ -38,8 +38,8 @@ export function ClientSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Cotizaciones Solicitadas</p>
@@ -53,8 +53,8 @@ export function ClientSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Documentos por Cargar</p>
@@ -68,8 +68,8 @@ export function ClientSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Polizas emitidas</p>
@@ -83,8 +83,8 @@ export function ClientSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Cobranza pendiente</p>
@@ -98,8 +98,8 @@ export function ClientSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side">Indemnizaciones activas</p>
@@ -113,8 +113,8 @@ export function ClientSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Documentos</p>
@@ -128,8 +128,8 @@ export function ClientSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             Cerrar Sesión
@@ -152,8 +152,8 @@ export function BrokerSB() {
   }
   return (
     <>
-      <ul className=" txt-center  sidebar-broker sidebar-nav">
-      <li className="li-1line">
+      <ul className=" txt-center  sidebar-nav">
+        <li className="li-1line">
           <Link href="/">
             <div className="txt-center">
               <Image
@@ -161,8 +161,8 @@ export function BrokerSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Oportunidad</p>
@@ -176,8 +176,8 @@ export function BrokerSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Visualizar clientes</p>
@@ -191,8 +191,8 @@ export function BrokerSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Ver Reclamos</p>
@@ -206,8 +206,8 @@ export function BrokerSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side">Seguimiento</p>
@@ -221,8 +221,8 @@ export function BrokerSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side">Reportes</p>
@@ -236,8 +236,8 @@ export function BrokerSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             <p className="p-side"> Estadísticas</p>
@@ -251,8 +251,8 @@ export function BrokerSB() {
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             Cerrar Sesión
@@ -275,107 +275,107 @@ export function InsuSB() {
   }
   return (
     <>
-      <ul className="sidebar-nav txt-center  sidebar-insurance">
+      <ul className=" txt-center  sidebar-nav">
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="/">
+            <div className="txt-center">
               <Image
                 src={iconFoco}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
-            Oportunidad
-          </a>
+            <p className="p-side"> Oportunidad</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
+          <Link href="/">
             <div>
               <Image
                 src={iconMano}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
-            Ver clientes
-          </a>
+            <p className="p-side"> Visualizar clientes</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="/">
+            <div className="txt-center">
               <Image
                 src={iconCasa}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
-            Ver Reclamos
-          </a>
+            <p className="p-side"> Ver Reclamos</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
+          <Link href="/">
             <div>
               <Image
                 src={iconManos}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
-            Seguimiento
-          </a>
+            <p className="p-side">Seguimiento</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="/">
+            <div className="txt-center">
               <Image
                 src={iconPorcentaje}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
-            Reportes
-          </a>
+            <p className="p-side">Reportes</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="#">
+            <div className="txt-center">
               <Image
                 src={iconLabel}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
-            Estadísticas
-          </a>
+            <p className="p-side"> Estadísticas</p>
+          </Link>
         </li>
         <li className="li-1line">
           <a href="#" onClick={logout}>
-            <div>
+            <div className="txt-center">
               <Image
                 src={iconSalir}
                 alt=" "
                 quality={100}
                 layout="fixed"
-                width="25"
-                height="25"
+                width="40"
+                height="40"
               />
             </div>
             Cerrar Sesión
@@ -404,18 +404,26 @@ function SideBar({ sideBarVisible, onOutsideClick }) {
   if (!user) return null;
 
   return (
-    <aside className={` sidebar-area  d-print-none`}>
-      <OutsideClickHandler onOutsideClick={onOutsideClick}>
-        <nav>
-          {router.route === "/clientes/panel" ? (
-            <ClientSB />
-          ) : router.route === "/broker/panel" ? (
-            <BrokerSB />
-          ) : router.route === "/aseguradoras/panel" ? (
-            <InsuSB />
-          ) : null}
-        </nav>
-      </OutsideClickHandler>
+    <aside
+      className={`${
+        router.route === "/clientes/panel"
+          ? "sidebar-client"
+          : router.route === "/broker/panel"
+          ? "sidebar-broker"
+          : router.route === "/aseguradoras/panel"
+          ? "sidebar-insurance"
+          : ""
+      } sidebar-area  d-print-none`}
+    >
+      <nav>
+        {router.route === "/clientes/panel" ? (
+          <ClientSB />
+        ) : router.route === "/broker/panel" ? (
+          <BrokerSB />
+        ) : router.route === "/aseguradoras/panel" ? (
+          <InsuSB />
+        ) : null}
+      </nav>
     </aside>
   );
 }

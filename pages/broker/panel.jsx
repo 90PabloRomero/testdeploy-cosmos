@@ -3,7 +3,7 @@ import { leadService } from "services";
 import { useEffect, useState } from "react";
 import { Link } from "components";
 import CalendarArea from "components/Calendar";
-import LeadCreator2 from "../../components/demo/leads-broker/LeadBroker02" ;
+import LeadCreator2 from "../../components/demo/leads-broker/LeadBroker02";
 import LeadCreator3 from "../../components/demo/leads-broker/LeadBroker03";
 import LeadCreator4 from "../../components/demo/leads-broker/LeadBroker04";
 import LeadCreator6 from "../../components/demo/leads-broker/LeadBroker06";
@@ -56,6 +56,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
       <LeadCreator2
         modalPanel2ShowHandler={modalLead2}
         onClickOutside={() => setModalLead2(false)}
+        onOutsideClick={() => setModalLead2(false)}
       />
       <LeadCreator3
         modalPanel3ShowHandler={modalLead3}
@@ -156,7 +157,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -168,21 +169,19 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">Comercial(2)</div>
                     <div className="tab-list-form-row-column">
-                   Nueva Cotización a Revisar
+                      Nueva Cotización a Revisar
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead2(!modalLead2)}>
+                      <button onClick={() => setModalLead2(!modalLead2)}>
                         Revisar cotizacion
                       </button>
                     </div>
                   </div>
-                  
+
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -196,13 +195,11 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                       Cotización en Revisión de la Aseguradora
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -218,16 +215,14 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead3(!modalLead3)}>
+                      <button onClick={() => setModalLead3(!modalLead3)}>
                         Enviar cotizacion
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-              
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -242,18 +237,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button
-                        className="user-btn m-0 p-0"
-                       
-                      >
-                        Cancelar
-                      </button>
+                      <button className="user-btn m-0 p-0">Cancelar</button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -265,20 +255,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">Comercial(6)</div>
                     <div className="tab-list-form-row-column">
-                    Cliente necesita Asesoría
+                      Cliente necesita Asesoría
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead4(!modalLead4)}>
+                      <button onClick={() => setModalLead4(!modalLead4)}>
                         Realizar Asesoría
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                     
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -293,18 +281,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button
-                        className="user-btn m-0 p-0"
-                       
-                      >
-                        Cancelar
-                      </button>
+                      <button className="user-btn m-0 p-0">Cancelar</button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -316,19 +299,17 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(8)</div>
                     <div className="tab-list-form-row-column">
-                     Revisión de Formularios y Requisitos
+                      Revisión de Formularios y Requisitos
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead6(!modalLead6)}>
-                   Revisar Formularios
+                      <button onClick={() => setModalLead6(!modalLead6)}>
+                        Revisar Formularios
                       </button>
                     </div>
                   </div>
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -339,18 +320,14 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(9)</div>
                     <div className="tab-list-form-row-column">
-                     Evaluación de riesgos (en proceso)
+                      Evaluación de riesgos (en proceso)
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                  
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                     
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -365,18 +342,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button
-                        className="user-btn m-0 p-0"
-                       
-                      >
-                        Cancelar
-                      </button>
+                      <button className="user-btn m-0 p-0">Cancelar</button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -388,20 +360,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(11)</div>
                     <div className="tab-list-form-row-column">
-                   Proceso de Emisión de Polizas
+                      Proceso de Emisión de Polizas
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead9(!modalLead9)}>
-                   Solicitar Emisión
+                      <button onClick={() => setModalLead9(!modalLead9)}>
+                        Solicitar Emisión
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -412,18 +382,14 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(12)</div>
                     <div className="tab-list-form-row-column">
-                    Emisión de Poliza en Aseguradora
+                      Emisión de Poliza en Aseguradora
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                  
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -434,17 +400,15 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">Cobranza</div>
                     <div className="tab-list-form-row-column">
-                     Cliente Añade Débito Bancario
+                      Cliente Añade Débito Bancario
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -454,22 +418,23 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(14) </div>
                     <div className="tab-list-form-row-column">
-                   Revisar Documentación del Cliente 
+                      {" "}
+                      Cobranzas(14){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Revisar Documentación del Cliente
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead12(!modalLead12)}>
-                   Revisar Documentación
+                      <button onClick={() => setModalLead12(!modalLead12)}>
+                        Revisar Documentación
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -478,20 +443,19 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(15) </div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora registrando Forma de pago
+                      {" "}
+                      Cobranzas(15){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora registrando Forma de pago
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                     
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -505,14 +469,12 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                       Cliente Añade constancia de pago
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -522,22 +484,23 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(17) </div>
                     <div className="tab-list-form-row-column">
-                    Revisar Documentación del Cliente
+                      {" "}
+                      Cobranzas(17){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Revisar Documentación del Cliente
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead15(!modalLead15)}>
-                    Revisar Documentación
+                      <button onClick={() => setModalLead15(!modalLead15)}>
+                        Revisar Documentación
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                     
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -551,14 +514,33 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                       Cliente Añade Tarjeta de Crédito
                     </div>
 
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                    
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
                     </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Cobranzas(19){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora confirmando pago
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                      
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -568,19 +550,45 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(19) </div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora confirmando pago
+                      {" "}
+                      Cobranzas(20){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Activar Poliza
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
+                      <button onClick={() => setModalLead17(!modalLead17)}>
+                        Activar Poliza
+                      </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>   
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Movimientos{" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cliente Solicita un Movimiento
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -590,21 +598,66 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(20) </div>
                     <div className="tab-list-form-row-column">
-                   Activar Poliza
+                      {" "}
+                      Movimientos(23){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Revisar Solicitud de Movimientos
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead17(!modalLead17)}>
-                    Activar Poliza
+                      <button onClick={() => setModalLead19(!modalLead19)}>
+                        Revisar Solicitud de Movimientos
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                    
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Movimientos(24){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora emitiendo movimiento
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Indemnización{" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cliente Solicita Indemnización
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -614,19 +667,66 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Movimientos </div>
                     <div className="tab-list-form-row-column">
-                   Cliente Solicita un Movimiento
+                      {" "}
+                      Indemnización(26){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Revisar Solicitud de Indemnización
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
+                      <button onClick={() => setModalLead22(!modalLead22)}>
+                        Revisar Solicitud
+                      </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Indemnización(27){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora en Ajuste y Tratamiento
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Indemnización (28){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cliente Revisión Liquidación de Siniestros
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -636,150 +736,17 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Movimientos(23) </div>
                     <div className="tab-list-form-row-column">
-                   Revisar Solicitud de Movimientos
-                    </div>
-                    
-                    <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead19(!modalLead19)}>
-                    Revisar Solicitud de Movimientos
-                      </button>
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
+                      {" "}
+                      Indemnización(29){" "}
                     </div>
                     <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Movimientos(24) </div>
-                    <div className="tab-list-form-row-column">
-                   Aseguradora emitiendo movimiento
+                      realizar Alcance
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                   
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización </div>
-                    <div className="tab-list-form-row-column">
-                   Cliente Solicita Indemnización
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización(26) </div>
-                    <div className="tab-list-form-row-column">
-                    Revisar Solicitud de Indemnización
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead22(!modalLead22)}>
-                    Revisar Solicitud 
-                      </button>
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización(27) </div>
-                    <div className="tab-list-form-row-column">
-                   Aseguradora en Ajuste y Tratamiento
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                   
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización (28) </div>
-                    <div className="tab-list-form-row-column">
-                   Cliente Revisión Liquidación de Siniestros
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización(29) </div>
-                    <div className="tab-list-form-row-column">
-                  realizar Alcance
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead25(!modalLead25)}>
-                    realizar Alcance
+                      <button onClick={() => setModalLead25(!modalLead25)}>
+                        realizar Alcance
                       </button>
                     </div>
                   </div>

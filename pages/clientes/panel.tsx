@@ -5,10 +5,10 @@ import LeadCreator2 from "../../components/demo/leads-broker/LeadBroker02";
 import LeadCreator3 from "../../components/demo/leads-broker/LeadBroker03";
 import LeadCreator5 from "../../components/demo/leads-broker/LeadBroker05";
 import LeadCreator8 from "../../components/demo/leads-broker/LeadBroker08";
-import LeadCreator11 from "../../components/demo/leads-broker/LeadBroker11" ;
-import LeadCreator14 from "../../components/demo/leads-broker/LeadBroker14" ;
-import LeadCreator16 from "../../components/demo/leads-broker/LeadBroker16" ;
-import LeadCreator18 from "../../components/demo/leads-broker/LeadBroker18"; 
+import LeadCreator11 from "../../components/demo/leads-broker/LeadBroker11";
+import LeadCreator14 from "../../components/demo/leads-broker/LeadBroker14";
+import LeadCreator16 from "../../components/demo/leads-broker/LeadBroker16";
+import LeadCreator18 from "../../components/demo/leads-broker/LeadBroker18";
 import LeadCreator21 from "../../components/demo/leads-broker/LeadBroker21";
 import LeadCreator24 from "../../components/demo/leads-broker/LeadBroker24";
 import Image from "next/image";
@@ -43,9 +43,8 @@ const Home = ({ onClick, onClickUser }) => {
       setLeads((leads) => leads.filter((x) => x.id !== id));
     });
   }
- 
+
   useEffect(() => {
-  
     // aca añadimos  el primer valor del array de usestate como booleano de todos los formularios accion que necesitamos para ajustar el body cada vez que queremos que se abra el modal, necesitamos que el body tenga la clase "modal-mode" para lograr el efecto de ventana superpuesta
     document.body.className = modalLead2 ? "modal-mode" : "";
     document.body.className = modalLead3 ? "modal-mode" : "";
@@ -53,12 +52,11 @@ const Home = ({ onClick, onClickUser }) => {
     document.body.className = modalLead8 ? "modal-mode" : "";
     document.body.className = modalLead11 ? "modal-mode" : "";
     document.body.className = modalLead14 ? "modal-mode" : "";
-    document.body.className = modalLead16 ? "modal-mode" : "" ;
+    document.body.className = modalLead16 ? "modal-mode" : "";
     document.body.className = modalLead18 ? "modal-mode" : "";
     document.body.className = modalLead21 ? "modal-mode" : "";
     document.body.className = modalLead24 ? "modal-mode" : "";
   });
-  
 
   // llamo al modal LeadCreator2 y le doy sus condiciones para que se pueda abrir
   const [modalLead2, setModalLead2] = useState(false);
@@ -68,9 +66,9 @@ const Home = ({ onClick, onClickUser }) => {
   const [modalLead11, setModalLead11] = useState(false);
   const [modalLead14, setModalLead14] = useState(false);
   const [modalLead16, setModalLead16] = useState(false);
-  const [modalLead18, setModalLead18] = useState(false) ;
+  const [modalLead18, setModalLead18] = useState(false);
   const [modalLead21, setModalLead21] = useState(false);
- const [modalLead24, setModalLead24] = useState(false);
+  const [modalLead24, setModalLead24] = useState(false);
 
   return (
     <>
@@ -90,7 +88,7 @@ const Home = ({ onClick, onClickUser }) => {
         modalPanel5ShowHandler={modalLead5}
         onClickOutside={() => setModalLead5(false)}
       />
-       <LeadCreator8
+      <LeadCreator8
         modalPanel8ShowHandler={modalLead8}
         onClickOutside={() => setModalLead8(false)}
       />
@@ -106,7 +104,7 @@ const Home = ({ onClick, onClickUser }) => {
         modalPanel16ShowHandler={modalLead16}
         onClickOutside={() => setModalLead16(false)}
       />
-       <LeadCreator18
+      <LeadCreator18
         modalPanel18ShowHandler={modalLead18}
         onClickOutside={() => setModalLead18(false)}
       />
@@ -114,7 +112,7 @@ const Home = ({ onClick, onClickUser }) => {
         modalPanel21ShowHandler={modalLead21}
         onClickOutside={() => setModalLead21(false)}
       />
-       <LeadCreator24
+      <LeadCreator24
         modalPanel24ShowHandler={modalLead24}
         onClickOutside={() => setModalLead24(false)}
       />
@@ -208,9 +206,7 @@ const Home = ({ onClick, onClickUser }) => {
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -225,20 +221,13 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button
-                        className="user-btn m-0 p-0"
-                       
-                      >
-                        Cancelar
-                      </button>
+                      <button className="user-btn m-0 p-0">Cancelar</button>
                     </div>
                   </div>
-                  
+
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -253,18 +242,11 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button
-                        className="user-btn m-0 p-0"
-                       
-                      >
-                        Cancelar
-                      </button>
+                      <button className="user-btn m-0 p-0">Cancelar</button>
                     </div>
                   </div>
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -278,9 +260,7 @@ const Home = ({ onClick, onClickUser }) => {
                       Broker se contactará con usted
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -301,16 +281,14 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead3(!modalLead3)}>
+                      <button onClick={() => setModalLead3(!modalLead3)}>
                         Revisar cotizacion
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -324,9 +302,7 @@ const Home = ({ onClick, onClickUser }) => {
                       Solicitud Asesoría en proceso
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -347,16 +323,14 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead5(!modalLead5)}>
+                      <button onClick={() => setModalLead5(!modalLead5)}>
                         Llenar Formulario
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -367,17 +341,13 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(8)</div>
                     <div className="tab-list-form-row-column">
-                     Registro de Seguro en Revisión
+                      Registro de Seguro en Revisión
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                  
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -388,12 +358,10 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(9)</div>
                     <div className="tab-list-form-row-column">
-                     Evaluación de riesgos (en proceso)
+                      Evaluación de riesgos (en proceso)
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                  
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -414,16 +382,14 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead8(!modalLead8)}>
+                      <button onClick={() => setModalLead8(!modalLead8)}>
                         Registrar Solicitud
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -434,18 +400,14 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(11)</div>
                     <div className="tab-list-form-row-column">
-                    Emisión de Poliza enviada al Broker
+                      Emisión de Poliza enviada al Broker
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                  
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -456,12 +418,10 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">Emisión(12)</div>
                     <div className="tab-list-form-row-column">
-                    Emisión de Poliza en proceso
+                      Emisión de Poliza en proceso
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                  
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -482,16 +442,14 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead11(!modalLead11)}>
-                    Añadir Débito Bancario
+                      <button onClick={() => setModalLead11(!modalLead11)}>
+                        Añadir Débito Bancario
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -500,20 +458,19 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(14) </div>
                     <div className="tab-list-form-row-column">
-                    Documentación en Revisión del Broker
+                      {" "}
+                      Cobranzas(14){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Documentación en Revisión del Broker
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -522,14 +479,15 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(15) </div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora registrando Forma de pago
+                      {" "}
+                      Cobranzas(15){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora registrando Forma de pago
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -550,16 +508,14 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead14(!modalLead14)}>
-                    Añadir Constancia de Pago
+                      <button onClick={() => setModalLead14(!modalLead14)}>
+                        Añadir Constancia de Pago
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -568,14 +524,15 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(17) </div>
                     <div className="tab-list-form-row-column">
-                    Documentación en Revisión del Broker
+                      {" "}
+                      Cobranzas(17){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Documentación en Revisión del Broker
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -596,15 +553,57 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead16(!modalLead16)}>
-                    Pagar con tarjeta de Crédito
+                      <button onClick={() => setModalLead16(!modalLead16)}>
+                        Pagar con tarjeta de Crédito
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                      
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Cobranzas(19){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora confirmando pago
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Cobranzas(20){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      ¡POLIZA ACTIVA!
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -614,19 +613,66 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(19) </div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora confirmando pago
+                      {" "}
+                      Movimientos{" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Solicitud de Movimientos
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
+                      <button onClick={() => setModalLead18(!modalLead18)}>
+                        Abrir Solicitud de Movimiento
+                      </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                      
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Movimientos(23){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Broker Revisando requisitos
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Movimientos(24){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora emitiendo movimiento
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -636,19 +682,66 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Cobranzas(20) </div>
                     <div className="tab-list-form-row-column">
-                   ¡POLIZA ACTIVA!
+                      {" "}
+                      Indemnización{" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Solicitud de Indemnización
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
+                      <button onClick={() => setModalLead21(!modalLead21)}>
+                        Abrir Solicitud de Indemnización
+                      </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Indemnización(26){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Broker Revisando requisitos
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      {" "}
+                      Indemnización(27){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora en Ajuste y Tratamiento
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
@@ -658,22 +751,23 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Movimientos </div>
                     <div className="tab-list-form-row-column">
-                   Solicitud de Movimientos
+                      {" "}
+                      Indemnización (28){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Revisión Liquidación de Siniestros
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead18(!modalLead18)}>
-                    Abrir Solicitud de Movimiento
+                      <button onClick={() => setModalLead24(!modalLead24)}>
+                        Revisar Liquidación
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
@@ -682,150 +776,15 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column"> Movimientos(23) </div>
                     <div className="tab-list-form-row-column">
-                   Broker Revisando requisitos
+                      {" "}
+                      Indemnización(29){" "}
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Broker realizando Alcance
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Movimientos(24) </div>
-                    <div className="tab-list-form-row-column">
-                   Aseguradora emitiendo movimiento
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización </div>
-                    <div className="tab-list-form-row-column">
-                   Solicitud de Indemnización
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead21(!modalLead21)}>
-                    Abrir Solicitud de Indemnización
-                      </button>
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización(26) </div>
-                    <div className="tab-list-form-row-column">
-                   Broker Revisando requisitos
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización(27) </div>
-                    <div className="tab-list-form-row-column">
-                   Aseguradora en Ajuste y Tratamiento
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización (28) </div>
-                    <div className="tab-list-form-row-column">
-                   Revisión Liquidación de Siniestros
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead24(!modalLead24)}>
-                    Revisar Liquidación
-                      </button>
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column"> Indemnización(29) </div>
-                    <div className="tab-list-form-row-column">
-                  Broker realizando Alcance
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                 </div>
@@ -848,7 +807,6 @@ const Home = ({ onClick, onClickUser }) => {
                   </ul>
                 </div>
               </div>
-              
             </div>
             {/* <CalendarArea
               modalCalendarVisible={modalCalendarVisible}

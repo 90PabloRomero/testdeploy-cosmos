@@ -58,6 +58,7 @@ function App({ Component, pageProps }) {
       "/clientes/panel",
       "/broker/panel",
       "/aseguradoras/panel",
+      "/",
 
       // dev
       "/broker/register-lead",
@@ -109,6 +110,7 @@ function App({ Component, pageProps }) {
           setModalCCVisible(false);
         }}
       />
+
       <div className={`app-container`}>
         {user ? (
           <>

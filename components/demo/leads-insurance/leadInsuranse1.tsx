@@ -2,15 +2,15 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "components";
 import { leadService, alertService } from "services";
 import Head from "next/head";
-import { Table } from 'react-bootstrap';
+import { Table } from "react-bootstrap";
 
-export default LeadCreatori;
+export default LeadInsu1;
 
-function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
+function LeadInsu1 ({ onClickOutside, modalPanel26ShowHandler }) {
   const router = useRouter();
 
   // form validation rules
@@ -45,52 +45,60 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
       })
       .catch(alertService.error);
   }
-  
-  return (<>
+
+  return (
     <>
-    <div className=" modal-lead-titular">
-            Comercial- <span>Cotización Nueva a Revisar</span>
-            </div>
-    <div
-        className={`layoutModal ${
-          modalPaneliShowHandler ? "d-block modal-open" : "d-none"
-        }`}
-      >
-        <div className="modal-dialog bg-white">
-    <div className="">
-      <div className="">Producto</div>
-        <form onSubmit={handleSubmit(onSubmit)}> </form>
-          <div className="modal-body my-2 bg-grey">
-            <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" disabled > 
-            <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
-</select>
+      <>
+        <div
+          className={`layoutModal ${
+            modalPanel26ShowHandler ? "d-block modal-open" : "d-none"
+          }`}
+        >
+          <div className="modal-dialog bg-white">
+            <div className="modal-content">
+              <div className="">
+                <div className="">Producto</div>
+                <form onSubmit={handleSubmit(onSubmit)}> </form>
+                <div className="modal-body my-2 bg-grey">
+                  <div className="d-flex justify-content-around ">
+                    {" "}
+                    <div className="form-group ">
+                      <select
+                        name="productos"
+                        className="select-product"
+                        disabled
+                      >
+                        <option selected value="0">
+                          {" "}
+                          selecciona un producto{" "}
+                        </option>
+                        <optgroup label="VUMI">
+                          <option value="1">VUMI opcion 1</option>
+                          <option value="2">VUMI opción 2</option>
+                          <option value="3">VUMI opcion 3</option>
+                        </optgroup>
+                        <optgroup label="MAPFRE">
+                          <option value="10">MAPFRE opcion 3</option>
+                          <option value="11">MAPFRE opcion 3</option>
+                          <option value="12">MAPFRE opcion 3</option>
+                        </optgroup>
+                      </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
                   disabled
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -168,7 +176,7 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
                   placeholder="dato precompletado"
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -224,7 +232,7 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                  
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -236,10 +244,10 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
                   type="checkbox"
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                 
+
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
             </div>
@@ -257,7 +265,7 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -281,7 +289,7 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
                   disabled
-               
+
                 />
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
@@ -290,50 +298,50 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
           {}
           <div>Resumén de Planes</div>
           <div className="modal-body my-2">
-          <div className="container">   
+          <div className="container">
           <div className="d-flex justify-content-around">
-          
+
           <div className="form-group">
-                
+
                 <input
-                
+
                   type="text"
-                  
+
                   placeholder="Producto"
-               
+
                 />
                 <div className="invalid-feedback">
                   {errors.lastName?.message}
                 </div>
               </div>
-                
+
               <div className="form-group">
-                
+
                 <input
-                
+
                   type="text"
-                 
+
                   placeholder="Precio"
-                
+
                 />
                 <div className="invalid-feedback">
                   {errors.lastName?.message}
                 </div>
               </div>
-            
-           
+
+
               <div className="form-group">
-                
+
                 <input
-                  
+
                   type="text"
-                
+
                   placeholder="Resumen del producto"
-               
+
                 />
                 <div className="invalid-feedback">{errors.email?.message}</div>
               </div>
-              
+
       </div>
       <div className="txt-align-end">
             <button
@@ -343,7 +351,7 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
               {formState.isSubmitting && (
                 <span className="spinner-border spinner-border-sm mr-1 justify-content-end"></span>
               )}
-              AGREGAR 
+              AGREGAR
             </button>
             </div>
             <div className="grid">
@@ -351,71 +359,71 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
 
   <tbody>
   <tr>
-      
+
       <td>Producto</td>
       <td>Costo</td>
       <td rowSpan={3}>Resumen</td>
     </tr>
-    
+
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr>
-      
+
       <td>Producto</td>
       <td>Costo</td>
       <td rowSpan={3}>Resumen</td>
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr>
-      
+
       <td>Producto</td>
       <td>Costo</td>
       <td rowSpan={3}>Resumen</td>
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
     <tr className="opacity-0">
-      
+
       <td></td>
       <td></td>
-      
+
     </tr>
   </tbody>
 </Table>
@@ -437,25 +445,25 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               COTIZADO
             </button>
-            
+
             <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               RIESGO SIN APETITO
             </button>
-            
-           
-            
+
+
+
           </div>
           <div className="d-flex justify-content-center">
           <button onClick={onClickOutside} className="btn btn-link">
@@ -465,8 +473,9 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
         </form>
       </div>
   </div>
-  </div>
-    </>
+  </div>  </div>
+
+      </>
   </>
 
 
