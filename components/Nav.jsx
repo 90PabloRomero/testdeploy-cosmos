@@ -1,4 +1,9 @@
 import { useState } from "react";
+import { CurrencyDollarIcon } from "@heroicons/react/solid";
+import { DocumentTextIcon } from "@heroicons/react/solid";
+import { CashIcon } from "@heroicons/react/solid";
+import { BadgeCheckIcon } from "@heroicons/react/solid";
+import { ReceiptTaxIcon } from "@heroicons/react/solid";
 
 import { useRouter } from "next/router";
 import { Link } from "components";
@@ -29,11 +34,11 @@ function Nav() {
         </div>
         <h6 className="">
           {router.route === "/clientes/panel"
-            ? "Sistema de Servicio al Cliente"
+            ? "Servicio al Cliente. Bienvenido"
             : router.route === "/broker/panel"
-            ? "Sistema de Operación del Bróker"
+            ? "Sistema de Operación del Bróker. Bienvenido"
             : router.route === "/aseguradoras/panel"
-            ? "Sistema de Aseguradoras"
+            ? "Sistema de Operación de Aseguradoras. Bienvenido"
             : " "}
         </h6>
       </div>
@@ -47,19 +52,28 @@ function Nav() {
               <li>
                 <a href="" className="active">
                   Comercial
+                  <CurrencyDollarIcon className="link-icon" />
                 </a>
               </li>
               <li>
-                <a href="">Emisión</a>
+                <a href="">
+                  Emisión <DocumentTextIcon className="link-icon" />
+                </a>
               </li>
               <li>
-                <a href="">Cobranzas</a>
+                <a href="">
+                  Cobranzas <CashIcon className="link-icon" />
+                </a>
               </li>
               <li>
-                <a href="">Polizas Activas</a>
+                <a href="">
+                  Polizas Activas <BadgeCheckIcon className="link-icon" />
+                </a>
               </li>
               <li>
-                <a href="">Indemnización</a>
+                <a href="">
+                  Indemnización <ReceiptTaxIcon className="link-icon" />
+                </a>
               </li>
             </ul>
           </nav>
@@ -71,19 +85,28 @@ function Nav() {
               <li>
                 <a href="" className="active">
                   Comercial
+                  <CurrencyDollarIcon className="link-icon" />
                 </a>
               </li>
               <li>
-                <a href="">Emisión</a>
+                <a href="">
+                  Emisión <DocumentTextIcon className="link-icon" />
+                </a>
               </li>
               <li>
-                <a href="">Cobranzas</a>
+                <a href="">
+                  Cobranzas <CashIcon className="link-icon" />
+                </a>
               </li>
               <li>
-                <a href="">Polizas Activas</a>
+                <a href="">
+                  Polizas Activas <BadgeCheckIcon className="link-icon" />
+                </a>
               </li>
               <li>
-                <a href="">Indemnización</a>
+                <a href="">
+                  Indemnización <ReceiptTaxIcon className="link-icon" />
+                </a>
               </li>
             </ul>
           </nav>

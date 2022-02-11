@@ -175,16 +175,14 @@ header {
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 32px 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 1rem;
 }
 .nav-area .header-nav li {
   color: var(--green);
 }
 .nav-area .header-nav li a:hover {
   color: var(--green);
-  -webkit-box-shadow: 0px 7px 0px 0px var(--green),
-    2px 3px 0px 3px rgba(0, 0, 0, 0);
-  box-shadow: 0px 7px 0px 0px var(--green), 2px 3px 0px 3px rgba(0, 0, 0, 0);
 }
 .nav-area .header-nav li a:active {
   color: var(--green);
@@ -1068,6 +1066,9 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  .modal-lead-titular{
    font-size:22px;
    padding:5px 0px;
+ }
+ .link-icon {
+   max-width: 30px;
  }
 `;
 
