@@ -2,15 +2,15 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "components";
 import { leadService, alertService } from "services";
 import Head from "next/head";
-import { Table } from 'react-bootstrap';
+import { Table } from "react-bootstrap";
 
-export default LeadCreatori;
+export default LeadCreator1;
 
-function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
+function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
   const router = useRouter();
 
   // form validation rules
@@ -45,36 +45,44 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
       })
       .catch(alertService.error);
   }
-  
-  return (<>
+
+  return (
     <>
-    <div className=" modal-lead-titular">
-            Comercial- <span>Cotización Nueva a Revisar</span>
-            </div>
-    <div
-        className={`layoutModal ${
-          modalPaneliShowHandler ? "d-block modal-open" : "d-none"
-        }`}
-      >
-        <div className="modal-dialog bg-white">
-    <div className="">
-      <div className="">Producto</div>
-        <form onSubmit={handleSubmit(onSubmit)}> </form>
-          <div className="modal-body my-2 bg-grey">
-            <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" disabled > 
-            <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
-</select>
+      <>
+        <div
+          className={`layoutModal ${
+            modalPanel26ShowHandler ? "d-block modal-open" : "d-none"
+          }`}
+        >
+          <div className="modal-dialog bg-white">
+            <div className="modal-content">
+              <div className="">
+                <div className="">Producto</div>
+                <form onSubmit={handleSubmit(onSubmit)}> </form>
+                <div className="modal-body my-2 bg-grey">
+                  <div className="d-flex justify-content-around ">
+                    {" "}
+                    <div className="form-group ">
+                      <select
+                        name="productos"
+                        className="select-product"
+                        disabled
+                      >
+                        <option selected value="0">
+                          {" "}
+                          selecciona un producto{" "}
+                        </option>
+                        <optgroup label="VUMI">
+                          <option value="1">VUMI opcion 1</option>
+                          <option value="2">VUMI opción 2</option>
+                          <option value="3">VUMI opcion 3</option>
+                        </optgroup>
+                        <optgroup label="MAPFRE">
+                          <option value="10">MAPFRE opcion 3</option>
+                          <option value="11">MAPFRE opcion 3</option>
+                          <option value="12">MAPFRE opcion 3</option>
+                        </optgroup>
+                      </select>
 
 <div className="form-group">
                 
@@ -465,8 +473,9 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
         </form>
       </div>
   </div>
-  </div>
-    </>
+  </div>  </div>
+
+      </>
   </>
 
 

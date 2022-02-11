@@ -45,6 +45,21 @@ const Styles = createGlobalStyle`
     var(--primary) 77%
   );
   --warning: #ff8300 !important;
+  --linear-client-sidebar: linear-gradient(
+    180deg,
+    #333 0%,
+    var(--lightblue) 77%
+    );
+  --linear-broker-sidebar: linear-gradient(180deg, #333 0%, var(--light-red) 77%);
+  --linear-aseguradora-sidebar: linear-gradient(180deg, #333 0%, var(--light-green) 77%);
+  --linear-client-sidebar-h: linear-gradient(
+    180deg,
+    #333 0%,
+    var(--lightblue) 77%
+    );
+  --linear-broker-sidebar-h: linear-gradient(180deg, #333 0%, var(--light-red) 77%);
+  --linear-aseguradora-sidebar-g: linear-gradient(180deg, #333 0%, var(--light-green) 77%);
+
 }
 
 .layout {
@@ -186,7 +201,7 @@ header {
 .sidebar-area >  nav {
   max-width: 120px;
   position: fixed;
-  top: 72px;
+  top: 87px;
   left: 6px;
 }
 .sidebar-area .sidebar-nav li:nth-child(n + 2) {
@@ -829,7 +844,7 @@ box-shadow: 16px 19px 13px 15px #0004;
 }
 .layoutModal {
   position: absolute;
-  z-index: 99999;
+  z-index: 10;
   left: 0;
   right: 0;
   top: 0;
@@ -912,17 +927,17 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
 }
 
   .sidebar-client{
-    background: var(--linear-gradient);
+    background: var(--linear-client-sidebar);
 
     width:100%;
   }
   .sidebar-broker{
-    background: var(--linear-gradient-red);
+    background: var(--linear-broker-sidebar);
 
     width:100%
   }
   .sidebar-insurance{
-    background: var(--linear-gradient-green);
+    background: var(--linear-aseguradora-sidebar);
 
     width:100%;
   }

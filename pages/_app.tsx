@@ -110,6 +110,7 @@ function App({ Component, pageProps }) {
           setModalCCVisible(false);
         }}
       />
+
       <div className={`app-container`}>
         {user ? (
           <>

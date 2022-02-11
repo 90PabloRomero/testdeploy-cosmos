@@ -275,10 +275,10 @@ export function InsuSB() {
   }
   return (
     <>
-      <ul className="sidebar-nav txt-center">
+      <ul className=" txt-center  sidebar-nav">
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="/">
+            <div className="txt-center">
               <Image
                 src={iconFoco}
                 alt=" "
@@ -288,11 +288,11 @@ export function InsuSB() {
                 height="40"
               />
             </div>
-            Oportunidad
-          </a>
+            <p className="p-side"> Oportunidad</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
+          <Link href="/">
             <div>
               <Image
                 src={iconMano}
@@ -303,12 +303,12 @@ export function InsuSB() {
                 height="40"
               />
             </div>
-            Ver clientes
-          </a>
+            <p className="p-side"> Visualizar clientes</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="/">
+            <div className="txt-center">
               <Image
                 src={iconCasa}
                 alt=" "
@@ -318,11 +318,11 @@ export function InsuSB() {
                 height="40"
               />
             </div>
-            Ver Reclamos
-          </a>
+            <p className="p-side"> Ver Reclamos</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
+          <Link href="/">
             <div>
               <Image
                 src={iconManos}
@@ -333,12 +333,12 @@ export function InsuSB() {
                 height="40"
               />
             </div>
-            Seguimiento
-          </a>
+            <p className="p-side">Seguimiento</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="/">
+            <div className="txt-center">
               <Image
                 src={iconPorcentaje}
                 alt=" "
@@ -348,12 +348,12 @@ export function InsuSB() {
                 height="40"
               />
             </div>
-            Reportes
-          </a>
+            <p className="p-side">Reportes</p>
+          </Link>
         </li>
         <li className="li-1line">
-          <a href="#">
-            <div>
+          <Link href="#">
+            <div className="txt-center">
               <Image
                 src={iconLabel}
                 alt=" "
@@ -363,12 +363,12 @@ export function InsuSB() {
                 height="40"
               />
             </div>
-            Estadísticas
-          </a>
+            <p className="p-side"> Estadísticas</p>
+          </Link>
         </li>
         <li className="li-1line">
           <a href="#" onClick={logout}>
-            <div>
+            <div className="txt-center">
               <Image
                 src={iconSalir}
                 alt=" "
