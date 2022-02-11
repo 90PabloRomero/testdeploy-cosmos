@@ -6,7 +6,7 @@ const Styles = createGlobalStyle`
 /* colors */
 :root {
   --green: #18a763;
-  
+
   --linear-gradient-green: linear-gradient(
     0deg,
     var(--light-green) 0%,
@@ -118,8 +118,10 @@ header {
   grid-template-areas: "logo nav";
   padding: 0 1rem;
   background: white;
-  position:relative;
+  position:fixed;
   z-index: 10;
+  left: 0;
+  right: 0;
 }
 .logo-area {
   display: grid;
@@ -175,25 +177,30 @@ header {
 /* header ends */
 /* sidebar */
 .sidebar-area {
-  
+
   position: relative;
-  bottom: 0;
-  top: 14.5%;
-  width: 20vw;
-} 
-.sidebar-area > div > nav {
-  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  min-height:100%;
+}
+.sidebar-area >  nav {
+  max-width: 120px;
+  position: fixed;
+  top: 72px;
+  left: 6px;
 }
 .sidebar-area .sidebar-nav li:nth-child(n + 2) {
   border-top: 2px solid #ffffff24;
 }
 .sidebar-area .sidebar-nav li {
-  
+  padding: 10px 0;
   cursor: pointer;
+  min-height: 120px;
+  display: grid;
+  place-items: center;
 }
 .sidebar-area img {
-  width: 15px;
-  height: 15px;
+
   margin-right: 10px;
 }
 .sidebar-area a {
@@ -206,6 +213,7 @@ main {
   position: relative;
   z-index: 1;
   padding: 1.5rem;
+  margin-top: 72px;
 }
 .main-layout {
   display: flex;
@@ -457,29 +465,33 @@ box-shadow: 16px 19px 13px 15px #0004;
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column,
 .tab-list-form .tab-list-form-row .tab-list-form-row-column {
   border-right: 1px solid var(--linegray);
-  padding: 18px 0;
-  padding-left: 10.5px;
   height: 100%;
+  display: grid;
+  place-items: center start;
+  padding-left: 15px;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(1),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(1){
-  min-width: 5%;
+  width: 6%;
+  display: grid;
+  place-items: center;
+  padding-left: 0;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(2),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(2){
-  min-width: 25%;
+  width: 20%;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(3),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(3){
-  min-width: 25%;
+  width: 20%;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(4),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(4){
-  min-width: 21%;
+  width: 40%;
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(5),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(5){
-  min-width: 20.3%;
+  width: 14%;
 }
 .tab-list-form .tab-list-form-row:nth-child(odd) {
   background: #f2f2f2;
@@ -802,7 +814,7 @@ box-shadow: 16px 19px 13px 15px #0004;
 .app-container .sidebar-area{
   user-select: none;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
- width: 150px;
+  max-width: 135px;;
 }
 .app-container .modal {
   user-select: none;
@@ -886,7 +898,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   .p-side{
     position: relative;
     display: inline-flex;
-    
+
   }
   .txt-center{
     text-align:center;
@@ -901,24 +913,24 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
 
   .sidebar-client{
     background: var(--linear-gradient);
-    
+
     width:100%;
   }
   .sidebar-broker{
     background: var(--linear-gradient-red);
-    
+
     width:100%
   }
   .sidebar-insurance{
     background: var(--linear-gradient-green);
-   
+
     width:100%;
   }
  .li-1line{
   padding-top: 10%;
  }
   .select-product{
-    
+
     height:40px;
   }
   .ml-10{
@@ -943,7 +955,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   }
   .txt-align-end{
     text-align:end;
-  
+
   }
   .notes-n{
     background:var(--linear-gradient-khaki);
@@ -952,7 +964,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
     margin: 20px 10px 20px 10px;
     width:100%;
     padding:10px
-  
+
   }
   .notes-n p{
     margin: 20px 0px 20px 0px;
@@ -984,7 +996,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  .archive-description{
   text-align:start;
   margin-right:5px;
- 
+
  }
  .opacity-0{
   opacity:0;
@@ -997,7 +1009,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   width:150px;
   height:150px;
   border-radius: 100px;
-   
+
  }
  .txt-align-ct{
    text-align:center;
@@ -1021,7 +1033,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  }
  .banner-creditcard img{
    width:480px;
-   
+
  }
  .inputs-left{
   margin-bottom:20px;
@@ -1029,7 +1041,7 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  }
  .Container-Solicitud-Landing{
   display:grid;
-  
+
   margin:auto;
   max-width:950px;
  }

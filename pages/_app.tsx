@@ -58,6 +58,7 @@ function App({ Component, pageProps }) {
       "/clientes/panel",
       "/broker/panel",
       "/aseguradoras/panel",
+      "/",
 
       // dev
       "/broker/register-lead",
