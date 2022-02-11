@@ -54,17 +54,17 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
         }`}
       >
         <div className="modal-dialog bg-white">
-
           <div className="modal-content">
             <Tabs
               defaultActiveKey="Datos"
               id="uncontrolled-tab-example"
               className="mb-3"
             >
-              <Tab eventKey="Datos" title="Datos"><div>
-              <div className=" modal-lead-titular">
-            Comercial- <span>Nueva Cotización a Revisar</span>
-                </div>
+              <Tab eventKey="Datos" title="Datos">
+                <div>
+                  <div className=" modal-lead-titular">
+                    Comercial- <span>Nueva Cotización a Revisar</span>
+                  </div>
                   <div className="">Producto</div>
                   <form onSubmit={handleSubmit(onSubmit)}> </form>
                   <div className="modal-body my-2">
@@ -327,7 +327,7 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                     </div>
                     <div className="d-flex justify-content-center">
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </form>
@@ -415,7 +415,7 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                       ENVIAR FORMULARIO
                     </button>
                     <button onClick={onClickOutside} className="btn btn-link">
-                      CANCELAR
+                      cerrar
                     </button>
                   </div>
                 </div>

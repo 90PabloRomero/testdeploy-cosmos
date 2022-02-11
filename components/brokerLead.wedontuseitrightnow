@@ -55,34 +55,34 @@ function LeadCreator({ onClickOutside }) {
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" > 
+           <select name="productos" className="select-product" >
             <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
+       <optgroup label="VUMI">
+       <option value="1">VUMI opcion 1</option>
+       <option value="2">VUMI opción 2</option>
+       <option value="3">VUMI opcion 3</option>
+   </optgroup>
+   <optgroup label="MAPFRE">
+       <option value="10">MAPFRE opcion 3</option>
+       <option value="11">MAPFRE opcion 3</option>
+       <option value="12">MAPFRE opcion 3</option>
+   </optgroup>
 </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -150,7 +150,7 @@ function LeadCreator({ onClickOutside }) {
                   {...register("date-birth")}
                   className={`form-control ${errors.datebirth ? "is-invalid" : ""}`}
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -229,7 +229,7 @@ function LeadCreator({ onClickOutside }) {
               ENVIAR FORMULARIO
             </button>
             <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
+              cerrar
             </button>
           </div>
         </form>
@@ -242,42 +242,42 @@ function LeadCreator({ onClickOutside }) {
 
 lead 1 del broker
 return (<>
-  
+
    <>
-   
+
       <div>
       <div className="">Producto</div>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" > 
+           <select name="productos" className="select-product" >
             <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
+       <optgroup label="VUMI">
+       <option value="1">VUMI opcion 1</option>
+       <option value="2">VUMI opción 2</option>
+       <option value="3">VUMI opcion 3</option>
+   </optgroup>
+   <optgroup label="MAPFRE">
+       <option value="10">MAPFRE opcion 3</option>
+       <option value="11">MAPFRE opcion 3</option>
+       <option value="12">MAPFRE opcion 3</option>
+   </optgroup>
 </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -345,7 +345,7 @@ return (<>
                   {...register("date-birth")}
                   className={`form-control ${errors.datebirth ? "is-invalid" : ""}`}
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -428,16 +428,16 @@ return (<>
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               DEJAR PENDIENTE
             </button>
             <br></br>
             <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
+              cerrar
             </button>
-            
+
           </div>
         </form>
       </div>
@@ -450,34 +450,34 @@ return (<>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" > 
+           <select name="productos" className="select-product" >
             <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
+       <optgroup label="VUMI">
+       <option value="1">VUMI opcion 1</option>
+       <option value="2">VUMI opción 2</option>
+       <option value="3">VUMI opcion 3</option>
+   </optgroup>
+   <optgroup label="MAPFRE">
+       <option value="10">MAPFRE opcion 3</option>
+       <option value="11">MAPFRE opcion 3</option>
+       <option value="12">MAPFRE opcion 3</option>
+   </optgroup>
 </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -545,7 +545,7 @@ return (<>
                   {...register("date-birth")}
                   className={`form-control ${errors.datebirth ? "is-invalid" : ""}`}
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -666,59 +666,59 @@ return (<>
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               DEJAR PENDIENTE
             </button>
             <br></br>
-           
-            
+
+
           </div>
           <div className="d-flex justify-content-center">
           <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
+              cerrar
             </button>
             </div>
         </form>
       </div>
 
       lead 3 del broker
-      
+
       <div className="">
       <div className="">Producto</div>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2 bg-grey">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" disabled > 
+           <select name="productos" className="select-product" disabled >
             <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
+       <optgroup label="VUMI">
+       <option value="1">VUMI opcion 1</option>
+       <option value="2">VUMI opción 2</option>
+       <option value="3">VUMI opcion 3</option>
+   </optgroup>
+   <optgroup label="MAPFRE">
+       <option value="10">MAPFRE opcion 3</option>
+       <option value="11">MAPFRE opcion 3</option>
+       <option value="12">MAPFRE opcion 3</option>
+   </optgroup>
 </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
                   disabled
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -796,7 +796,7 @@ return (<>
                   placeholder="dato precompletado"
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -852,7 +852,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                  
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -864,10 +864,10 @@ return (<>
                   type="checkbox"
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                 
+
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
             </div>
@@ -885,7 +885,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -909,7 +909,7 @@ return (<>
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
                   disabled
-               
+
                 />
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
@@ -918,10 +918,10 @@ return (<>
           {}
           <div>Resumén de Planes</div>
           <div className="modal-body my-2">
-          <div className="container">   
-    
-    <div className="row">       
-      <div className="col-md">        
+          <div className="container">
+
+    <div className="row">
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">VUMI</h4>
@@ -943,34 +943,34 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
-                <input               
-                  type="checkbox"                
+
+                <input
+                  type="checkbox"
                />
-                <label>Enviar</label>               
+                <label>Enviar</label>
               </div>
               <div className="form-group card-check">
 
-                <input                 
+                <input
                   type="checkbox"
                              />
                 Recomendada
-                
-             </div> 
+
+             </div>
             </div>
-          </div>          
+          </div>
       </div>
 
-      <div className="col-md">        
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">SaludSa</h4>
               <div className="info-card">
-                
+
               <h5 >Producto</h5>
               <p>
                 nombre del producto
@@ -988,36 +988,36 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
+
                 <input
-                
+
                   type="checkbox"
-                 
+
                 />
                 <label>Enviar</label>
-                
+
               </div>
               <div className="form-group card-check">
-              
+
                 <input
-                  
+
                   type="checkbox"
-                 
-                 
+
+
                 />
                 Recomendada
-                
+
               </div>
-   
+
             </div>
-          </div>          
+          </div>
       </div>
-      
-      <div className="col-md">        
+
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">CONFIAMED</h4>
@@ -1039,35 +1039,35 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
+
                 <input
-                
+
                   type="checkbox"
-                 
+
                 />
                 <label>Enviar</label>
-                
+
               </div>
               <div className="form-group card-check">
-              
+
                 <input
-                  
+
                   type="checkbox"
-                 
-                 
+
+
                 />
                 Recomendada
-                
+
               </div>
-   
+
             </div>
             </div>
-          </div>          
-      </div>      
+          </div>
+      </div>
       </div>
     </div>
 
@@ -1086,18 +1086,18 @@ return (<>
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               DEJAR PENDIENTE
             </button>
             <br></br>
-           
-            
+
+
           </div>
           <div className="d-flex justify-content-center">
           <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
+              cerrar
             </button>
             </div>
         </form>
@@ -1107,10 +1107,10 @@ return (<>
 
 
 
-    
 
 
-    revision del cliente 
+
+    revision del cliente
 
 
 
@@ -1122,35 +1122,35 @@ return (<>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2 bg-grey">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" disabled > 
+           <select name="productos" className="select-product" disabled >
             <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
+       <optgroup label="VUMI">
+       <option value="1">VUMI opcion 1</option>
+       <option value="2">VUMI opción 2</option>
+       <option value="3">VUMI opcion 3</option>
+   </optgroup>
+   <optgroup label="MAPFRE">
+       <option value="10">MAPFRE opcion 3</option>
+       <option value="11">MAPFRE opcion 3</option>
+       <option value="12">MAPFRE opcion 3</option>
+   </optgroup>
 </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
                   disabled
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -1228,7 +1228,7 @@ return (<>
                   placeholder="dato precompletado"
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -1284,7 +1284,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                  
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -1296,10 +1296,10 @@ return (<>
                   type="checkbox"
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                 
+
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
             </div>
@@ -1317,7 +1317,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -1341,7 +1341,7 @@ return (<>
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
                   disabled
-               
+
                 />
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
@@ -1350,10 +1350,10 @@ return (<>
           {}
           <div>Resumén de Planes</div>
           <div className="modal-body my-2">
-          <div className="container">   
-    
-    <div className="row">       
-      <div className="col-md">        
+          <div className="container">
+
+    <div className="row">
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">VUMI</h4>
@@ -1375,30 +1375,30 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
-                <input               
-                  type="checkbox"                
+
+                <input
+                  type="checkbox"
                />
-                <label>seleccionar</label>               
+                <label>seleccionar</label>
               </div>
               <div className="form-group card-check">
 
-         
-             </div> 
+
+             </div>
             </div>
-          </div>          
+          </div>
       </div>
 
-      <div className="col-md">        
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">SaludSa</h4>
               <div className="info-card">
-                
+
               <h5 >Producto</h5>
               <p>
                 nombre del producto
@@ -1416,31 +1416,31 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
+
                 <input
-                
+
                   type="checkbox"
-                 
+
                 />
                 <label>seleccionar</label>
-                
+
               </div>
               <div className="form-group card-check">
-              
-            
+
+
                <b> Recomendada </b>
-                
+
               </div>
-   
+
             </div>
-          </div>          
+          </div>
       </div>
-      
-      <div className="col-md">        
+
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">CONFIAMED</h4>
@@ -1462,29 +1462,29 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
+
                 <input
-                
+
                   type="checkbox"
-                 
+
                 />
                 <label>seleccionar</label>
-                
+
               </div>
               <div className="form-group card-check">
-              
-            
-            
+
+
+
               </div>
-   
+
             </div>
             </div>
-          </div>          
-      </div>      
+          </div>
+      </div>
       </div>
     </div>
 
@@ -1503,29 +1503,29 @@ return (<>
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               YA NO DESEO
             </button>
-            
+
             <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               REQUIERO ASESORAMIENTO
             </button>
             <br></br>
-           
-            
+
+
           </div>
           <div className="d-flex justify-content-center">
           <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
+              cerrar
             </button>
             </div>
         </form>
@@ -1542,35 +1542,35 @@ return (<>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2 bg-grey">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" disabled > 
+           <select name="productos" className="select-product" disabled >
             <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
+       <optgroup label="VUMI">
+       <option value="1">VUMI opcion 1</option>
+       <option value="2">VUMI opción 2</option>
+       <option value="3">VUMI opcion 3</option>
+   </optgroup>
+   <optgroup label="MAPFRE">
+       <option value="10">MAPFRE opcion 3</option>
+       <option value="11">MAPFRE opcion 3</option>
+       <option value="12">MAPFRE opcion 3</option>
+   </optgroup>
 </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
                   disabled
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -1648,7 +1648,7 @@ return (<>
                   placeholder="dato precompletado"
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -1704,7 +1704,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                  
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -1716,10 +1716,10 @@ return (<>
                   type="checkbox"
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                 
+
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
             </div>
@@ -1737,7 +1737,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -1761,7 +1761,7 @@ return (<>
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
                   disabled
-               
+
                 />
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
@@ -1770,10 +1770,10 @@ return (<>
           {}
           <div>Resumén de Planes</div>
           <div className="modal-body my-2">
-          <div className="container">   
-    
-    <div className="row">       
-      <div className="col-md">        
+          <div className="container">
+
+    <div className="row">
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">VUMI</h4>
@@ -1795,30 +1795,30 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
-                <input               
-                  type="checkbox"                
+
+                <input
+                  type="checkbox"
                />
-                <label>seleccionar</label>               
+                <label>seleccionar</label>
               </div>
               <div className="form-group card-check">
 
-         
-             </div> 
+
+             </div>
             </div>
-          </div>          
+          </div>
       </div>
 
-      <div className="col-md">        
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">SaludSa</h4>
               <div className="info-card">
-                
+
               <h5 >Producto</h5>
               <p>
                 nombre del producto
@@ -1836,26 +1836,26 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
+
                 <input
-                
+
                   type="checkbox"
-                 
+
                 />
                 <label>seleccionar</label>
-                
+
               </div>
-              
-   
+
+
             </div>
-          </div>          
+          </div>
       </div>
-      
-      <div className="col-md">        
+
+      <div className="col-md">
           <div className="card text-center">
             <div className="card-body">
               <h4 className="card-title">CONFIAMED</h4>
@@ -1877,29 +1877,29 @@ return (<>
                resumen del producto
              </p>
              </div>
-              
+
               <a href="#" className="btn btn-primary archive-card">Archivos</a>
 
               <div className="form-group card-check">
-                
+
                 <input
-                
+
                   type="checkbox"
-                 
+
                 />
                 <label>seleccionar</label>
-                
+
               </div>
               <div className="form-group card-check">
-              
-            
-            
+
+
+
               </div>
-   
+
             </div>
             </div>
-          </div>          
-      </div>      
+          </div>
+      </div>
       </div>
     </div>
 
@@ -1918,29 +1918,29 @@ return (<>
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               CLIENTE YA NO DESEA
             </button>
-            
+
             <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               RECOTIZAR
             </button>
             <br></br>
-           
-            
+
+
           </div>
           <div className="d-flex justify-content-center">
           <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
+              cerrar
             </button>
             </div>
         </form>
@@ -1952,41 +1952,41 @@ return (<>
     cotizaciones pendientes del seguro
 
 
-    
+
       <div className="">
       <div className="">Producto</div>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
           <div className="modal-body my-2 bg-grey">
             <div className="d-flex justify-content-around ">  <div className="form-group ">
-           <select name="productos" className="select-product" disabled > 
+           <select name="productos" className="select-product" disabled >
             <option selected value="0"> selecciona un producto </option>
-       <optgroup label="VUMI"> 
-       <option value="1">VUMI opcion 1</option> 
-       <option value="2">VUMI opción 2</option> 
-       <option value="3">VUMI opcion 3</option> 
-   </optgroup> 
-   <optgroup label="MAPFRE"> 
-       <option value="10">MAPFRE opcion 3</option> 
-       <option value="11">MAPFRE opcion 3</option> 
-       <option value="12">MAPFRE opcion 3</option> 
-   </optgroup> 
+       <optgroup label="VUMI">
+       <option value="1">VUMI opcion 1</option>
+       <option value="2">VUMI opción 2</option>
+       <option value="3">VUMI opcion 3</option>
+   </optgroup>
+   <optgroup label="MAPFRE">
+       <option value="10">MAPFRE opcion 3</option>
+       <option value="11">MAPFRE opcion 3</option>
+       <option value="12">MAPFRE opcion 3</option>
+   </optgroup>
 </select>
 
 <div className="form-group">
-                
+
                 <input
                   name="asesoria"
                   type="checkbox"
                   {...register("asesoria")}
                   disabled
-                
+
                 />
                 <label>No sé todavia, necesito asesoria</label>
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
 
-            
-                
+
+
                 <div className="invalid-feedback">{errors.age?.message}</div>
               </div>
             </div>
@@ -2064,7 +2064,7 @@ return (<>
                   placeholder="dato precompletado"
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.datebirth?.message}</div>
               </div>
             </div>
@@ -2120,7 +2120,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                  
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -2132,10 +2132,10 @@ return (<>
                   type="checkbox"
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                 
+
                 disabled
                 />
-                
+
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
             </div>
@@ -2153,7 +2153,7 @@ return (<>
                   className={`form-control ${
                     errors.organs ? "is-invalid" : ""
                   }`}
-                
+
                 disabled
                 />
                 <div className="invalid-feedback">{errors.organs?.message}</div>
@@ -2177,7 +2177,7 @@ return (<>
                   {...register("plus")}
                   className={`form-control ${errors.plus ? "is-invalid" : ""}`}
                   disabled
-               
+
                 />
                 <div className="invalid-feedback">{errors.plus?.message}</div>
               </div>
@@ -2186,46 +2186,46 @@ return (<>
           {}
           <div>Resumén de Planes</div>
           <div className="modal-body my-2">
-          <div className="container">   
+          <div className="container">
           <div className="d-flex justify-content-around">
-          
+
           <div className="form-group">
-                
+
                 <input
-                
+
                   type="text"
-                  
+
                   placeholder="Producto"
-               
+
                 />
                 <div className="invalid-feedback">
                   {errors.lastName?.message}
                 </div>
               </div>
-                
+
               <div className="form-group">
-                
+
                 <input
-                
+
                   type="text"
-                 
+
                   placeholder="Precio"
-                
+
                 />
                 <div className="invalid-feedback">
                   {errors.lastName?.message}
                 </div>
               </div>
-            
-           
+
+
               <div className="form-group">
-                
+
                 <input
-                  
+
                   type="text"
-                
+
                   placeholder="Resumen del producto"
-               
+
                 />
                 <div className="invalid-feedback">{errors.email?.message}</div>
               </div>
@@ -2234,7 +2234,7 @@ return (<>
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               Agregar
@@ -2257,29 +2257,29 @@ return (<>
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               COTIZADO
             </button>
-            
+
             <button
               disabled={formState.isSubmitting}
               className="btn btn-primary ml-10"
             >
               {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 " 
+                <span className="spinner-border spinner-border-sm mr-1 "
              ></span>
               )}
               RIESGO SIN APETITO
             </button>
-            
-           
-            
+
+
+
           </div>
           <div className="d-flex justify-content-center">
           <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
+              cerrar
             </button>
             </div>
         </form>

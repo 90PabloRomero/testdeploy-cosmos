@@ -64,9 +64,9 @@ function LeadCreator5({ onClickOutside, modalPanel5ShowHandler }) {
                 <Tab eventKey="Datos" title="Datos">
                   <div className="">
                     <div className=" modal-lead-titular">
-            Emisión- <span> Nueva Solicitud de Seguro</span>
-            </div>
-              <div className="">Producto</div>
+                      Emisión- <span> Nueva Solicitud de Seguro</span>
+                    </div>
+                    <div className="">Producto</div>
                     <form onSubmit={handleSubmit(onSubmit)}> </form>
                     <div className="modal-body my-2 bg-grey">
                       <div className="d-flex justify-content-around ">
@@ -496,7 +496,7 @@ function LeadCreator5({ onClickOutside, modalPanel5ShowHandler }) {
                           {formState.isSubmitting && (
                             <span className="spinner-border spinner-border-sm mr-1 "></span>
                           )}
-                          CLIENTE YA NO DESEA
+                          CANCELAR OPERACION
                         </button>
 
                         <button
@@ -515,7 +515,7 @@ function LeadCreator5({ onClickOutside, modalPanel5ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -603,7 +603,7 @@ function LeadCreator5({ onClickOutside, modalPanel5ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

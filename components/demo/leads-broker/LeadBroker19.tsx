@@ -64,9 +64,10 @@ function LeadCreator19({ onClickOutside, modalPanel19ShowHandler }) {
                 <Tab eventKey="Datos" title="Datos">
                   <div className="">
                     <div className=" modal-lead-titular">
-  Movimientos - <span> Revisar Solicitud de Movimientos</span>
-            </div>
-  <div>Poliza</div>
+                      Movimientos -{" "}
+                      <span> Revisar Solicitud de Movimientos</span>
+                    </div>
+                    <div>Poliza</div>
                     <div className="modal-body my-2 bg-grey">
                       <div>
                         <div className="d-flex ">
@@ -442,7 +443,7 @@ function LeadCreator19({ onClickOutside, modalPanel19ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -530,7 +531,7 @@ function LeadCreator19({ onClickOutside, modalPanel19ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

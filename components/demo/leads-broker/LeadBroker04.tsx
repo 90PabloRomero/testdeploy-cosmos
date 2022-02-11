@@ -60,9 +60,9 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                 <Tab eventKey="Datos" title="Datos">
                   <div className="">
                     <div className=" modal-lead-titular">
-            Comercial- <span>Cliente necesita Asesoría</span>
-            </div>
-              <div className="">Producto</div>
+                      Comercial- <span>Cliente necesita Asesoría</span>
+                    </div>
+                    <div className="">Producto</div>
                     <form onSubmit={handleSubmit(onSubmit)}> </form>
                     <div className="modal-body my-2 bg-grey">
                       <div className="d-flex justify-content-around ">
@@ -450,7 +450,7 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                           {formState.isSubmitting && (
                             <span className="spinner-border spinner-border-sm mr-1 "></span>
                           )}
-                          CLIENTE YA NO DESEA
+                          CANCELAR OPERACION
                         </button>
 
                         <button
@@ -465,7 +465,7 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         <br></br>
                       </div>
                       <div className="d-flex justify-content-center">
-                        <button className="btn btn-link">CANCELAR</button>
+                        <button className="btn btn-link">cerrar</button>
                       </div>
                     </form>
                   </div>
@@ -551,7 +551,7 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         )}
                         ENVIAR FORMULARIO
                       </button>
-                      <button className="btn btn-link">CANCELAR</button>
+                      <button className="btn btn-link">cerrar</button>
                     </div>
                   </div>
                 </Tab>
@@ -706,6 +706,5 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
         </div>{" "}
       </>
     </>
-  
   );
 }

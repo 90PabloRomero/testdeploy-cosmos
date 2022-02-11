@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CurrencyDollarIcon } from "@heroicons/react/solid";
+import { CurrencyDollarIcon, CollectionIcon } from "@heroicons/react/solid";
 import { DocumentTextIcon } from "@heroicons/react/solid";
 import { CashIcon } from "@heroicons/react/solid";
 import { BadgeCheckIcon } from "@heroicons/react/solid";
@@ -50,7 +50,13 @@ function Nav() {
           <nav className="nav-area">
             <ul className="header-nav ">
               <li>
-                <a href="" className="active">
+                <li>
+                  <a href="" className="active">
+                    Todo
+                    <CollectionIcon className="link-icon" />
+                  </a>
+                </li>
+                <a href="">
                   Comercial
                   <CurrencyDollarIcon className="link-icon" />
                 </a>
@@ -84,6 +90,12 @@ function Nav() {
             <ul className="header-nav ">
               <li>
                 <a href="" className="active">
+                  Todo
+                  <CollectionIcon className="link-icon" />
+                </a>
+              </li>
+              <li>
+                <a href="">
                   Comercial
                   <CurrencyDollarIcon className="link-icon" />
                 </a>

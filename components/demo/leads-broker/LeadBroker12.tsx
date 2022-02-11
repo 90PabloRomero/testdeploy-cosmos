@@ -63,9 +63,9 @@ function LeadCreator12({ onClickOutside, modalPanel12ShowHandler }) {
               >
                 <Tab eventKey="Datos" title="Datos">
                   <div className=" modal-lead-titular">
-            Cobranzas- <span>  Revisar Documentación del Cliente </span>
-            </div>
-            <div>Poliza</div>
+                    Cobranzas- <span> Revisar Documentación del Cliente </span>
+                  </div>
+                  <div>Poliza</div>
                   <div className="modal-body my-2 bg-grey">
                     <div>
                       <div className="d-flex ">
@@ -408,7 +408,7 @@ function LeadCreator12({ onClickOutside, modalPanel12ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -496,7 +496,7 @@ function LeadCreator12({ onClickOutside, modalPanel12ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

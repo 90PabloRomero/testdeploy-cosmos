@@ -1,4 +1,12 @@
 import { leadService } from "services";
+import {
+  XCircleIcon,
+  SearchCircleIcon,
+  MailIcon,
+  PhoneOutgoingIcon,
+  ClipboardListIcon,
+  CheckIcon,
+} from "@heroicons/react/solid";
 
 import { useEffect, useState } from "react";
 import { Link } from "components";
@@ -113,13 +121,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
               <div className="tabs-list-crud-actions"></div>
 
               <div className="tab-actions-and-search">
-                <div className="tab-actions">
+                {/* <div className="tab-actions">
                   <button className="btn btn-tab btn-tab-active">
                     Pendientes
                   </button>
                   <button className="btn btn-tab">Todos</button>
                   <button className="btn btn-tab">Renovaciones</button>
-                </div>
+                </div> */}
 
                 <div className="tab-search mb-1">
                   <fieldset>
@@ -129,11 +137,11 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                       className="search-input "
                     />
                   </fieldset>
-                  <Link href="/account/register-lead">
+                  {/* <Link href="/account/register-lead">
                     <button className="btn btn-primary ml-4">
                       CREAR CLIENTE
                     </button>
-                  </Link>
+                  </Link> */}
                   <button
                     onClick={() => setModalCalendarVisible(true)}
                     className="btn btn-primary ml-4"
@@ -167,14 +175,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(2)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(2) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Nueva Cotización a Revisar
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead2(!modalLead2)}>
-                        Revisar cotizacion
+                        {/* Revisar cotizacion */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -190,7 +202,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(3)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(3) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión de la Aseguradora
                     </div>
@@ -209,14 +224,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(4)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(4)  */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización por Enviar al Cliente
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead3(!modalLead3)}>
-                        Enviar cotizacion
+                        {/* Enviar cotizacion */}
+                        <MailIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -231,13 +250,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(5)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(5) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión del cliente
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -253,14 +277,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(6)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(6) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cliente necesita Asesoría
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead4(!modalLead4)}>
-                        Realizar Asesoría
+                        {/* Realizar Asesoría */}
+                        <PhoneOutgoingIcon className="link-icon icon-blue" />
                       </button>
                     </div>
                   </div>
@@ -281,7 +309,9 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -297,14 +327,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(8)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(8) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Revisión de Formularios y Requisitos
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead6(!modalLead6)}>
-                        Revisar Formularios
+                        {/* Revisar Formularios */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -318,7 +352,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(9)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(9) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Evaluación de riesgos (en proceso)
                     </div>
@@ -336,13 +373,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(10)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(10) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Revisón del Cliente
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -358,14 +400,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(11)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(11) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Proceso de Emisión de Polizas
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead9(!modalLead9)}>
-                        Solicitar Emisión
+                        {/* Solicitar Emisión */}
+                        <ClipboardListIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -380,7 +426,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(12)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(12) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Emisión de Poliza en Aseguradora
                     </div>
@@ -398,7 +447,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza</div>
+                    <div className="tab-list-form-row-column">Cobranzas</div>
                     <div className="tab-list-form-row-column">
                       Cliente Añade Débito Bancario
                     </div>
@@ -420,7 +469,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(14){" "}
+                      {/* Cobranzas(14){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Documentación del Cliente
@@ -428,7 +478,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead12(!modalLead12)}>
-                        Revisar Documentación
+                        {/* Revisar Documentación */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -445,7 +496,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(15){" "}
+                      {/* Cobranzas(15){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora registrando Forma de pago
@@ -464,7 +516,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(16)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(16) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cliente Añade constancia de pago
                     </div>
@@ -486,15 +541,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(17){" "}
+                      {/* Cobranzas(17){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Documentación del Cliente
+                      {/* <SearchCircleIcon className="link-icon" /> */}
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead15(!modalLead15)}>
-                        Revisar Documentación
+                        {/* Revisar Documentación */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -509,7 +567,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(18)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(18) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cliente Añade Tarjeta de Crédito
                     </div>
@@ -529,7 +590,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(19){" "}
+                      {/* Cobranzas(19){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora confirmando pago
@@ -552,7 +614,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(20){" "}
+                      {/* Cobranzas(20){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Activar Poliza
@@ -560,7 +623,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead17(!modalLead17)}>
-                        Activar Poliza
+                        {/* Activar Poliza */}
+                        <CheckIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -600,15 +664,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(23){" "}
+                      {/* Movimientos(23){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Solicitud de Movimientos
+                      {/* <SearchCircleIcon className="link-icon" /> */}
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead19(!modalLead19)}>
-                        Revisar Solicitud de Movimientos
+                        {/* Revisar Solicitud de Movimientos */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -625,7 +692,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(24){" "}
+                      {/* Movimientos(24){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora emitiendo movimiento
@@ -669,15 +737,18 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(26){" "}
+                      {/* Indemnización(26){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Solicitud de Indemnización
+                      {/* <SearchCircleIcon className="link-icon" /> */}
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead22(!modalLead22)}>
-                        Revisar Solicitud
+                        {/* Revisar Solicitud */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -694,7 +765,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(27){" "}
+                      {/* Indemnización(27){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora en Ajuste y Tratamiento
@@ -715,7 +787,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización (28){" "}
+                      {/* Indemnización (28){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Cliente Revisión Liquidación de Siniestros
@@ -738,7 +811,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(29){" "}
+                      {/* Indemnización(29){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       realizar Alcance

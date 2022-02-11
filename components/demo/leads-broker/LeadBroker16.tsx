@@ -63,9 +63,9 @@ function LeadCreator16({ onClickOutside, modalPanel16ShowHandler }) {
               >
                 <Tab eventKey="Datos" title="Datos">
                   <div className=" modal-lead-titular">
-            Cobranzas- <span> Nuevo Pago a Confirmar </span>
-            </div>
-  <div>Poliza</div>
+                    Cobranzas- <span> Nuevo Pago a Confirmar </span>
+                  </div>
+                  <div>Poliza</div>
                   <div className="modal-body my-2 bg-grey">
                     <div>
                       <div className="d-flex ">
@@ -360,7 +360,7 @@ function LeadCreator16({ onClickOutside, modalPanel16ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                         <button
                           disabled={formState.isSubmitting}
@@ -458,7 +458,7 @@ function LeadCreator16({ onClickOutside, modalPanel16ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

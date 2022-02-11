@@ -628,7 +628,7 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -716,7 +716,7 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

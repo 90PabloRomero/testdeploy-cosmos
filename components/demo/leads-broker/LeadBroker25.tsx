@@ -64,9 +64,9 @@ function LeadCreator25({ onClickOutside, modalPanel25ShowHandler }) {
                 <Tab eventKey="Datos" title="Datos">
                   <div className="">
                     <div className=" modal-lead-titular">
-  indemnización - <span> realizar Alcance</span>
-            </div>
-  <div>Poliza</div>
+                      indemnización - <span> realizar Alcance</span>
+                    </div>
+                    <div>Poliza</div>
                     <div className="modal-body my-2 bg-grey">
                       <div>
                         <div className="d-flex ">
@@ -521,7 +521,7 @@ function LeadCreator25({ onClickOutside, modalPanel25ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -609,7 +609,7 @@ function LeadCreator25({ onClickOutside, modalPanel25ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>

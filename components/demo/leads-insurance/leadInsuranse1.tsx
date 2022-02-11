@@ -10,7 +10,7 @@ import { Table } from "react-bootstrap";
 
 export default LeadInsu1;
 
-function LeadInsu1 ({ onClickOutside, modalPanel26ShowHandler }) {
+function LeadInsu1({ onClickOutside, modalPanel26ShowHandler }) {
   const router = useRouter();
 
   // form validation rules
@@ -84,401 +84,379 @@ function LeadInsu1 ({ onClickOutside, modalPanel26ShowHandler }) {
                         </optgroup>
                       </select>
 
-<div className="form-group">
+                      <div className="form-group">
+                        <input
+                          name="asesoria"
+                          type="checkbox"
+                          {...register("asesoria")}
+                          disabled
+                        />
+                        <label>No sé todavia, necesito asesoria</label>
+                        <div className="invalid-feedback">
+                          {errors.plus?.message}
+                        </div>
+                      </div>
 
-                <input
-                  name="asesoria"
-                  type="checkbox"
-                  {...register("asesoria")}
-                  disabled
-
-                />
-                <label>No sé todavia, necesito asesoria</label>
-                <div className="invalid-feedback">{errors.plus?.message}</div>
-              </div>
-
-
-
-                <div className="invalid-feedback">{errors.age?.message}</div>
-              </div>
-            </div>
-          </div>
-        <div className="">Datos del solicitante</div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="modal-body my-2 bg-grey">
-            <div className="d-flex justify-content-around ">
-              <div className="form-group ">
-                <label>Nombre </label>
-                <input
-                  name="firstName"
-                  type="text"
-                  {...register("firstName")}
-                  className={`form-control ${
-                    errors.firstName ? "is-invalid" : ""
-                  }`
-                } placeholder="dato precompletado"
-                disabled
-                />
-                <div className="invalid-feedback">
-                  {errors.firstName?.message}
+                      <div className="invalid-feedback">
+                        {errors.age?.message}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="form-group">
-                <label>Apellido</label>
-                <input
-                  name="lastName"
-                  type="text"
-                  {...register("lastName")}
-                  className={`form-control ${
-                    errors.lastName ? "is-invalid" : ""
-                  }`}
-                  placeholder="dato precompletado"
-                disabled
-                />
-                <div className="invalid-feedback">
-                  {errors.lastName?.message}
-                </div>
+                <div className="">Datos del solicitante</div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <div className="modal-body my-2 bg-grey">
+                    <div className="d-flex justify-content-around ">
+                      <div className="form-group ">
+                        <label>Nombre </label>
+                        <input
+                          name="firstName"
+                          type="text"
+                          {...register("firstName")}
+                          className={`form-control ${
+                            errors.firstName ? "is-invalid" : ""
+                          }`}
+                          placeholder="dato precompletado"
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.firstName?.message}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <label>Apellido</label>
+                        <input
+                          name="lastName"
+                          type="text"
+                          {...register("lastName")}
+                          className={`form-control ${
+                            errors.lastName ? "is-invalid" : ""
+                          }`}
+                          placeholder="dato precompletado"
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.lastName?.message}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="d-flex justify-content-around">
+                      <div className="form-group">
+                        <label>Correo electronico</label>
+                        <input
+                          name="email"
+                          type="text"
+                          {...register("email")}
+                          className={`form-control ${
+                            errors.email ? "is-invalid" : ""
+                          }`}
+                          placeholder="dato precompletado"
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.email?.message}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <label>Numero Telefónico</label>
+                        <input
+                          name="number"
+                          type="text"
+                          {...register("age")}
+                          className={`form-control ${
+                            errors.number ? "is-invalid" : ""
+                          }`}
+                          placeholder="dato precompletado"
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.number?.message}
+                        </div>
+                      </div>{" "}
+                    </div>
+                    <div className="d-flex justify-content-around">
+                      <div className="form-group">
+                        <label>Fecha de Nacimiento</label>
+                        <input
+                          name="datebirth"
+                          type="text"
+                          {...register("date-birth")}
+                          className={`form-control ${
+                            errors.datebirth ? "is-invalid" : ""
+                          }`}
+                          placeholder="dato precompletado"
+                          disabled
+                        />
+
+                        <div className="invalid-feedback">
+                          {errors.datebirth?.message}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {}
+                  <div>Datos de los familiares</div>
+                  <div className="modal-body my-2 bg-grey">
+                    <div className="d-flex justify-content-around">
+                      <div className="form-group">
+                        <label>fecha de nacimiento del conyuge</label>
+                        <input
+                          name="conguyeage"
+                          type="text"
+                          {...register("conguyeage")}
+                          className={`form-control ${
+                            errors.conguyeage ? "is-invalid" : ""
+                          }`}
+                          placeholder="dato precompletado"
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.conguyeage?.message}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <label>Numero de hijos</label>
+                        <input
+                          name="numberOfKids"
+                          type="text"
+                          {...register("numberOfKids")}
+                          className={`form-control ${
+                            errors.numberOfKids ? "is-invalid" : ""
+                          }`}
+                          placeholder="dato precompletado"
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.numberOfKids?.message}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {}
+                  <div>Anexos</div>
+                  <div className="modal-body my-2 bg-grey">
+                    <div className="d-flex justify-content-around">
+                      <div className="form-group">
+                        <label>Transplante de Organos?</label>
+                        <input
+                          name="organs"
+                          type="checkbox"
+                          {...register("organs")}
+                          className={`form-control ${
+                            errors.organs ? "is-invalid" : ""
+                          }`}
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.organs?.message}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <label>Cobertura Plus?</label>
+                        <input
+                          name="plus"
+                          type="checkbox"
+                          {...register("plus")}
+                          className={`form-control ${
+                            errors.plus ? "is-invalid" : ""
+                          }`}
+                          disabled
+                        />
+
+                        <div className="invalid-feedback">
+                          {errors.plus?.message}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {}
+                  <div>Aseguradoras para solicitar cotización</div>
+                  <div className="modal-body my-2 bg-grey">
+                    <div className="d-flex justify-content-around">
+                      <div className="form-group">
+                        <label>Vumi</label>
+                        <input
+                          name="organs"
+                          type="checkbox"
+                          {...register("organs")}
+                          className={`form-control ${
+                            errors.organs ? "is-invalid" : ""
+                          }`}
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.organs?.message}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <label>saludsa</label>
+                        <input
+                          name="plus"
+                          type="checkbox"
+                          {...register("plus")}
+                          className={`form-control ${
+                            errors.plus ? "is-invalid" : ""
+                          }`}
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.plus?.message}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <label>Confiamed</label>
+                        <input
+                          name="plus"
+                          type="checkbox"
+                          {...register("plus")}
+                          className={`form-control ${
+                            errors.plus ? "is-invalid" : ""
+                          }`}
+                          disabled
+                        />
+                        <div className="invalid-feedback">
+                          {errors.plus?.message}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {}
+                  <div>Resumén de Planes</div>
+                  <div className="modal-body my-2">
+                    <div className="container">
+                      <div className="d-flex justify-content-around">
+                        <div className="form-group">
+                          <input type="text" placeholder="Producto" />
+                          <div className="invalid-feedback">
+                            {errors.lastName?.message}
+                          </div>
+                        </div>
+
+                        <div className="form-group">
+                          <input type="text" placeholder="Precio" />
+                          <div className="invalid-feedback">
+                            {errors.lastName?.message}
+                          </div>
+                        </div>
+
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            placeholder="Resumen del producto"
+                          />
+                          <div className="invalid-feedback">
+                            {errors.email?.message}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="txt-align-end">
+                        <button
+                          disabled={formState.isSubmitting}
+                          className="btn btn-primary"
+                        >
+                          {formState.isSubmitting && (
+                            <span className="spinner-border spinner-border-sm mr-1 justify-content-end"></span>
+                          )}
+                          AGREGAR
+                        </button>
+                      </div>
+                      <div className="grid">
+                        <Table striped bordered hover>
+                          <tbody>
+                            <tr>
+                              <td>Producto</td>
+                              <td>Costo</td>
+                              <td rowSpan={3}>Resumen</td>
+                            </tr>
+
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Producto</td>
+                              <td>Costo</td>
+                              <td rowSpan={3}>Resumen</td>
+                            </tr>
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Producto</td>
+                              <td>Costo</td>
+                              <td rowSpan={3}>Resumen</td>
+                            </tr>
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr className="opacity-0">
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <button
+                      disabled={formState.isSubmitting}
+                      className="btn btn-primary"
+                    >
+                      {formState.isSubmitting && (
+                        <span className="spinner-border spinner-border-sm mr-1"></span>
+                      )}
+                      INFORMACION INCOMPLETA
+                    </button>
+                    <button
+                      disabled={formState.isSubmitting}
+                      className="btn btn-primary ml-10"
+                    >
+                      {formState.isSubmitting && (
+                        <span className="spinner-border spinner-border-sm mr-1 "></span>
+                      )}
+                      COTIZADO
+                    </button>
+
+                    <button
+                      disabled={formState.isSubmitting}
+                      className="btn btn-primary ml-10"
+                    >
+                      {formState.isSubmitting && (
+                        <span className="spinner-border spinner-border-sm mr-1 "></span>
+                      )}
+                      RIESGO SIN APETITO
+                    </button>
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <button onClick={onClickOutside} className="btn btn-link">
+                      cerrar
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
-            <div className="d-flex justify-content-around">
-              <div className="form-group">
-                <label>Correo electronico</label>
-                <input
-                  name="email"
-                  type="text"
-                  {...register("email")}
-                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
-                  placeholder="dato precompletado"
-                disabled
-                />
-                <div className="invalid-feedback">{errors.email?.message}</div>
-              </div>
-              <div className="form-group">
-                <label>Numero Telefónico</label>
-                <input
-                  name="number"
-                  type="text"
-                  {...register("age")}
-                  className={`form-control ${errors.number ? "is-invalid" : ""}`}
-                  placeholder="dato precompletado"
-                disabled
-                />
-                <div className="invalid-feedback">{errors.number?.message}</div>
-              </div> </div>
-              <div className="d-flex justify-content-around">
-              <div className="form-group">
-                <label>Fecha de Nacimiento</label>
-                <input
-                  name="datebirth"
-                  type="text"
-                  {...register("date-birth")}
-                  className={`form-control ${errors.datebirth ? "is-invalid" : ""}`}
-                  placeholder="dato precompletado"
-                disabled
-                />
-
-                <div className="invalid-feedback">{errors.datebirth?.message}</div>
-              </div>
-            </div>
-          </div>
-          {  }
-          <div>Datos de los familiares</div>
-          <div className="modal-body my-2 bg-grey">
-            <div className="d-flex justify-content-around">
-              <div className="form-group">
-                <label>fecha de nacimiento del conyuge</label>
-                <input
-                  name="conguyeage"
-                  type="text"
-                  {...register("conguyeage")}
-                  className={`form-control ${
-                    errors.conguyeage ? "is-invalid" : ""
-                  }`}
-                  placeholder="dato precompletado"
-                disabled
-                />
-                <div className="invalid-feedback">
-                  {errors.conguyeage?.message}
-                </div>
-              </div>
-              <div className="form-group">
-                <label>Numero de hijos</label>
-                <input
-                  name="numberOfKids"
-                  type="text"
-                  {...register("numberOfKids")}
-                  className={`form-control ${
-                    errors.numberOfKids ? "is-invalid" : ""
-                  }`}
-                  placeholder="dato precompletado"
-                disabled
-                />
-                <div className="invalid-feedback">
-                  {errors.numberOfKids?.message}
-                </div>
-              </div>
-            </div>
-          </div>
-          {}
-          <div>Anexos</div>
-          <div className="modal-body my-2 bg-grey">
-            <div className="d-flex justify-content-around">
-              <div className="form-group">
-                <label>Transplante de Organos?</label>
-                <input
-                  name="organs"
-                  type="checkbox"
-                  {...register("organs")}
-                  className={`form-control ${
-                    errors.organs ? "is-invalid" : ""
-                  }`}
-
-                disabled
-                />
-                <div className="invalid-feedback">{errors.organs?.message}</div>
-              </div>
-              <div className="form-group">
-                <label>Cobertura Plus?</label>
-                <input
-                  name="plus"
-                  type="checkbox"
-                  {...register("plus")}
-                  className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-
-                disabled
-                />
-
-                <div className="invalid-feedback">{errors.plus?.message}</div>
-              </div>
-            </div>
-          </div>
-          {}
-          <div>Aseguradoras para solicitar cotización</div>
-          <div className="modal-body my-2 bg-grey">
-            <div className="d-flex justify-content-around">
-              <div className="form-group" >
-                <label>Vumi</label>
-                <input
-                  name="organs"
-                  type="checkbox"
-                  {...register("organs")}
-                  className={`form-control ${
-                    errors.organs ? "is-invalid" : ""
-                  }`}
-
-                disabled
-                />
-                <div className="invalid-feedback">{errors.organs?.message}</div>
-              </div>
-              <div className="form-group">
-                <label>saludsa</label>
-                <input
-                  name="plus"
-                  type="checkbox"
-                  {...register("plus")}
-                  className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                  disabled
-                />
-                <div className="invalid-feedback">{errors.plus?.message}</div>
-              </div>
-              <div className="form-group">
-                <label>Confiamed</label>
-                <input
-                  name="plus"
-                  type="checkbox"
-                  {...register("plus")}
-                  className={`form-control ${errors.plus ? "is-invalid" : ""}`}
-                  disabled
-
-                />
-                <div className="invalid-feedback">{errors.plus?.message}</div>
-              </div>
-            </div>
-          </div>
-          {}
-          <div>Resumén de Planes</div>
-          <div className="modal-body my-2">
-          <div className="container">
-          <div className="d-flex justify-content-around">
-
-          <div className="form-group">
-
-                <input
-
-                  type="text"
-
-                  placeholder="Producto"
-
-                />
-                <div className="invalid-feedback">
-                  {errors.lastName?.message}
-                </div>
-              </div>
-
-              <div className="form-group">
-
-                <input
-
-                  type="text"
-
-                  placeholder="Precio"
-
-                />
-                <div className="invalid-feedback">
-                  {errors.lastName?.message}
-                </div>
-              </div>
-
-
-              <div className="form-group">
-
-                <input
-
-                  type="text"
-
-                  placeholder="Resumen del producto"
-
-                />
-                <div className="invalid-feedback">{errors.email?.message}</div>
-              </div>
-
-      </div>
-      <div className="txt-align-end">
-            <button
-              disabled={formState.isSubmitting}
-              className="btn btn-primary"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 justify-content-end"></span>
-              )}
-              AGREGAR
-            </button>
-            </div>
-            <div className="grid">
-            <Table striped bordered hover>
-
-  <tbody>
-  <tr>
-
-      <td>Producto</td>
-      <td>Costo</td>
-      <td rowSpan={3}>Resumen</td>
-    </tr>
-
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-
-      <td>Producto</td>
-      <td>Costo</td>
-      <td rowSpan={3}>Resumen</td>
-    </tr>
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr>
-
-      <td>Producto</td>
-      <td>Costo</td>
-      <td rowSpan={3}>Resumen</td>
-    </tr>
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-    <tr className="opacity-0">
-
-      <td></td>
-      <td></td>
-
-    </tr>
-  </tbody>
-</Table>
-            </div>
-    </div>
-</div>
-          <div className="d-flex justify-content-center">
-            <button
-              disabled={formState.isSubmitting}
-              className="btn btn-primary"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1"></span>
-              )}
-              INFORMACION INCOMPLETA
-            </button>
-            <button
-              disabled={formState.isSubmitting}
-              className="btn btn-primary ml-10"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 "
-             ></span>
-              )}
-              COTIZADO
-            </button>
-
-            <button
-              disabled={formState.isSubmitting}
-              className="btn btn-primary ml-10"
-            >
-              {formState.isSubmitting && (
-                <span className="spinner-border spinner-border-sm mr-1 "
-             ></span>
-              )}
-              RIESGO SIN APETITO
-            </button>
-
-
-
-          </div>
-          <div className="d-flex justify-content-center">
-          <button onClick={onClickOutside} className="btn btn-link">
-              CANCELAR
-            </button>
-            </div>
-        </form>
-      </div>
-  </div>
-  </div>  </div>
-
+          </div>{" "}
+        </div>
       </>
-  </>
-
-
+    </>
   );
 }
-

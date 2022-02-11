@@ -17,6 +17,15 @@ import editIcon from "public/edit.png";
 import sendIcon from "/public/icon3.png";
 import { leadService } from "services";
 import ModalCreateLead from "components/demo/modalCreateLead";
+import {
+  SearchCircleIcon,
+  XCircleIcon,
+  PhoneOutgoingIcon,
+  DocumentAddIcon,
+  CreditCardIcon,
+  IdentificationIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/solid";
 
 const Home = ({ onClick, onClickUser }) => {
   const [leads, setLeads] = useState(null);
@@ -215,13 +224,18 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(2)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(2) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión del Broker
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
 
@@ -236,13 +250,18 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(3)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(3) Comercial */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Cotización en Revisión de la Aseguradora
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   <div className="tab-list-form-row">
@@ -255,7 +274,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(4)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(4) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Broker se contactará con usted
                     </div>
@@ -275,14 +297,18 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(5)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(5) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Nueva Cotización disponible
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead3(!modalLead3)}>
-                        Revisar cotizacion
+                        {/* Revisar cotizacion */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -297,7 +323,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Comercial(6)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Comercial(6) */}
+                      Comercial
+                    </div>
                     <div className="tab-list-form-row-column">
                       Solicitud Asesoría en proceso
                     </div>
@@ -324,7 +353,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead5(!modalLead5)}>
-                        Llenar Formulario
+                        {/* Llenar Formulario */}
+                        <DocumentAddIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -339,7 +369,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(8)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(8) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Registro de Seguro en Revisión
                     </div>
@@ -356,7 +389,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(9)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(9) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Evaluación de riesgos (en proceso)
                     </div>
@@ -376,14 +412,18 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(10)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(10) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Revisón final de Documentación
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead8(!modalLead8)}>
-                        Registrar Solicitud
+                        {/* Registrar Solicitud */}
+                        <IdentificationIcon className="link-icon blue-icon" />
                       </button>
                     </div>
                   </div>
@@ -398,7 +438,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(11)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(11) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Emisión de Poliza enviada al Broker
                     </div>
@@ -416,7 +459,10 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión(12)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Emisión(12) */}
+                      Emisión
+                    </div>
                     <div className="tab-list-form-row-column">
                       Emisión de Poliza en proceso
                     </div>
@@ -436,14 +482,15 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza</div>
+                    <div className="tab-list-form-row-column">Cobranzas</div>
                     <div className="tab-list-form-row-column">
                       Añadir Débito Bancario
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead11(!modalLead11)}>
-                        Añadir Débito Bancario
+                        {/* Añadir Débito Bancario */}
+                        <CreditCardIcon className="link-icon blue-icon" />
                       </button>
                     </div>
                   </div>
@@ -460,7 +507,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(14){" "}
+                      {/* Cobranzas(14){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Documentación en Revisión del Broker
@@ -481,7 +529,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(15){" "}
+                      {/* Cobranzas(15){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora registrando Forma de pago
@@ -502,14 +551,18 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(16)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(16) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Transferencia, Depósito o Cheque
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead14(!modalLead14)}>
-                        Añadir Constancia de Pago
+                        {/* Añadir Constancia de Pago */}
+                        <DocumentAddIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -526,7 +579,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(17){" "}
+                      {/* Cobranzas(17){" "} */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Documentación en Revisión del Broker
@@ -547,14 +601,18 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Cobranza(18)</div>
+                    <div className="tab-list-form-row-column">
+                      {/* Cobranza(18) */}
+                      Cobranzas
+                    </div>
                     <div className="tab-list-form-row-column">
                       Pago con Tarjeta de crédito
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead16(!modalLead16)}>
-                        Pagar con tarjeta de Crédito
+                        {/* Pagar con tarjeta de Crédito */}
+                        <CreditCardIcon className="link-icon blue-icon" />
                       </button>
                     </div>
                   </div>
@@ -571,7 +629,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(19){" "}
+                      {/* Cobranzas(19){" "}<></> */}
+                      Cobranzas
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora confirmando pago
@@ -592,10 +651,10 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(20){" "}
+                      {/* Cobranzas(20){" "} */}
                     </div>
                     <div className="tab-list-form-row-column">
-                      ¡POLIZA ACTIVA!
+                      Poliza activa
                     </div>
 
                     <div className="tab-list-form-row-column"></div>
@@ -613,17 +672,15 @@ const Home = ({ onClick, onClickUser }) => {
                         Juan Ugalde
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">
-                      {" "}
-                      Movimientos{" "}
-                    </div>
+                    <div className="tab-list-form-row-column"> Movimientos</div>
                     <div className="tab-list-form-row-column">
                       Solicitud de Movimientos
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead18(!modalLead18)}>
-                        Abrir Solicitud de Movimiento
+                        {/* Abrir Solicitud de Movimiento */}
+                        <DocumentAddIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -640,7 +697,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(23){" "}
+                      {/* Movimientos(23){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Broker Revisando requisitos
@@ -661,7 +719,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Movimientos(24){" "}
+                      {/* Movimientos(24){" "} */}
+                      Movimientos
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora emitiendo movimiento
@@ -692,7 +751,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead21(!modalLead21)}>
-                        Abrir Solicitud de Indemnización
+                        {/* Abrir Solicitud de Indemnización */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -709,7 +769,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(26){" "}
+                      {/* Indemnización(26){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Broker Revisando requisitos
@@ -730,7 +791,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(27){" "}
+                      {/* Indemnización(27){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Aseguradora en Ajuste y Tratamiento
@@ -753,7 +815,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización (28){" "}
+                      {/* Indemnización (28){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisión Liquidación de Siniestros
@@ -761,7 +824,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead24(!modalLead24)}>
-                        Revisar Liquidación
+                        {/* Revisar Liquidación */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -778,7 +842,8 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Indemnización(29){" "}
+                      {/* Indemnización(29){" "} */}
+                      Indemnización
                     </div>
                     <div className="tab-list-form-row-column">
                       Broker realizando Alcance

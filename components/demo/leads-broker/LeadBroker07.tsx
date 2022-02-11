@@ -479,7 +479,7 @@ function LeadCreator7({ onClickOutside, modalPanel7ShowHandler }) {
                           {formState.isSubmitting && (
                             <span className="spinner-border spinner-border-sm mr-1 "></span>
                           )}
-                          CLIENTE YA NO DESEA
+                          CANCELAR OPERACION
                         </button>
 
                         <button
@@ -516,7 +516,7 @@ function LeadCreator7({ onClickOutside, modalPanel7ShowHandler }) {
                           onClick={onClickOutside}
                           className="btn btn-link"
                         >
-                          CANCELAR
+                          cerrar
                         </button>
                       </div>
                     </form>
@@ -604,7 +604,7 @@ function LeadCreator7({ onClickOutside, modalPanel7ShowHandler }) {
                         ENVIAR FORMULARIO
                       </button>
                       <button onClick={onClickOutside} className="btn btn-link">
-                        CANCELAR
+                        cerrar
                       </button>
                     </div>
                   </div>
