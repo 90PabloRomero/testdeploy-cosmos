@@ -11,7 +11,6 @@ import { useRouter } from "next/router";
 
 const Home = () => {
   // return <h1>home</h1>;
-  const router = useRouter();
-  return router.push("/clientes/panel");
+  return <Link href="/clientes/panel">Click aqui (dev mode)</Link>;
 };
 export default Home;
