@@ -1,13 +1,11 @@
 import { leadService } from "services";
 import dynamic from "next/dynamic.js";
-import LeadCreatori from "../../components/demo/leads-insurance/lead-insuranse1";
 import LeadCreator7 from "../../components/demo/leads-broker/LeadBroker07";
 import LeadCreator10 from "../../components/demo/leads-broker/LeadBroker10";
 import LeadCreator13 from "../../components/demo/leads-broker/LeadBroker13";
 import LeadCreator16 from "../../components/demo/leads-broker/LeadBroker16";
 import LeadCreator20 from "../../components/demo/leads-broker/LeadBroker20";
 import LeadCreator23 from "../../components/demo/leads-broker/LeadBroker23";
-
 import { useEffect, useState } from "react";
 import { Link } from "components";
 // import CalendarArea from "components/Calendar";
@@ -16,6 +14,7 @@ import addIcon from "public/add.png";
 import editIcon from "public/edit.png";
 import sendIcon from "public/icon3.png";
 import Head from "next/head";
+import LeadInsu1 from "../../components/demo/leads-insurance/leadInsuranse1";
 const FC = dynamic(() => import("components/demo/piechart"), { ssr: false });
 
 const Home = ({ onClick, onClickUser, onClickCargarCotizacion }) => {
@@ -32,7 +31,7 @@ const Home = ({ onClick, onClickUser, onClickCargarCotizacion }) => {
   useEffect(() => {
     
     // aca añadimos  el primer valor del array de usestate como booleano de todos los formularios accion que necesitamos para ajustar el body cada vez que queremos que se abra el modal, necesitamos que el body tenga la clase "modal-mode" para lograr el efecto de ventana superpuesta
-    document.body.className = modalLeadi ? "modal-mode" : "";
+    document.body.className = modalLead1 ? "modal-mode" : "";
     document.body.className = modalLead7 ? "modal-mode" : "" ;
     document.body.className = modalLead10 ? "modal-mode" : "";
      document.body.className = modalLead13 ? "modal-mode" : "";
@@ -40,7 +39,7 @@ const Home = ({ onClick, onClickUser, onClickCargarCotizacion }) => {
      document.body.className = modalLead20 ? "modal-mode" : "";
      document.body.className = modalLead23 ? "modal-mode" : "";
   });
-  const [modalLeadi, setModalLeadi] = useState(false) ;
+  const [modalLead1, setModalLead1] = useState(false) ;
   const [modalLead7, setModalLead7] = useState(false);
   const [modalLead10, setModalLead10] = useState(false);
   const [modalLead13, setModalLead13] = useState(false);
@@ -49,9 +48,9 @@ const Home = ({ onClick, onClickUser, onClickCargarCotizacion }) => {
   const [modalLead23, setModalLead23] = useState(false);
   return (
     <>
-     <LeadCreatori
-        modalPaneliShowHandler={modalLeadi}
-        onClickOutside={() => setModalLeadi(false)}
+     <LeadInsu1
+        modalPanel26ShowHandler={modalLead1}
+        onClickOutside={() => setModalLead1(false)}
       />
       <LeadCreator7
         modalPanel7ShowHandler={modalLead7}
@@ -174,7 +173,7 @@ const Home = ({ onClick, onClickUser, onClickCargarCotizacion }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLeadi(!modalLeadi)}>
+                    <button onClick={() => setModalLead1(!modalLead1)}>
                         Revisar cotizacion
                       </button>
                     </div>

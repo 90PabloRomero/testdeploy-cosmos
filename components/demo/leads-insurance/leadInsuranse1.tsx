@@ -8,9 +8,9 @@ import { leadService, alertService } from "services";
 import Head from "next/head";
 import { Table } from "react-bootstrap";
 
-export default LeadCreator1;
+export default LeadInsu1;
 
-function LeadCreator1 ({ onClickOutside, modalPanel26ShowHandler }) {
+function LeadInsu1 ({ onClickOutside, modalPanel26ShowHandler }) {
   const router = useRouter();
 
   // form validation rules
