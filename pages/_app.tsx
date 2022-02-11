@@ -55,6 +55,10 @@ function App({ Component, pageProps }) {
       "/broker/login",
       "/aseguradoras/login",
       "/clientes/login",
+      "/clientes/panel",
+      "/broker/panel",
+      "/aseguradoras/panel",
+
       // dev
       "/broker/register-lead",
     ];
@@ -63,7 +67,7 @@ function App({ Component, pageProps }) {
     if (!userService.userValue && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
-        pathname: "/clientes/panel",
+        pathname: "/clientes/login",
         query: { returnUrl: router.asPath },
       });
     } else {
