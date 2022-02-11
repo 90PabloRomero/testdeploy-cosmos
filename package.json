@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.5",
     "@hookform/resolvers": "^2.8.5",
     "autoprefixer": "^10.4.1",
     "bcryptjs": "^2.4.3",
