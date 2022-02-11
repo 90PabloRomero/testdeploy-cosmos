@@ -54,6 +54,7 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
         }`}
       >
         <div className="modal-dialog bg-white">
+          
           <Tabs
             defaultActiveKey="Datos"
             id="uncontrolled-tab-example"
@@ -61,6 +62,9 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
           >
             <Tab eventKey="Datos" title="Datos">
               <div>
+              <div className=" modal-lead-titular">
+            Comercial- <span>Nueva Cotización a Revisar</span>
+            </div>
                 <div className="">Producto</div>
                 <form onSubmit={handleSubmit(onSubmit)}> </form>
                 <div className="modal-body my-2">
@@ -562,7 +566,8 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
               </div>
             </Tab>
           </Tabs>
-        </div>
+          </div>
+       
       </div>
     </>
   );

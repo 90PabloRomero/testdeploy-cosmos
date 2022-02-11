@@ -57,6 +57,9 @@ function LeadCreator23 ({ onClickOutside,modalPanel23ShowHandler }) {
     <Tabs defaultActiveKey="Datos" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="Datos" title="Datos">
   <div className="">
+  <div className=" modal-lead-titular">
+  indemnización - <span>  Realizar Tratamiento y Ajustes</span>
+            </div>
   <div>Poliza</div>
           <div className="modal-body my-2 bg-grey">
           <div >

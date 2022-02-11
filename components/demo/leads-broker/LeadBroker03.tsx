@@ -62,6 +62,9 @@ function LeadCreator3({ onClickOutside, modalPanel3ShowHandler }) {
         >
           <Tab eventKey="Datos" title="Datos">
             <div className="">
+            <div className=" modal-lead-titular">
+            Comercial- <span>Cotización por Enviar al Cliente</span>
+            </div>
               <div className="">Producto</div>
               <form onSubmit={handleSubmit(onSubmit)}> </form>
               <div className="modal-body my-2 bg-grey">

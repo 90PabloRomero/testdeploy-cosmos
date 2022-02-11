@@ -62,6 +62,9 @@ function LeadCreator7({ onClickOutside,modalPanel7ShowHandler }) {
         >
           <Tab eventKey="Datos" title="Datos">
             <div className="">
+            <div className=" modal-lead-titular">
+            Emisión- <span>Evaluación de riesgos</span>
+            </div>
               <div className="">Producto</div>
               <form onSubmit={handleSubmit(onSubmit)}> </form>
               <div className="modal-body my-2 bg-grey">

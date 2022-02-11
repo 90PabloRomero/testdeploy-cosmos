@@ -61,6 +61,9 @@ function LeadCreator12({ onClickOutside,modalPanel12ShowHandler }) {
           className="mb-3"
         >
           <Tab eventKey="Datos" title="Datos">
+          <div className=" modal-lead-titular">
+            Cobranzas- <span>  Revisar Documentación del Cliente </span>
+            </div>
             <div>Poliza</div>
             <div className="modal-body my-2 bg-grey">
               <div>

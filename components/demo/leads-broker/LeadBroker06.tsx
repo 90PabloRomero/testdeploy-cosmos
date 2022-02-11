@@ -49,6 +49,7 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
   return (
     <>
       <>
+
       <div
         className={`layoutModal ${
           modalPanel6ShowHandler ? "d-block modal-open" : "d-none"
@@ -62,6 +63,9 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
         >
           <Tab eventKey="Datos" title="Datos">
             <div className="">
+            <div className=" modal-lead-titular">
+            Emisión- <span> Revisión de Formularios y Requisitos</span>
+            </div>
               <div className="">Producto</div>
               <form onSubmit={handleSubmit(onSubmit)}> </form>
               <div className="modal-body my-2 bg-grey">

@@ -48,6 +48,9 @@ function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
   
   return (<>
     <>
+    <div className=" modal-lead-titular">
+            Comercial- <span>Cotización Nueva a Revisar</span>
+            </div>
     <div
         className={`layoutModal ${
           modalPaneliShowHandler ? "d-block modal-open" : "d-none"
