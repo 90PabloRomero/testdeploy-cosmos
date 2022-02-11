@@ -242,7 +242,12 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
+                    <button
+                        className="user-btn m-0 p-0"
+                       
+                      >
+                        Cancelar
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -288,7 +293,12 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
+                    <button
+                        className="user-btn m-0 p-0"
+                       
+                      >
+                        Cancelar
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -355,7 +365,12 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    
+                    <button
+                        className="user-btn m-0 p-0"
+                       
+                      >
+                        Cancelar
+                      </button>
                     </div>
                   </div>
                   {/*  */}
