@@ -57,6 +57,9 @@ function LeadCreator18 ({ onClickOutside,modalPanel18ShowHandler }) {
     <Tabs defaultActiveKey="Datos" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="Datos" title="Datos">
   <div className="">
+  <div className=" modal-lead-titular">
+  Movimientos - <span> Solicitud de Movimientos </span>
+            </div>
   <div>Poliza</div>
           <div className="modal-body my-2 bg-grey">
           <div >

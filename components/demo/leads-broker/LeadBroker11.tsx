@@ -61,6 +61,9 @@ function LeadCreator11({ onClickOutside,modalPanel11ShowHandler }) {
           className="mb-3"
         >
           <Tab eventKey="Datos" title="Datos">
+          <div className=" modal-lead-titular">
+            Cobranzas- <span> Añadir Débito Bancario</span>
+            </div>
             <div>Poliza</div>
             <div className="modal-body my-2 bg-grey">
               <div>

@@ -8,9 +8,9 @@ import { leadService, alertService } from "services";
 import Head from "next/head";
 import { Table } from 'react-bootstrap';
 
-export default LeadCreator;
+export default LeadCreatori;
 
-function LeadCreator ({ onClickOutside }) {
+function LeadCreatori ({ onClickOutside,modalPaneliShowHandler }) {
   const router = useRouter();
 
   // form validation rules
@@ -48,6 +48,15 @@ function LeadCreator ({ onClickOutside }) {
   
   return (<>
     <>
+    <div className=" modal-lead-titular">
+            Comercial- <span>Cotización Nueva a Revisar</span>
+            </div>
+    <div
+        className={`layoutModal ${
+          modalPaneliShowHandler ? "d-block modal-open" : "d-none"
+        }`}
+      >
+        <div className="modal-dialog bg-white">
     <div className="">
       <div className="">Producto</div>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
@@ -455,7 +464,8 @@ function LeadCreator ({ onClickOutside }) {
             </div>
         </form>
       </div>
-  
+  </div>
+  </div>
     </>
   </>
 

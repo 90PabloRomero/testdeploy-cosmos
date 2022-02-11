@@ -57,6 +57,9 @@ function LeadCreator9 ({ onClickOutside,modalPanel9ShowHandler }) {
     <Tabs defaultActiveKey="Datos" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="Datos" title="Datos">
   <div className="">
+  <div className=" modal-lead-titular">
+            Emisión- <span> Proceso de Emisión de Polizas</span>
+            </div>
       <div className="">Producto</div>
         <form onSubmit={handleSubmit(onSubmit)}> </form>
         <div className="modal-body my-2 bg-grey">

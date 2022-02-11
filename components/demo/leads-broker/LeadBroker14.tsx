@@ -56,6 +56,9 @@ function LeadCreator14 ({ onClickOutside,modalPanel14ShowHandler }) {
         <div className="modal-dialog bg-white">
     <Tabs defaultActiveKey="Datos" id="uncontrolled-tab-example" className="mb-3">
   <Tab eventKey="Datos" title="Datos">
+  <div className=" modal-lead-titular">
+            Cobranzas- <span> Transferencia, Depósito o Cheque </span>
+            </div>
   <div>Poliza</div>
           <div className="modal-body my-2 bg-grey">
           <div >

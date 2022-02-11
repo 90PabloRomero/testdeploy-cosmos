@@ -8,9 +8,9 @@ import { leadService, alertService } from "services";
 import Head from "next/head";
 import { Tabs, Tab, Table } from "react-bootstrap";
 
-export default LeadCreator5;
+export default LeadCreator;
 
-function LeadCreator5({ onClickOutside,modalPanel5ShowHandler }) {
+function LeadCreator({ onClickOutside,modalPanel5ShowHandler }) {
   const router = useRouter();
 
   // form validation rules
@@ -62,6 +62,9 @@ function LeadCreator5({ onClickOutside,modalPanel5ShowHandler }) {
         >
           <Tab eventKey="Datos" title="Datos">
             <div className="">
+            <div className=" modal-lead-titular">
+            Emisión- <span> Nueva Solicitud de Seguro</span>
+            </div>
               <div className="">Producto</div>
               <form onSubmit={handleSubmit(onSubmit)}> </form>
               <div className="modal-body my-2 bg-grey">

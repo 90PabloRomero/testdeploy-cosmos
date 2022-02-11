@@ -1038,6 +1038,10 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
   color: var(--primary);
   text-align:center;
  }
+ .modal-lead-titular{
+   font-size:22px;
+   padding:5px 0px;
+ }
 `;
 
 export default Styles;
