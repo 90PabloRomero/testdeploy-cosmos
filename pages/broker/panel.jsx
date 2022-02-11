@@ -1,4 +1,12 @@
 import { leadService } from "services";
+import {
+  XCircleIcon,
+  SearchCircleIcon,
+  MailIcon,
+  PhoneOutgoingIcon,
+  ClipboardListIcon,
+  CheckIcon,
+} from "@heroicons/react/solid";
 
 import { useEffect, useState } from "react";
 import { Link } from "components";
@@ -174,7 +182,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead2(!modalLead2)}>
-                        Revisar cotizacion
+                        {/* Revisar cotizacion */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -216,7 +225,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead3(!modalLead3)}>
-                        Enviar cotizacion
+                        {/* Enviar cotizacion */}
+                        <MailIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -237,7 +247,9 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -260,7 +272,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead4(!modalLead4)}>
-                        Realizar Asesoría
+                        {/* Realizar Asesoría */}
+                        <PhoneOutgoingIcon className="link-icon icon-blue" />
                       </button>
                     </div>
                   </div>
@@ -281,7 +294,9 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -304,7 +319,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead6(!modalLead6)}>
-                        Revisar Formularios
+                        {/* Revisar Formularios */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -342,7 +358,9 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   {/*  */}
@@ -365,7 +383,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead9(!modalLead9)}>
-                        Solicitar Emisión
+                        {/* Solicitar Emisión */}
+                        <ClipboardListIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -428,7 +447,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead12(!modalLead12)}>
-                        Revisar Documentación
+                        {/* Revisar Documentación */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -490,11 +510,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Documentación del Cliente
+                      {/* <SearchCircleIcon className="link-icon" /> */}
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead15(!modalLead15)}>
-                        Revisar Documentación
+                        {/* Revisar Documentación */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -560,7 +582,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead17(!modalLead17)}>
-                        Activar Poliza
+                        {/* Activar Poliza */}
+                        <CheckIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -604,11 +627,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Solicitud de Movimientos
+                      {/* <SearchCircleIcon className="link-icon" /> */}
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead19(!modalLead19)}>
-                        Revisar Solicitud de Movimientos
+                        {/* Revisar Solicitud de Movimientos */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -673,11 +698,13 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       Revisar Solicitud de Indemnización
+                      {/* <SearchCircleIcon className="link-icon" /> */}
                     </div>
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead22(!modalLead22)}>
-                        Revisar Solicitud
+                        {/* Revisar Solicitud */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>

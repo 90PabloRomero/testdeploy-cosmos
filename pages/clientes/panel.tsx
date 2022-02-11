@@ -17,6 +17,15 @@ import editIcon from "public/edit.png";
 import sendIcon from "/public/icon3.png";
 import { leadService } from "services";
 import ModalCreateLead from "components/demo/modalCreateLead";
+import {
+  SearchCircleIcon,
+  XCircleIcon,
+  PhoneOutgoingIcon,
+  DocumentAddIcon,
+  CreditCardIcon,
+  IdentificationIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/solid";
 
 const Home = ({ onClick, onClickUser }) => {
   const [leads, setLeads] = useState(null);
@@ -221,7 +230,9 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
 
@@ -242,7 +253,9 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      <button className="user-btn m-0 p-0">Cancelar</button>
+                      <button className="user-btn m-0 p-0">
+                        <XCircleIcon className="link-icon red-icon" />
+                      </button>
                     </div>
                   </div>
                   <div className="tab-list-form-row">
@@ -282,7 +295,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead3(!modalLead3)}>
-                        Revisar cotizacion
+                        {/* Revisar cotizacion */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -324,7 +338,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead5(!modalLead5)}>
-                        Llenar Formulario
+                        {/* Llenar Formulario */}
+                        <DocumentAddIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -383,7 +398,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead8(!modalLead8)}>
-                        Registrar Solicitud
+                        {/* Registrar Solicitud */}
+                        <IdentificationIcon className="link-icon blue-icon" />
                       </button>
                     </div>
                   </div>
@@ -443,7 +459,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead11(!modalLead11)}>
-                        Añadir Débito Bancario
+                        {/* Añadir Débito Bancario */}
+                        <CreditCardIcon className="link-icon blue-icon" />
                       </button>
                     </div>
                   </div>
@@ -509,7 +526,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead14(!modalLead14)}>
-                        Añadir Constancia de Pago
+                        {/* Añadir Constancia de Pago */}
+                        <DocumentAddIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -554,7 +572,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead16(!modalLead16)}>
-                        Pagar con tarjeta de Crédito
+                        {/* Pagar con tarjeta de Crédito */}
+                        <CreditCardIcon className="link-icon blue-icon" />
                       </button>
                     </div>
                   </div>
@@ -592,10 +611,10 @@ const Home = ({ onClick, onClickUser }) => {
                     </div>
                     <div className="tab-list-form-row-column">
                       {" "}
-                      Cobranzas(20){" "}
+                      {/* Cobranzas(20){" "} */}
                     </div>
                     <div className="tab-list-form-row-column">
-                      ¡POLIZA ACTIVA!
+                      Poliza activa
                     </div>
 
                     <div className="tab-list-form-row-column"></div>
@@ -623,7 +642,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead18(!modalLead18)}>
-                        Abrir Solicitud de Movimiento
+                        {/* Abrir Solicitud de Movimiento */}
+                        <DocumentAddIcon className="link-icon green-icon" />
                       </button>
                     </div>
                   </div>
@@ -692,7 +712,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead21(!modalLead21)}>
-                        Abrir Solicitud de Indemnización
+                        {/* Abrir Solicitud de Indemnización */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>
@@ -761,7 +782,8 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column">
                       <button onClick={() => setModalLead24(!modalLead24)}>
-                        Revisar Liquidación
+                        {/* Revisar Liquidación */}
+                        <SearchCircleIcon className="link-icon" />
                       </button>
                     </div>
                   </div>

@@ -61,6 +61,27 @@ const Styles = createGlobalStyle`
   --linear-aseguradora-sidebar-g: linear-gradient(180deg, #333 0%, var(--light-green) 77%);
 
 }
+.red-icon {
+  color: red!important;
+  filter: contrast(80%);
+  &:hover {
+    filter:contrast(100%);
+  }
+}
+.green-icon {
+  color: green!important;
+  filter: contrast(80%);
+  &:hover {
+    filter:contrast(100%);
+  }
+}
+.blue-icon {
+  color: blue!important;
+  filter: contrast(80%);
+  &:hover {
+    filter:contrast(100%);
+  }
+}
 
 .layout {
   min-height:100vh;
@@ -482,6 +503,12 @@ box-shadow: 16px 19px 13px 15px #0004;
   display: grid;
   place-items: center start;
   padding-left: 15px;
+  button {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 .tab-list-form .tab-list-form-heading .tab-list-form-heading-column:nth-child(1),
 .tab-list-form .tab-list-form-row .tab-list-form-row-column:nth-child(1){
