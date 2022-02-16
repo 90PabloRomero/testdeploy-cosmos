@@ -851,7 +851,193 @@ const Home = ({ onClick, onClickUser }) => {
 
                     <div className="tab-list-form-row-column"></div>
                   </div>
+
                   {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                       <span className="priority-icon priority-normal"></span>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Poliza Renovación</div>
+                    <div className="tab-list-form-row-column">
+                      Validar Intención de Renovación
+                    </div>
+
+                    <div className="tab-list-form-row-column">
+                    <button onClick={() => setModalLead3(!modalLead3)}>
+                        Validar intención
+                      </button>
+                    </div>
+                  </div>
+
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Poliza Renovación(2)</div>
+                    <div className="tab-list-form-row-column">
+                    Cotización en Revisión del Broker 
+                    </div>
+
+                    <div className="tab-list-form-row-column">
+                      <button className="user-btn m-0 p-0">Cancelar</button>
+                    </div>
+                  </div>
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Poliza Renovación(3)</div>
+                    <div className="tab-list-form-row-column">
+                    Cotización en Revisión de la Aseguradora 
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                     
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Poliza Renovación(4)</div>
+                    <div className="tab-list-form-row-column">
+                    Broker se contactará con usted  
+                    </div>
+
+                    <div className="tab-list-form-row-column">
+                      
+                    </div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Poliza Renovación(5)</div>
+                    <div className="tab-list-form-row-column">
+                    Aseguradora Cancelando  
+                    </div>
+
+                    <div className="tab-list-form-row-column">
+                    
+                    </div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                      <span className="priority-icon priority-normal"></span>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Poliza Renovación(6)</div>
+                    <div className="tab-list-form-row-column">
+                    Nueva Cotización disponible 
+                    </div>
+
+                    <div className="tab-list-form-row-column">
+                    <button onClick={() => setModalLead3(!modalLead3)}>
+                        Revisar cotizacion
+                      </button>
+                    </div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column">
+                   
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Poliza Renovación(7)</div>
+                    <div className="tab-list-form-row-column">
+                     Broker se Contactará con usted
+                    </div>
+
+                    <div className="tab-list-form-row-column">
+                      
+                    </div>
+                  </div>
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Emisión Renovación(8)</div>
+                    <div className="tab-list-form-row-column">
+                    Broker Notificando Orden de Renovación  
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Juan Ugalde
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">Emisión Renovación(9)</div>
+                    <div className="tab-list-form-row-column">
+                    Aseguradora Emitiendo Renovación
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  
                 </div>
                 <div className="tab-list-pagination">
                   <ul>
