@@ -10,11 +10,19 @@ import Head from "next/head";
 import heroImage from "public/fondo-aseg.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default Login;
 
 function Login() {
   const router = useRouter();
+
+  useEffect(() => {
+    // redirect to home if already logged in
+    if (userService.userValue) {
+      router.push("/aseguradoras/panel");
+    }
+  }, []);
 
   // form validation rules
   const validationSchema = Yup.object().shape({

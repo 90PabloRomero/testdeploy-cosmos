@@ -10,11 +10,19 @@ import Head from "next/head";
 import heroImage from "public/login-clientes.png";
 import Image from "next/image";
 import { Link } from "components";
+import { useEffect } from "react";
 
 export default Login;
 
 function Login() {
   const router = useRouter();
+
+  useEffect(() => {
+    // redirect to home if already logged in
+    if (userService.userValue) {
+      router.push("/clientes/panel");
+    }
+  }, []);
 
   // form validation rules
   const validationSchema = Yup.object().shape({

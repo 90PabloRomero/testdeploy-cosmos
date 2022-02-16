@@ -20,6 +20,12 @@ function App({ Component, pageProps }) {
   const [sideBarVisible, setSideBarOpen] = useState(false);
   const [modalCCVisible, setModalCCVisible] = useState(false);
   useEffect(() => {
+    document.body.className = modalCotizacionVisible ? "modal-mode" : "";
+    document.body.className = modalCCVisible ? "modal-mode" : "";
+    document.body.className = modalUserVisible ? "modal-mode" : "";
+    document.body.className = modalVisible ? "modal-mode" : "";
+  });
+  useEffect(() => {
     // on initial load - run auth check
     authCheck(router.asPath);
 
@@ -39,36 +45,19 @@ function App({ Component, pageProps }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    document.body.className = modalCotizacionVisible ? "modal-mode" : "";
-    document.body.className = modalCCVisible ? "modal-mode" : "";
-    document.body.className = modalUserVisible ? "modal-mode" : "";
-    document.body.className = modalVisible ? "modal-mode" : "";
-  });
   function authCheck(url: string) {
     // redirect to login page if accessing a private page and not logged in
     setUser(userService.userValue);
     const publicPaths = [
-      "/clientes/inicia-cotizacion",
-      "/clientes/register",
-      "/broker/register",
       "/broker/login",
       "/aseguradoras/login",
       "/clientes/login",
-      "/clientes/panel",
-      "/broker/panel",
-      "/aseguradoras/panel",
-      "/",
-
-      // dev
-      "/broker/register-lead",
     ];
-
     const path = url.split("?")[0];
     if (!userService.userValue && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
-        pathname: "/clientes/login",
+        pathname: "/broker/login",
         query: { returnUrl: router.asPath },
       });
     } else {
@@ -88,6 +77,7 @@ function App({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
+
       <Modal
         modalVisible={modalVisible}
         onOutsideClick={() => setModalVisible(false)}
@@ -112,47 +102,30 @@ function App({ Component, pageProps }) {
       />
 
       <div className={`app-container`}>
-        {user ? (
-          <>
-            <Nav />
-            <div className="tooltip-wrapper">
-              <SideBar
-                sideBarVisible={sideBarVisible}
-                onOutsideClick={() => setSideBarOpen(false)}
-              />
-              <div
-                className={`layout ${
-                  sideBarVisible ? " layout-modal-mode" : ""
-                } `}
-              >
-                <Alert />
-
-                {authorized && (
-                  <Component
-                    {...pageProps}
-                    onClick={setModalVisible}
-                    onClickUser={setModalUserVisible}
-                    onClickCotizacion={() => setModalCotizacionVisible(true)}
-                    onClickCargarCotizacion={() => setModalCCVisible(true)}
-                  />
-                )}
-              </div>
-            </div>
-          </>
-        ) : (
-          <>
+        {user && <Nav />}
+        <div className="tooltip-wrapper">
+          <SideBar
+            sideBarVisible={sideBarVisible}
+            onOutsideClick={() => setSideBarOpen(false)}
+          />
+          <div
+            className={`layout ${sideBarVisible ? " layout-modal-mode" : ""} `}
+          >
             <Alert />
+
             {authorized && (
-              <Component
-                {...pageProps}
-                onClick={setModalVisible}
-                onClickCotizacion={() => setModalCotizacionVisible(true)}
-                onClickCargarCotizacion={() => setModalCCVisible(true)}
-                onClickUser={setModalUserVisible}
-              />
+              <>
+                <Component
+                  {...pageProps}
+                  onClick={setModalVisible}
+                  onClickUser={setModalUserVisible}
+                  onClickCotizacion={() => setModalCotizacionVisible(true)}
+                  onClickCargarCotizacion={() => setModalCCVisible(true)}
+                />
+              </>
             )}
-          </>
-        )}
+          </div>
+        </div>
       </div>
     </>
   );
