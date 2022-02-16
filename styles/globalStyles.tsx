@@ -112,6 +112,17 @@ ul {
 .btn-primary:hover {
   filter: brightness(120%) saturate(120%);
 }
+.sidebar-nav {
+  max-height: 100%;
+  overflow-y:scroll;
+}
+.sidebar-nav::-webkit-scrollbar {
+  display:none;
+}
+.sidebar-nav {
+  --ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .sidebar-nav li {
   background: #ffffff01;
 }
@@ -222,6 +233,7 @@ header {
   position: fixed;
   top: 87px;
   left: 6px;
+  bottom: 0;
 }
 .sidebar-area .sidebar-nav li:nth-child(n + 2) {
   border-top: 2px solid #ffffff24;

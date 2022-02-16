@@ -7,9 +7,11 @@ import {
   ClipboardListIcon,
   CheckIcon,
 } from "@heroicons/react/solid";
+import dynamic from "next/dynamic.js";
 
 import { useEffect, useState } from "react";
-import { Link } from "components";
+const FC = dynamic(() => import("components/demo/piechart"), { ssr: false });
+
 import CalendarArea from "components/Calendar";
 import LeadCreator2 from "../../components/demo/leads-broker/LeadBroker02";
 import LeadCreator3 from "../../components/demo/leads-broker/LeadBroker03";
@@ -114,8 +116,12 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
               menu
             </button>
           </div> */}
-            <div className="message-box">
-              <h5>Message:</h5>
+            <div className="d-flex w-full justify-content-between">
+              <div className="message-box">
+                <h5>Message:</h5>
+              </div>
+              {/* pie chart disgusting import mode */}
+              <FC></FC>
             </div>
             <div className="tabs-list-area">
               <div className="tabs-list-crud-actions"></div>
@@ -165,14 +171,14 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                      <span className="priority-icon priority-normal"></span>
+                      {/* <span className="priority-icon priority-normal"></span> */}
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Florencio Ojeda
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -199,7 +205,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Jose Fernando Da-Silva
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -221,7 +227,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Dionisio Montaño
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -247,7 +253,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Abdelkader Mendez
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -274,7 +280,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Abderrahim Zamora
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -300,7 +306,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Martin Marrero
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">Emisión</div>
@@ -324,7 +330,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Aziz Segura
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -349,7 +355,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Driss Miguez
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -370,7 +376,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Manuel Jose Morera
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -397,7 +403,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Said Rodrigo
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -423,7 +429,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Candido Duran
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -444,7 +450,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Maximo San-Jose
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">Cobranzas</div>
@@ -464,7 +470,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Ildefonso Ribas
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -491,7 +497,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Asier Maroto
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -513,7 +519,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Emilio Jose Quiros
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -536,7 +542,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Gustavo Adolfo Macias
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -564,7 +570,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Jose Juan Alcaraz
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -585,7 +591,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Oscar Velazquez
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -609,7 +615,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Ayoub Beltran
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -636,7 +642,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Adam Sancho
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -659,7 +665,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Angel Maria Toro
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -687,7 +693,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Nestor Zapata
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -709,7 +715,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Carlos Recio
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -732,7 +738,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Demetrio Robles
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -760,7 +766,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Marius Puerta
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -782,7 +788,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Jacinto Lozano
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -806,7 +812,7 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Emiliano Lillo
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -825,50 +831,49 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                     </div>
                   </div>
                   {/*  */}
-                    {/*  */}
-                    <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                       
-                    </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Axel Mas
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación</div>
                     <div className="tab-list-form-row-column">
-                     Cliente Validará su Renovación
+                      Poliza Renovación
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cliente Validará su Renovación
                     </div>
 
-                    <div className="tab-list-form-row-column">
-                  
-                    </div>
+                    <div className="tab-list-form-row-column"></div>
                   </div>
 
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Clemente Calleja
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(2)</div>
                     <div className="tab-list-form-row-column">
-                    Cotizar Intención de Renovación
+                      Poliza Renovación(2)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cotizar Intención de Renovación
                     </div>
 
                     <div className="tab-list-form-row-column">
-                      
-                    <button onClick={() => setModalLead3(!modalLead3)}>
+                      <button onClick={() => setModalLead3(!modalLead3)}>
                         Cotizar renovación
                       </button>
                     </div>
@@ -880,12 +885,14 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Alberto Montoro
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(3)</div>
                     <div className="tab-list-form-row-column">
-                    Cotización en Revisión de la Aseguradora 
+                      Poliza Renovación(3)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cotización en Revisión de la Aseguradora
                     </div>
 
                     <div className="tab-list-form-row-column"></div>
@@ -893,23 +900,25 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Luis Cid
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(4)</div>
                     <div className="tab-list-form-row-column">
-                   Cotización por enviar al Cliente
+                      Poliza Renovación(4)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cotización por enviar al Cliente
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead3(!modalLead3)}>
+                      <button onClick={() => setModalLead3(!modalLead3)}>
                         Enviar Cotización
                       </button>
                     </div>
@@ -922,84 +931,86 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Pere Jerez
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(5)</div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora Cancelando  
+                      Poliza Renovación(5)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora Cancelando
                     </div>
 
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                    
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Fabian Suarez
+                      </button>
                     </div>
+                    <div className="tab-list-form-row-column">
+                      Poliza Renovación(6)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cotización en Revisión del cliente
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                     
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Camilo Sempere
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(6)</div>
                     <div className="tab-list-form-row-column">
-                   Cotización en Revisión del cliente
+                      Poliza Renovación(7)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cliente necesita asesoria
                     </div>
 
                     <div className="tab-list-form-row-column">
-                   
-                    </div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(7)</div>
-                    <div className="tab-list-form-row-column">
-                     Cliente necesita asesoria
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead3(!modalLead3)}>
+                      <button onClick={() => setModalLead3(!modalLead3)}>
                         Realizar asesoria
                       </button>
                     </div>
                   </div>
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                    <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Pedro Luis Calvo
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión Renovación(8)</div>
                     <div className="tab-list-form-row-column">
-                   Notificar Orden de Renovación a Aseguradora 
+                      Emisión Renovación(8)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Notificar Orden de Renovación a Aseguradora
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead3(!modalLead3)}>
-                    Notificar Orden de Renovación 
+                      <button onClick={() => setModalLead3(!modalLead3)}>
+                        Notificar Orden de Renovación
                       </button>
                     </div>
                   </div>
@@ -1010,18 +1021,19 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Abraham Cabrera
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión Renovación(9)</div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora Emitiendo Renovación
+                      Emisión Renovación(9)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora Emitiendo Renovación
                     </div>
 
                     <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
-                  
                 </div>
                 <div className="tab-list-pagination">
                   <ul>

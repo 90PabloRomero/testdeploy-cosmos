@@ -221,7 +221,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Ismael Tena
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -247,7 +247,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Anabel Roca
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -271,7 +271,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Simon Anton
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -294,7 +294,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Aritz Felipe
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -320,7 +320,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Ferran Macias
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -343,7 +343,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Luis Angel Hinojosa
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">Emisión</div>
@@ -366,7 +366,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Benjamin Moyano
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -386,7 +386,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Bernardino Macia
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -409,7 +409,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Carmelo Aguirre
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -435,7 +435,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Marti Mestre
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -456,7 +456,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Benigno Marin
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -479,7 +479,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Albert Barbero
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">Cobranzas</div>
@@ -502,7 +502,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Hector Gonzalez
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -524,7 +524,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Jeronimo Miralles
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -548,7 +548,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Nicolas Franco
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -574,7 +574,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Michael Jaen
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -598,7 +598,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Eduard Melian
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -624,7 +624,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Jose Jesus Silva
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -646,7 +646,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Ion Castañeda
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -669,7 +669,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Patricio Quiñones
                       </button>
                     </div>
                     <div className="tab-list-form-row-column"> Movimientos</div>
@@ -692,7 +692,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Clemente Campos
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -714,7 +714,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Jose Enrique Saldaña
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -738,7 +738,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Noel Tudela
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -764,7 +764,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Juan Miguel Amor
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -786,7 +786,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Pau Cervantes
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -810,7 +810,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Josep Cardenas
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -837,7 +837,7 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Bernat Mellado
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
@@ -855,23 +855,25 @@ const Home = ({ onClick, onClickUser }) => {
                   {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column">
-                       <span className="priority-icon priority-normal"></span>
+                      <span className="priority-icon priority-normal"></span>
                     </div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Miquel Valle
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación</div>
+                    <div className="tab-list-form-row-column">
+                      Poliza Renovación
+                    </div>
                     <div className="tab-list-form-row-column">
                       Validar Intención de Renovación
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead3(!modalLead3)}>
+                      <button onClick={() => setModalLead3(!modalLead3)}>
                         Validar intención
                       </button>
                     </div>
@@ -885,12 +887,14 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Gonzalo Campillo
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(2)</div>
                     <div className="tab-list-form-row-column">
-                    Cotización en Revisión del Broker 
+                      Poliza Renovación(2)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cotización en Revisión del Broker
                     </div>
 
                     <div className="tab-list-form-row-column">
@@ -904,37 +908,17 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Pascual Galera
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(3)</div>
                     <div className="tab-list-form-row-column">
-                    Cotización en Revisión de la Aseguradora 
+                      Poliza Renovación(3)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Cotización en Revisión de la Aseguradora
                     </div>
 
                     <div className="tab-list-form-row-column"></div>
-                  </div>
-                  {/*  */}
-                  <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                     
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(4)</div>
-                    <div className="tab-list-form-row-column">
-                    Broker se contactará con usted  
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -944,17 +928,37 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Muhammad Carrera
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(5)</div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora Cancelando  
+                      Poliza Renovación(4)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Broker se contactará con usted
                     </div>
 
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  {/*  */}
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
-                    
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Antonio Miguel Araujo
+                      </button>
                     </div>
+                    <div className="tab-list-form-row-column">
+                      Poliza Renovación(5)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora Cancelando
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
@@ -966,55 +970,38 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Mateo Salmeron
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(6)</div>
                     <div className="tab-list-form-row-column">
-                    Nueva Cotización disponible 
+                      Poliza Renovación(6)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Nueva Cotización disponible
                     </div>
 
                     <div className="tab-list-form-row-column">
-                    <button onClick={() => setModalLead3(!modalLead3)}>
+                      <button onClick={() => setModalLead3(!modalLead3)}>
                         Revisar cotizacion
                       </button>
                     </div>
                   </div>
                   {/*  */}
                   <div className="tab-list-form-row">
-                    <div className="tab-list-form-row-column">
-                   
-                    </div>
-                    <div className="tab-list-form-row-column">
-                      <button
-                        className="user-btn m-0 p-0"
-                        onClick={onClickUser}
-                      >
-                        Juan Ugalde
-                      </button>
-                    </div>
-                    <div className="tab-list-form-row-column">Poliza Renovación(7)</div>
-                    <div className="tab-list-form-row-column">
-                     Broker se Contactará con usted
-                    </div>
-
-                    <div className="tab-list-form-row-column">
-                      
-                    </div>
-                  </div>
-                  <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
                       <button
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Juan Miguel Juan
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión Renovación(8)</div>
                     <div className="tab-list-form-row-column">
-                    Broker Notificando Orden de Renovación  
+                      Poliza Renovación(7)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Broker se Contactará con usted
                     </div>
 
                     <div className="tab-list-form-row-column"></div>
@@ -1026,18 +1013,38 @@ const Home = ({ onClick, onClickUser }) => {
                         className="user-btn m-0 p-0"
                         onClick={onClickUser}
                       >
-                        Juan Ugalde
+                        Ramiro Belmonte
                       </button>
                     </div>
-                    <div className="tab-list-form-row-column">Emisión Renovación(9)</div>
                     <div className="tab-list-form-row-column">
-                    Aseguradora Emitiendo Renovación
+                      Emisión Renovación(8)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Broker Notificando Orden de Renovación
+                    </div>
+
+                    <div className="tab-list-form-row-column"></div>
+                  </div>
+                  <div className="tab-list-form-row">
+                    <div className="tab-list-form-row-column"></div>
+                    <div className="tab-list-form-row-column">
+                      <button
+                        className="user-btn m-0 p-0"
+                        onClick={onClickUser}
+                      >
+                        Jose Manuel Vilar
+                      </button>
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Emisión Renovación(9)
+                    </div>
+                    <div className="tab-list-form-row-column">
+                      Aseguradora Emitiendo Renovación
                     </div>
 
                     <div className="tab-list-form-row-column"></div>
                   </div>
                   {/*  */}
-                  
                 </div>
                 <div className="tab-list-pagination">
                   <ul>
