@@ -65,7 +65,9 @@ function LeadCreator11({ onClickOutside, modalPanel11ShowHandler }) {
                   <div className=" modal-lead-titular">
                     Cobranzas- <span> Añadir Débito Bancario</span>
                   </div>
-                  <div>Poliza</div>
+                  <div className="modal-body">
+                  <div className="subtitle">Poliza
+                  <div className="resalt"></div></div>
                   <div className="modal-body my-2 bg-grey">
                     <div>
                       <div className="d-flex ">
@@ -182,7 +184,8 @@ function LeadCreator11({ onClickOutside, modalPanel11ShowHandler }) {
                     </div>
                   </div>
                   <div className="">
-                    <div className="">Cliente</div>
+                    <div className="subtitle">Cliente
+                    <div className="resalt"></div></div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
@@ -276,7 +279,9 @@ function LeadCreator11({ onClickOutside, modalPanel11ShowHandler }) {
                       {}
 
                       {}
-                      <div>Plan Seleccionado</div>
+                      <div className="subtitle">Plan Seleccionado
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex ">
                           <div className="form-group txt-align-ct">
@@ -308,7 +313,9 @@ function LeadCreator11({ onClickOutside, modalPanel11ShowHandler }) {
                       </div>
                       {}
 
-                      <div>Forma de Pago Ofrecido</div>
+                      <div className="subtitle">Forma de Pago Ofrecido
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -329,7 +336,8 @@ function LeadCreator11({ onClickOutside, modalPanel11ShowHandler }) {
                           </div>
                         </div>
                       </div>
-                      <div>Emisión</div>
+                      <div className="subtitle">Emisión
+                      <div className="resalt"></div></div>
                       <div className="modal-body my-2 bg-grey">
                         <div>
                           <div className="form-group">
@@ -341,7 +349,9 @@ function LeadCreator11({ onClickOutside, modalPanel11ShowHandler }) {
                           </div>
                         </div>
                       </div>
-                      <div>Forma de Pago Aplicable</div>
+                      <div className="subtitle">Forma de Pago Aplicable
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2">
                         <div>
                           <div className="d-flex justify-content-around">
@@ -430,8 +440,10 @@ function LeadCreator11({ onClickOutside, modalPanel11ShowHandler }) {
                       </div>
                     </form>
                   </div>
+                  </div>
                 </Tab>
-                <Tab eventKey="Notas" title="Notas">
+               
+              <Tab eventKey="Notas" title="Notas">
                   <div>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around ">

@@ -740,7 +740,7 @@ box-shadow: 16px 19px 13px 15px #0004;
 /* modal */
 .modal-content {
   border: 0 !important;
-  border-radius: 0;
+  border-radius: 15px;
   margin-top: 13px!important;
 }
 .modal-dialog {
@@ -794,7 +794,7 @@ box-shadow: 16px 19px 13px 15px #0004;
 .modal-body {
   /* padding: 2.25rem; */
   margin: -1px 1.45rem 0 1.45rem;
-  border: 1px solid black;
+  border: 2px solid var(--primary);
   border-radius: 14px;
   font-weight: 500
 }
@@ -1116,6 +1116,19 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  }
  .link-icon {
    max-width: 30px;
+ }
+ .tab-list-form-row-column  .link-icon {
+   width:100px;
+   margin:auto;
+ }
+ .resalt{
+   width:100%;
+   background:var(--primary);
+   height:2px;
+ }
+ .subtitle{
+   width:max-content;
+   font-weight: 600;
  }
 `;
 

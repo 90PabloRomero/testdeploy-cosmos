@@ -66,7 +66,9 @@ function LeadCreator18({ onClickOutside, modalPanel18ShowHandler }) {
                     <div className=" modal-lead-titular">
                       Movimientos - <span> Solicitud de Movimientos </span>
                     </div>
-                    <div>Poliza</div>
+                    <div className="modal-body">
+                    <div className="subtitle">Poliza
+                    <div className="resalt"></div></div>
                     <div className="modal-body my-2 bg-grey">
                       <div>
                         <div className="d-flex ">
@@ -182,7 +184,8 @@ function LeadCreator18({ onClickOutside, modalPanel18ShowHandler }) {
                         </div>
                       </div>
                     </div>
-                    <div className="">Datos del solicitante</div>
+                    <div className="subtitle">Datos del solicitante
+                    <div className="resalt"></div>  </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
@@ -274,7 +277,9 @@ function LeadCreator18({ onClickOutside, modalPanel18ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Datos de los familiares</div>
+                      <div className="subtitle">Datos de los familiares
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -312,7 +317,9 @@ function LeadCreator18({ onClickOutside, modalPanel18ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Anexos</div>
+                      <div className="subtitle">Anexos
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -349,7 +356,9 @@ function LeadCreator18({ onClickOutside, modalPanel18ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Plan Seleccionado</div>
+                      <div className="subtitle">Plan Seleccionado
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex ">
                           <div className="form-group txt-align-ct">
@@ -380,7 +389,9 @@ function LeadCreator18({ onClickOutside, modalPanel18ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Movimiento</div>
+                      <div className="subtitle">Movimiento
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 ">
                         <div className="d-flex justify-content-around ">
                           <div className="form-group ">
@@ -434,7 +445,7 @@ function LeadCreator18({ onClickOutside, modalPanel18ShowHandler }) {
                       </div>
                     </form>
                   </div>
-                </Tab>
+              </div>  </Tab>
                 <Tab eventKey="Notas" title="Notas">
                   <div>
                     <div className="modal-body my-2">

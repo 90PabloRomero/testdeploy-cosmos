@@ -13,6 +13,8 @@ import { useEffect, useState } from "react";
 const FC = dynamic(() => import("components/demo/piechart"), { ssr: false });
 
 import CalendarArea from "components/Calendar";
+
+import LeadCreator1 from "../../components/demo/leads-broker/LeadBroker01";
 import LeadCreator2 from "../../components/demo/leads-broker/LeadBroker02";
 import LeadCreator3 from "../../components/demo/leads-broker/LeadBroker03";
 import LeadCreator4 from "../../components/demo/leads-broker/LeadBroker04";
@@ -22,6 +24,7 @@ import LeadCreator12 from "../../components/demo/leads-broker/LeadBroker12";
 import LeadCreator15 from "../../components/demo/leads-broker/LeadBroker15";
 import LeadCreator17 from "../../components/demo/leads-broker/LeadBroker17";
 import LeadCreator19 from "../../components/demo/leads-broker/LeadBroker19";
+import LeadCreator21 from "../../components/demo/leads-broker/LeadBroker21";
 import LeadCreator22 from "../../components/demo/leads-broker/LeadBroker22";
 import LeadCreator25 from "../../components/demo/leads-broker/LeadBroker25";
 
@@ -47,6 +50,8 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
     document.body.className = modalLead19 ? "modal-mode" : "";
     document.body.className = modalLead22 ? "modal-mode" : "";
     document.body.className = modalLead25 ? "modal-mode" : "";
+    document.body.className = modalLead21 ? "modal-mode" : "";
+
   });
 
   // llamo al modal LeadCreator2 y le doy sus condiciones para que se pueda abrir
@@ -61,8 +66,15 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
   const [modalLead19, setModalLead19] = useState(false);
   const [modalLead22, setModalLead22] = useState(false);
   const [modalLead25, setModalLead25] = useState(false);
+  const [modalLead1, setModalLead1] = useState(false);
+  const [modalLead21, setModalLead21] = useState(false);
   return (
     <>
+    <LeadCreator1
+        modalPanel1ShowHandler={modalLead1}
+        onClickOutside={() => setModalLead1(false)}
+        onOutsideClick={() => setModalLead1(false)}
+      />
       <LeadCreator2
         modalPanel2ShowHandler={modalLead2}
         onClickOutside={() => setModalLead2(false)}
@@ -108,6 +120,10 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
         modalPanel25ShowHandler={modalLead25}
         onClickOutside={() => setModalLead25(false)}
       />
+       <LeadCreator21
+        modalPanel21ShowHandler={modalLead21}
+        onClickOutside={() => setModalLead21(false)}
+      />
       <main>
         <div className="main-layout">
           <div className="tabs-area">
@@ -143,11 +159,15 @@ const Home = ({ onClick, onClickUser, carryAppointment }) => {
                       className="search-input "
                     />
                   </fieldset>
-                  {/* <Link href="/account/register-lead">
-                    <button className="btn btn-primary ml-4">
-                      CREAR CLIENTE
+                 
+                    <button className="btn btn-primary ml-4"
+                    onClick={() => setModalLead1(!modalLead1)}>
+                      CREAR OPORTUNIDAD
                     </button>
-                  </Link> */}
+                    <button className="btn btn-primary ml-4 " onClick={() => setModalLead21(!modalLead21)}>
+                         CREAR INDEMNIZACIÓN
+                      
+                      </button>
                   <button
                     onClick={() => setModalCalendarVisible(true)}
                     className="btn btn-primary ml-4"

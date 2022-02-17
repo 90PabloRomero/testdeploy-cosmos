@@ -67,7 +67,9 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                       Emisión-{" "}
                       <span> Revisión de Formularios y Requisitos</span>
                     </div>
-                    <div className="">Producto</div>
+                    <div className="modal-body">
+                    <div className="subtitle">Producto
+                    <div className="resalt"></div></div>
                     <form onSubmit={handleSubmit(onSubmit)}> </form>
                     <div className="modal-body my-2 bg-grey">
                       <div className="d-flex justify-content-around ">
@@ -113,7 +115,8 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                         </div>
                       </div>
                     </div>
-                    <div className="">Datos del solicitante</div>
+                    <div className="subtitle">Datos del solicitante
+                    <div className="resalt"></div> </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
@@ -205,7 +208,9 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Datos de los familiares</div>
+                      <div className="subtitle">Datos de los familiares
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -243,7 +248,8 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Anexos</div>
+                      <div className="subtitle">Anexos
+                      <div className="resalt"></div></div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -280,7 +286,9 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Plan Seleccionado</div>
+                      <div className="subtitle">Plan Seleccionado
+                      <div className="resalt"></div>      
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex ">
                           <div className="form-group txt-align-ct">
@@ -311,7 +319,9 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Requisitos de activación de Poliza</div>
+                      <div className="subtitle">Requisitos de activación de Poliza
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 ">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -473,7 +483,9 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                           </div>
                         </div>
                       </div>
-                      <div>Forma de Pago Ofrecido</div>
+                      <div className="subtitle">Forma de Pago Ofrecido
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 ">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -544,7 +556,7 @@ function LeadCreator6({ onClickOutside, modalPanel6ShowHandler }) {
                         </button>
                       </div>
                     </form>
-                  </div>
+                  </div></div>
                 </Tab>
                 <Tab eventKey="Notas" title="Notas">
                   <div>

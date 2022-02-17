@@ -67,7 +67,9 @@ function LeadCreator1({
             >
               <Tab eventKey="Datos" title="Datos">
                 <div>
-                  <div className="">Producto</div>
+                <div className="modal-body">
+                  <div className="subtitle">Producto
+                  <div className="resalt"></div></div>
                   <form onSubmit={handleSubmit(onSubmit)}> </form>
                   <div className="modal-body my-2">
                     <div className="d-flex justify-content-around ">
@@ -108,7 +110,8 @@ function LeadCreator1({
                       </div>
                     </div>
                   </div>
-                  <div className="">Datos del solicitante</div>
+                  <div className="subtitle">Datos del solicitante
+                  <div className="resalt"></div></div>
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around ">
@@ -190,7 +193,8 @@ function LeadCreator1({
                       </div>
                     </div>
                     {}
-                    <div>Datos de los familiares</div>
+                    <div className="subtitle">Datos de los familiares
+                    <div className="resalt"></div></div>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around">
                         <div className="form-group">
@@ -224,7 +228,8 @@ function LeadCreator1({
                       </div>
                     </div>
                     {}
-                    <div>Anexos</div>
+                    <div className="subtitle">Anexos
+                    <div className="resalt"></div></div>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around">
                         <div className="form-group">
@@ -283,7 +288,7 @@ function LeadCreator1({
                       </button>
                     </div>
                   </form>
-                </div>
+                </div></div>
               </Tab>
               <Tab eventKey="Notas" title="Notas">
                 <div>

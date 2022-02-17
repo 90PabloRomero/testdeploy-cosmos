@@ -67,7 +67,9 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                       indemnización -{" "}
                       <span> Revisión Liquidación de Siniestros</span>
                     </div>
-                    <div>Poliza</div>
+                    <div className="modal-body">
+                    <div className="subtitle">Poliza
+                    <div className="resalt"></div></div>
                     <div className="modal-body my-2 bg-grey">
                       <div>
                         <div className="d-flex ">
@@ -183,7 +185,8 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                         </div>
                       </div>
                     </div>
-                    <div className="">Datos del solicitante</div>
+                    <div className="subtitle">Datos del solicitante
+                    <div className="resalt"></div></div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
@@ -279,7 +282,9 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                       {}
 
                       {}
-                      <div>Plan Seleccionado</div>
+                      <div className="subtitle">Plan Seleccionado
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex ">
                           <div className="form-group txt-align-ct">
@@ -310,7 +315,9 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Reclamo</div>
+                      <div className="subtitle">Reclamo
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2  bg-grey">
                         <div className="d-flex justify-content-around ">
                           <div className="form-group ">
@@ -358,7 +365,8 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                           </button>
                         </div>
                       </div>
-                      <div className="">Cuenta Bancaria Solicitante </div>
+                      <div className=" subtitle">Cuenta Bancaria Solicitante 
+                      <div className="resalt"></div> </div>
 
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
@@ -433,7 +441,8 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                           </div>
                         </div>
                       </div>
-                      <div className="">Liquidación</div>
+                      <div className="subtitle">Liquidación
+                      <div className="resalt"></div> </div>
 
                       <div className="modal-body my-2 bg-grey ">
                         <div className="d-flex ">
@@ -524,7 +533,7 @@ function LeadCreator24({ onClickOutside, modalPanel24ShowHandler }) {
                       </div>
                     </form>
                   </div>
-                </Tab>
+               </div> </Tab>
                 <Tab eventKey="Notas" title="Notas">
                   <div>
                     <div className="modal-body my-2">

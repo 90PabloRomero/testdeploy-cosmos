@@ -57,7 +57,9 @@ function LeadInsu1({ onClickOutside, modalPanel26ShowHandler }) {
           <div className="modal-dialog bg-white">
             <div className="modal-content">
               <div className="">
-                <div className="">Producto</div>
+              <div className="modal-body">
+                <div className="subtitle">Producto
+                <div className="resalt"></div></div>
                 <form onSubmit={handleSubmit(onSubmit)}> </form>
                 <div className="modal-body my-2 bg-grey">
                   <div className="d-flex justify-content-around ">
@@ -103,7 +105,8 @@ function LeadInsu1({ onClickOutside, modalPanel26ShowHandler }) {
                     </div>
                   </div>
                 </div>
-                <div className="">Datos del solicitante</div>
+                <div className="subtitle">Datos del solicitante
+                <div className="resalt"></div></div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="modal-body my-2 bg-grey">
                     <div className="d-flex justify-content-around ">
@@ -195,7 +198,9 @@ function LeadInsu1({ onClickOutside, modalPanel26ShowHandler }) {
                     </div>
                   </div>
                   {}
-                  <div>Datos de los familiares</div>
+                  <div className="subtitle">Datos de los familiares
+                  <div className="resalt"></div>
+                  </div>
                   <div className="modal-body my-2 bg-grey">
                     <div className="d-flex justify-content-around">
                       <div className="form-group">
@@ -233,7 +238,9 @@ function LeadInsu1({ onClickOutside, modalPanel26ShowHandler }) {
                     </div>
                   </div>
                   {}
-                  <div>Anexos</div>
+                  <div className="subtitle">Anexos
+                  <div className="resalt"></div>
+                  </div>
                   <div className="modal-body my-2 bg-grey">
                     <div className="d-flex justify-content-around">
                       <div className="form-group">
@@ -270,58 +277,11 @@ function LeadInsu1({ onClickOutside, modalPanel26ShowHandler }) {
                     </div>
                   </div>
                   {}
-                  <div>Aseguradoras para solicitar cotización</div>
-                  <div className="modal-body my-2 bg-grey">
-                    <div className="d-flex justify-content-around">
-                      <div className="form-group">
-                        <label>Vumi</label>
-                        <input
-                          name="organs"
-                          type="checkbox"
-                          {...register("organs")}
-                          className={`form-control ${
-                            errors.organs ? "is-invalid" : ""
-                          }`}
-                          disabled
-                        />
-                        <div className="invalid-feedback">
-                          {errors.organs?.message}
-                        </div>
-                      </div>
-                      <div className="form-group">
-                        <label>saludsa</label>
-                        <input
-                          name="plus"
-                          type="checkbox"
-                          {...register("plus")}
-                          className={`form-control ${
-                            errors.plus ? "is-invalid" : ""
-                          }`}
-                          disabled
-                        />
-                        <div className="invalid-feedback">
-                          {errors.plus?.message}
-                        </div>
-                      </div>
-                      <div className="form-group">
-                        <label>Confiamed</label>
-                        <input
-                          name="plus"
-                          type="checkbox"
-                          {...register("plus")}
-                          className={`form-control ${
-                            errors.plus ? "is-invalid" : ""
-                          }`}
-                          disabled
-                        />
-                        <div className="invalid-feedback">
-                          {errors.plus?.message}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                 
                   {}
-                  <div>Resumén de Planes</div>
+                  <div className="subtitle">Resumén de Planes
+                  <div className="resalt"></div>
+                  </div>
                   <div className="modal-body my-2">
                     <div className="container">
                       <div className="d-flex justify-content-around">
@@ -453,7 +413,7 @@ function LeadInsu1({ onClickOutside, modalPanel26ShowHandler }) {
                   </div>
                 </form>
               </div>
-            </div>
+            </div></div>
           </div>{" "}
         </div>
       </>

@@ -62,8 +62,9 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                 className="mb-3"
               >
                 <Tab eventKey="Datos" title="Datos">
-                  <div className="">
-                    <div className="">Producto</div>
+                  <div className="modal-body">
+                    <div className="subtitle">Producto
+                    <div className="resalt"></div></div>
                     <form onSubmit={handleSubmit(onSubmit)}> </form>
                     <div className="modal-body my-2 bg-grey">
                       <div className="d-flex justify-content-around ">
@@ -108,7 +109,8 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                         {errors.age?.message}
                       </div>
                     </div>
-                    <div className="">Datos del solicitante</div>
+                    <div className="subtitle">Datos del solicitante
+                    <div className="resalt"></div>  </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
@@ -200,7 +202,9 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Datos de los familiares</div>
+                      <div className="subtitle">Datos de los familiares
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -238,7 +242,8 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Anexos</div>
+                      <div className="subtitle">Anexos
+                      <div className="resalt"></div></div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -275,7 +280,9 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Plan Seleccionado</div>
+                      <div className="subtitle">Plan Seleccionado
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex ">
                           <div className="form-group txt-align-ct">
@@ -306,7 +313,9 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Requisitos de activación de Poliza</div>
+                      <div className="subtitle">Requisitos de activación de Poliza
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey ">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -450,7 +459,9 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                           </div>
                         </div>
                       </div>
-                      <div>Forma de Pago Ofrecido</div>
+                      <div className="subtitle">Forma de Pago Ofrecido
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -471,7 +482,8 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                           </div>
                         </div>
                       </div>
-                      <div>Emisión</div>
+                      <div className="subtitle">Emisión
+                      <div className="resalt"></div></div>
                       <div className="modal-body my-2 bg-grey">
                         <div>
                           <div className="form-group">
@@ -483,7 +495,8 @@ function LeadCreator10({ onClickOutside, modalPanel10ShowHandler }) {
                           </div>
                         </div>
                       </div>
-                      <div>Poliza</div>
+                      <div className="subtitle">Poliza
+                      <div className="resalt"></div></div>
                       <div className="modal-body my-2">
                         <div>
                           <div className="d-flex ">

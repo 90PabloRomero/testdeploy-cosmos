@@ -65,7 +65,9 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                   <div className=" modal-lead-titular">
                     Comercial- <span>Nueva Cotización a Revisar</span>
                   </div>
-                  <div className="">Producto</div>
+                  <div className="modal-body">
+                  <div className="subtitle">Producto
+                  <div className="resalt"></div></div>
                   <form onSubmit={handleSubmit(onSubmit)}> </form>
                   <div className="modal-body my-2">
                     <div className="d-flex justify-content-around ">
@@ -106,7 +108,8 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                       </div>
                     </div>
                   </div>
-                  <div className="">Datos del solicitante</div>
+                  <div className="subtitle">Datos del solicitante
+                  <div className="resalt"></div></div>
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around ">
@@ -188,7 +191,8 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                       </div>
                     </div>
                     {}
-                    <div>Datos de los familiares</div>
+                    <div className="subtitle">Datos de los familiares
+                    <div className="resalt"></div></div>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around">
                         <div className="form-group">
@@ -222,7 +226,8 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                       </div>
                     </div>
                     {}
-                    <div>Anexos</div>
+                    <div className="subtitle">Anexos</div>
+                    <div className="resalt"></div>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around">
                         <div className="form-group">
@@ -256,7 +261,8 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                       </div>
                     </div>
                     {}
-                    <div>Aseguradoras para solicitar cotización</div>
+                    <div className="subtitle">Aseguradoras para solicitar cotización
+                    <div className="resalt"></div></div>
                     <div className="modal-body my-2">
                       <div className="d-flex justify-content-around">
                         <div className="form-group">
@@ -331,7 +337,7 @@ function LeadCreator2({ onClickOutside, modalPanel2ShowHandler }) {
                       </button>
                     </div>
                   </form>
-                </div>
+                </div></div>
               </Tab>
               <Tab eventKey="Notas" title="Notas">
                 <div>

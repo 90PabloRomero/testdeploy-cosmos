@@ -11,17 +11,19 @@ import LeadCreator16 from "../../components/demo/leads-broker/LeadBroker16";
 import LeadCreator18 from "../../components/demo/leads-broker/LeadBroker18";
 import LeadCreator21 from "../../components/demo/leads-broker/LeadBroker21";
 import LeadCreator24 from "../../components/demo/leads-broker/LeadBroker24";
+
 import Image from "next/image";
 import addIcon from "public/add.png";
 import editIcon from "public/edit.png";
 import sendIcon from "/public/icon3.png";
+
 import { leadService } from "services";
 import ModalCreateLead from "components/demo/modalCreateLead";
 import {
   SearchCircleIcon,
   XCircleIcon,
   PhoneOutgoingIcon,
-  DocumentAddIcon,
+  DocumentAddIcon ,
   CreditCardIcon,
   IdentificationIcon,
   CurrencyDollarIcon,

@@ -62,7 +62,9 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                     <div className=" modal-lead-titular">
                       Comercial- <span>Cliente necesita Asesoría</span>
                     </div>
-                    <div className="">Producto</div>
+                    <div className="modal-body">
+                    <div className="subtitle">Producto
+                    <div className="resalt"></div> </div>
                     <form onSubmit={handleSubmit(onSubmit)}> </form>
                     <div className="modal-body my-2 bg-grey">
                       <div className="d-flex justify-content-around ">
@@ -108,7 +110,8 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         </div>
                       </div>
                     </div>
-                    <div className="">Datos del solicitante</div>
+                    <div className="subtitle">Datos del solicitante
+                    <div className="resalt"></div></div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
@@ -200,7 +203,9 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Datos de los familiares</div>
+                      <div className="subtitle">Datos de los familiares
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -238,7 +243,9 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Anexos</div>
+                      <div className="subtitle">Anexos
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -275,7 +282,9 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Aseguradoras para solicitar cotización</div>
+                      <div className="subtitle">Aseguradoras para solicitar cotización
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around">
                           <div className="form-group">
@@ -326,7 +335,9 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         </div>
                       </div>
                       {}
-                      <div>Resumén de Planes</div>
+                      <div className="subtitle"> Resumén de Planes
+                      <div className="resalt"></div>
+                      </div>
                       <div className="modal-body my-2">
                         <div className="container">
                           <div className="row">
@@ -468,7 +479,7 @@ function LeadCreator4({ modalPanel4ShowHandler }) {
                         <button className="btn btn-link">cerrar</button>
                       </div>
                     </form>
-                  </div>
+                  </div></div>
                 </Tab>
                 <Tab eventKey="Notas" title="Notas">
                   <div>
