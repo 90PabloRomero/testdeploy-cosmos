@@ -4,9 +4,8 @@ import Page from '../../components/core';
 import dynamic from "next/dynamic";
 import CircularProgress from "../../components/CircularProgress";
 const ClientHome = dynamic(() => import('../../routes/clientes/panel'),{
-  loading: () => <CircularProgress />,
+  loading: () => <CircularProgress />, ssr: false,
 });
-
 export default Page(() => (
   <>
     <Head>

@@ -6,10 +6,19 @@ export default ComposedComponent =>
   class WithData extends Component {
     static async getInitialProps(context) {  
       const isLoggedIn = getCookie('user_id', context.req);
+      const isUserRole = getCookie('user_role', context.req);
       if (!isLoggedIn) {
-        redirect(context, '/clientes/panel');
+        switch (isUserRole) {
+          case isUserRole == 'client':
+            redirect(context, '/clientes/login');
+          case isUserRole == 'broker':
+            redirect(context, '/broker/login');
+          case isUserRole == 'aseguradoras':
+            redirect(context, '/aseguradoras/login');
+        }
+        
       }
-      return {isLoggedIn};
+      return {isLoggedIn, isUserRole};
     }
 
     render() {

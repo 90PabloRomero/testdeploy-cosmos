@@ -440,13 +440,13 @@ box-shadow: 16px 19px 13px 15px #0004;
 }
 
 .login-username {
-  background: url(/login-username.png) no-repeat left center;
-  padding-left: 1.8rem;
+  background: url(/login-username.png) no-repeat scroll 7px 2px;
+  padding-left: 35px;
   border-left: 1px solid var(--linegray);
 }
 .login-password {
-  background: url(/login-password.png) no-repeat left center;
-  padding-left: 1.8rem;
+  background: url(/login-password.png) no-repeat scroll 7px 4px;
+  padding-left: 35px;
   border-left: 1px solid var(--linegray);
 }
 .tab-search fieldset input {
@@ -843,7 +843,7 @@ box-shadow: 16px 19px 13px 15px #0004;
   margin-bottom: 1rem;
 }
 .login-logo-area {
-  margin-top: 15vh;
+  margin-top: 0vh;
 }
 /*
   END LOGIN PAGE
@@ -1117,6 +1117,43 @@ filter: invert(85%) sepia(12%) saturate(6087%) hue-rotate(351deg) brightness(99%
  .link-icon {
    max-width: 30px;
  }
+ .app-loader-view {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  .loader {
+    position: relative;
+    margin: 0 auto;
+    width: 60px;
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+  }
+  .login-wrapper {
+    height: 100vh;
+    align-items: center;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0rem 2.5rem;
+  }
 `;
 
 export default Styles;
