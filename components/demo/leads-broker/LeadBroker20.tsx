@@ -12,7 +12,7 @@ export default LeadCreator20;
 
 function LeadCreator20({ onClickOutside, modalPanel20ShowHandler }) {
   const router = useRouter();
-
+  const [value, setValue] = useState("0");
   // form validation rules
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("Por favor coloque su/s nombre/s"),
@@ -381,8 +381,8 @@ function LeadCreator20({ onClickOutside, modalPanel20ShowHandler }) {
                       <div className="modal-body my-2 bg-grey">
                         <div className="d-flex justify-content-around ">
                           <div className="form-group ">
-                            <select name="productos" className="select-product">
-                              <option selected value="0">
+                            <select name="productos" className="select-product" value={value} onChange={(e) => {setValue(e.target.value);}}>
+                              <option value="0">
                                 {" "}
                                 Tipo de Movimiento{" "}
                               </option>
@@ -662,7 +662,7 @@ function LeadCreator20({ onClickOutside, modalPanel20ShowHandler }) {
                           name="productos"
                           className="select-product archive-select"
                         >
-                          <option selected value="0">
+                          <option value="0">
                             {" "}
                             Tipo de Archivo{" "}
                           </option>
@@ -717,7 +717,7 @@ function LeadCreator20({ onClickOutside, modalPanel20ShowHandler }) {
                           name="productos"
                           className="select-product archive-select"
                         >
-                          <option selected value="0">
+                          <option value="0">
                             {" "}
                             Tipo de Actividad{" "}
                           </option>

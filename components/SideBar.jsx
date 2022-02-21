@@ -11,22 +11,15 @@ import iconManos from "./../public/manos.png";
 import iconPorcentaje from "./../public/porcentaje.png";
 import iconLabel from "./../public/label.png";
 import iconSalir from "./../public/salir.png";
+import {userSignOut} from "../redux/actions/Auth";
+import {useDispatch} from "react-redux";
 
 import OutsideClickHandler from "react-outside-click-handler";
 
 import { useRouter } from "next/router";
 
 export function ClientSB() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const subscription = userService.user.subscribe((x) => setUser(x));
-    return () => subscription.unsubscribe();
-  }, []);
-
-  function logout() {
-    userService.logout();
-  }
+  const dispatch = useDispatch();
   return (
     <>
       <ul className="txt-center sidebar-nav">
@@ -121,7 +114,7 @@ export function ClientSB() {
           </Link>
         </li>
         <li className="li-1line">
-          <a href="#" onClick={logout}>
+          <a href="#" onClick={() => dispatch(userSignOut())}>
             <div className="txt-center">
               <Image
                 src={iconSalir}
@@ -386,23 +379,11 @@ export function InsuSB() {
   );
 }
 
-function SideBar({ sideBarVisible, onOutsideClick }) {
+const SideBar = ({ sideBarVisible, onOutsideClick }) => {
   const router = useRouter();
-
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const subscription = userService.user.subscribe((x) => setUser(x));
-    return () => subscription.unsubscribe();
-  }, []);
-
   function logout() {
     userService.logout();
   }
-
-  // only show when logged in
-  if (!user) return null;
-
   return (
     <aside
       className={`${
