@@ -440,13 +440,13 @@ box-shadow: 16px 19px 13px 15px #0004;
 }
 
 .login-username {
-  background: url(/login-username.png) no-repeat left center;
-  padding-left: 1.8rem;
+  background: url(login-username.png) no-repeat left center;
+  padding-left: 1.6rem;
   border-left: 1px solid var(--linegray);
 }
 .login-password {
-  background: url(/login-password.png) no-repeat left center;
-  padding-left: 1.8rem;
+  background: url(login-password.png) no-repeat left center;
+  padding-left: 1.6rem;
   border-left: 1px solid var(--linegray);
 }
 .tab-search fieldset input {

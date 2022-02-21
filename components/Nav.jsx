@@ -50,12 +50,12 @@ function Nav() {
           <nav className="nav-area">
             <ul className="header-nav ">
               <li>
+                <li>
                   <a href="" className="active">
                     Todo
                     <CollectionIcon className="link-icon" />
                   </a>
                 </li>
-              <li>
                 <a href="">
                   Comercial
                   <CurrencyDollarIcon className="link-icon" />

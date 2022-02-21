@@ -2,14 +2,16 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+
+import { Link } from "components";
 import { leadService, alertService } from "services";
-import { useState } from "react";
+import Head from "next/head";
 
 export default LeadCreator;
 
 function LeadCreator({ onClickOutside }) {
   const router = useRouter();
-  const [value, setValue] = useState("0");
+
   // form validation rules
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("Por favor coloque su/s nombre/s"),
@@ -27,7 +29,10 @@ function LeadCreator({ onClickOutside }) {
   const { register, handleSubmit, formState } = useForm(formOptions);
   const { errors } = formState;
 
-  function onSubmit(lead: any) {
+  // function handleClickOutside() {
+  //   onClickOutside;
+  // }
+  function onSubmit(lead) {
     return leadService
       .register(lead)
       .then(() => {
@@ -50,8 +55,8 @@ function LeadCreator({ onClickOutside }) {
             <div className="d-flex justify-content-around ">
               {" "}
               <div className="form-group ">
-                <select name="productos" className="select-product" value={value} onChange={(e) => {setValue(e.target.value);}}>
-                  <option value="0">
+                <select name="productos" className="select-product">
+                  <option selected value="0">
                     {" "}
                     selecciona un producto{" "}
                   </option>

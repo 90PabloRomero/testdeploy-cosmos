@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import {useDispatch, useSelector} from "react-redux";
 
 import { Layout } from "components/account";
 import { userService, alertService } from "services";
@@ -12,30 +11,18 @@ import heroImage from "public/login-clientes.png";
 import Image from "next/image";
 import { Link } from "components";
 import { useEffect } from "react";
-import {
-  hideMessage,
-  showAuthLoader,
-  userSignIn,
-} from "../../redux/actions/Auth";
 
-const clientLogin = () => {
+export default Login;
+
+function Login() {
   const router = useRouter();
-  const {authUser} = useSelector(({auth}) => auth);
-  const dispatch = useDispatch();
+
   useEffect(() => {
-    if(authUser !== null) {
-      console.log(authUser.role);
-      if(authUser.role === "client") {
-        router.push("/clientes/panel");
-      }
-      else if (authUser.role === "broker") {
-        router.push("/broker/panel");
-      }
-      else if (authUser.role === "insurer") {
-        router.push("/aseguradoras/panel");
-      }
+    // redirect to home if already logged in
+    if (userService.userValue) {
+      router.push("/clientes/panel");
     }
-  }, [authUser]);
+  }, []);
 
   // form validation rules
   const validationSchema = Yup.object().shape({
@@ -48,16 +35,17 @@ const clientLogin = () => {
   const { register, handleSubmit, formState } = useForm(formOptions);
   const { errors } = formState;
 
-  const onSubmit = user => {
-    dispatch(userSignIn(user));
-    // return userService
-    //   .login(username, password)
-    //   .then(() => {
-    //     const returnUrl = "/clientes/panel";
-    //     alertService.success("conexion exitosa");
-    //     router.push(returnUrl);
-    //   })
-    //   .catch(alertService.error);
+  function onSubmit({ username, password }) {
+    return userService
+      .login(username, password)
+      .then(() => {
+        // get return url from query parameters or default to '/'
+        // const returnUrl = router.query.returnUrl || "/";
+        const returnUrl = "/clientes/panel";
+        alertService.success("conexion exitosa");
+        router.push(returnUrl);
+      })
+      .catch(alertService.error);
   }
 
   return (
@@ -149,4 +137,3 @@ const clientLogin = () => {
     </Layout>
   );
 }
-export default clientLogin;

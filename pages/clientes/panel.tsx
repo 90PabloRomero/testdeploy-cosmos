@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Link } from "components";
+import CalendarArea from "components/Calendar";
 import LeadCreator2 from "../../components/demo/leads-broker/LeadBroker02";
 import LeadCreator3 from "../../components/demo/leads-broker/LeadBroker03";
 import LeadCreator5 from "../../components/demo/leads-broker/LeadBroker05";
@@ -9,7 +11,11 @@ import LeadCreator16 from "../../components/demo/leads-broker/LeadBroker16";
 import LeadCreator18 from "../../components/demo/leads-broker/LeadBroker18";
 import LeadCreator21 from "../../components/demo/leads-broker/LeadBroker21";
 import LeadCreator24 from "../../components/demo/leads-broker/LeadBroker24";
-import { leadService } from "../../services";
+import Image from "next/image";
+import addIcon from "public/add.png";
+import editIcon from "public/edit.png";
+import sendIcon from "/public/icon3.png";
+import { leadService } from "services";
 import ModalCreateLead from "components/demo/modalCreateLead";
 import {
   SearchCircleIcon,
@@ -21,7 +27,7 @@ import {
   CurrencyDollarIcon,
 } from "@heroicons/react/solid";
 
-const ClientHome = ({ onClick, onClickUser }) => {
+const Home = ({ onClick, onClickUser }) => {
   const [leads, setLeads] = useState(null);
   const [modalCreateLeadVisible, setModalCreateLeadVisible] = useState(false);
 
@@ -151,8 +157,24 @@ const ClientHome = ({ onClick, onClickUser }) => {
             </div>
             <div className="tabs-list-area">
               <div className="tabs-list-crud-actions"></div>
-              <div className="tab-actions-and-search">    
+
+              <div className="tab-actions-and-search">
+                {/* <div className="tab-actions">
+                <button className="btn btn-tab btn-tab-active">
+                  Pendientes
+                </button>
+                <button className="btn btn-tab">Todos</button>
+                <button className="btn btn-tab">Renovaciones</button>
+              </div> */}
+
                 <div className="tab-search mb-1">
+                  {/* <fieldset>
+                  <input
+                    type="text"
+                    placeholder="Buscar..."
+                    className="search-input "
+                  />
+                </fieldset> */}
                   {leads &&
                     leads.map((lead) =>
                       lead.phaseEmision === true ? (
@@ -172,6 +194,12 @@ const ClientHome = ({ onClick, onClickUser }) => {
                   >
                     LLENAR FORMULARIO PARA COTIZACION
                   </button>
+                  {/* <button
+                  onClick={() => setModalCalendarVisible(true)}
+                  className="btn btn-primary ml-4"
+                >
+                  VER CALENDARIO
+                </button> */}
                 </div>
               </div>
               <div className="tab-list">
@@ -185,6 +213,7 @@ const ClientHome = ({ onClick, onClickUser }) => {
                     <div className="tab-list-form-heading-column">Estado</div>
                     <div className="tab-list-form-heading-column">Accion</div>
                   </div>
+                  {/*  */}
                   <div className="tab-list-form-row">
                     <div className="tab-list-form-row-column"></div>
                     <div className="tab-list-form-row-column">
@@ -196,6 +225,7 @@ const ClientHome = ({ onClick, onClickUser }) => {
                       </button>
                     </div>
                     <div className="tab-list-form-row-column">
+                      {/* Comercial(2) */}
                       Comercial
                     </div>
                     <div className="tab-list-form-row-column">
@@ -1046,4 +1076,4 @@ const ClientHome = ({ onClick, onClickUser }) => {
     </>
   );
 };
-export default ClientHome;
+export default Home;
