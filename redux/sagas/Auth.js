@@ -42,11 +42,13 @@ function* signInClientUser({payload}) {
   const {username, password} = payload;
   try {
     const signInUser = yield call(signInClientUserRequest, username, password);
-    if (signInUser.err) {
-      yield put(showAuthMessage(signInUser.err));
+    if (typeof signInUser === "string") {
+
+      yield put(showAuthMessage(signInUser));
     } else {
       setCookie('user_id', signInUser.id);
       setCookie('user_role', signInUser.role);
+      setCookie('token', signInUser.token);
       yield put(userSignInSuccess(signInUser));
     }
   } catch (error) {

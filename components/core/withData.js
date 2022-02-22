@@ -18,7 +18,7 @@ export default ComposedComponent =>
         }
         
       }
-      return {isLoggedIn, isUserRole};
+      return {isLoggedIn};
     }
 
     render() {

@@ -1,6 +1,7 @@
 import {applyMiddleware, createStore} from 'redux';
 import createSagaMiddleware, {END} from 'redux-saga';
 import thunk from 'redux-thunk';
+import { persistStore } from 'redux-persist';
 
 import reducers from '../reducers';
 
@@ -17,11 +18,33 @@ const bindMiddleware = middleware => {
 };
 
 const configureStore = (initialState = {}) => {
-  const store = createStore(
-    reducers,
-    initialState,
-    bindMiddleware([thunk, sagaMiddleware])
-  );
+  let store;
+  const isClient = typeof window !== 'undefined';
+  if (isClient) {
+    const { persistReducer } = require('redux-persist');
+    const storage = require('redux-persist/lib/storage').default;
+
+    const persistConfig = {
+      key: 'root',
+      storage
+    };
+
+    store = createStore(
+      persistReducer(persistConfig, reducers),
+      initialState,
+      bindMiddleware([thunk, sagaMiddleware])
+    );
+
+     store.__PERSISTOR = persistStore(store);
+  } else {
+    store = createStore(
+      reducers,
+      initialState,
+      bindMiddleware([thunk, sagaMiddleware])
+    );
+
+  }
+  
   store.runSaga = () => {
     // Avoid running twice
     if (store.saga) return;

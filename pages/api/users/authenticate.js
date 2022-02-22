@@ -16,9 +16,7 @@ function authenticate(req, res) {
 
   // validate
   if (!(user && bcrypt.compareSync(password, user.hash))) {
-    return res.status(404).json({
-      message: "Datos de ingreso inválidos"
-    });
+    throw "Datos de ingreso inválidos";
   }
 
   // create a jwt token that is valid for 7 days

@@ -24,11 +24,11 @@ const clientLogin = () => {
   const {loader, alertMessage, showMessage,authUser} = useSelector(({auth}) => auth);
   const dispatch = useDispatch();
   useEffect(() => {
-    // if (showMessage) {
-    //   setTimeout(() => {
-    //    dispatch(hideMessage());
-    //   }, 100);
-    // }
+    if (showMessage) {
+      setTimeout(() => {
+       dispatch(hideMessage());
+      }, 100);
+    }
     if(authUser !== null) {
       console.log(authUser.role);
       if(authUser.role === "client") {
@@ -160,10 +160,11 @@ const clientLogin = () => {
             </div>
           </div>
         </div>
+        dddddddddddddddddddddddddd
+      {showMessage ?
+        alertService.error("conexion exitosa") : "null"}
       </div>
       
-      {showMessage ?
-        alertService.error("conexion exitosa") : null}
     </Layout>
   );
 }

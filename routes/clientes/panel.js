@@ -20,11 +20,12 @@ import {
   IdentificationIcon,
   CurrencyDollarIcon,
 } from "@heroicons/react/solid";
+import {useDispatch, useSelector} from "react-redux";
 
 const ClientHome = ({ onClick, onClickUser }) => {
   const [leads, setLeads] = useState(null);
   const [modalCreateLeadVisible, setModalCreateLeadVisible] = useState(false);
-
+  const {loader, alertMessage, showMessage,authUser} = useSelector(({auth}) => auth);
   useEffect(() => {
     leadService.getAll().then((x) => setLeads(x));
   }, []);

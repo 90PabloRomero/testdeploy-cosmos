@@ -4,6 +4,7 @@ export const setCookie = (key, value) => {
   if (process.browser) {
     Cookies.set(key, value, {
       expires: 1,
+      path: '/',
     });
   }
 };
